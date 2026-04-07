@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.csc325capstone.homeController">
+  <top>
+    <HBox alignment="CENTER_LEFT" spacing="24" style="-fx-padding: 14 28;">
+      <children>
+        <HBox alignment="CENTER_LEFT" spacing="12">
+          <Label text="Steam Builder">
+                  <font>
+                     <Font name="System Bold" size="25.0" />
+                  </font></Label>
+        </HBox>
+        <Region HBox.hgrow="ALWAYS" />
+        <HBox alignment="CENTER_RIGHT" spacing="10">
+          <Button fx:id="homeButton" onAction="#handleHome" style="-fx-background-radius: 12; -fx-padding: 6 16; -fx-font-size: 13px; -fx-font-weight: 700;" text="Home" />
+          <Button fx:id="savedButton" onAction="#handleSavedBuild" style="-fx-background-radius: 12; -fx-padding: 6 16; -fx-font-size: 13; -fx-font-weight: 700;" text="Saved" />
+          <Button fx:id="loginButton" onAction="#handleLogin" style="-fx-background-radius: 12; -fx-padding: 6 16; -fx-font-size: 13; -fx-font-weight: 700;" text="Login" />
+        </HBox>
+      </children>
+    </HBox>
+  </top>
+
+  <center>
+    <VBox alignment="CENTER" spacing="28" style="-fx-padding: 36 64 64 64;">
+      <children>
+
+        <Label style="-fx-alignment: center;" text="Build Your Gaming PC with Steam Builder" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font></Label>
+        <Label style="-fx-alignment: center;" text="Find compatible parts for your favorite Steam games with real-time compatibility checking" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+
+        <HBox alignment="CENTER" spacing="18">
+          <children>
+            <VBox spacing="8" style="-fx-background-radius: 14; -fx-padding: 18; -fx-pref-width: 240; -fx-min-height: 150;">
+              <children>
+                <Label style="-fx-font-size: 14px; -fx-font-weight: 700;" text="Search Games" />
+                <Label style="-fx-font-size: 11.8px;" text="Browse games and see required hardware" wrapText="true" />
+                        <Button id="findGames" fx:id="findGames" mnemonicParsing="false" onAction="#handleFindGames" style="-fx-background-radius: 12;" text="Find Games">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+              </children>
+            </VBox>
+
+            <VBox spacing="8" style="-fx-background-radius: 14; -fx-padding: 18; -fx-pref-width: 240; -fx-min-height: 150;">
+              <children>
+                <Label style="-fx-font-size: 14px; -fx-font-weight: 700;" text="Guided Build" />
+                <Label style="-fx-font-size: 11.8px;" text="Get recommendations based on your needs" wrapText="true" />
+                        <Button id="takeQuestionnaire" fx:id="takeQuestionnaire" mnemonicParsing="false" onAction="#handleQuestionnaire" style="-fx-background-radius: 12;" text="Take Questionnaire">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+              </children>
+            </VBox>
+
+            <VBox spacing="8" style="-fx-background-radius: 14; -fx-padding: 18; -fx-pref-width: 240; -fx-min-height: 150;">
+              <children>
+                <Label style="-fx-font-size: 14px; -fx-font-weight: 700;" text="Custom Build" />
+                <Label style="-fx-font-size: 11.8px;" text="Select parts with instant compatibility check" wrapText="true" />
+                        <Button id="buildSandbox" fx:id="buildSandbox" mnemonicParsing="false" onAction="#handleSandbox" style="-fx-background-radius: 12;" text="Build Sandbox">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+              </children>
+            </VBox>
+          </children>
+        </HBox>
+
+        <VBox prefHeight="139.0" prefWidth="658.0" spacing="16" style="-fx-background-radius: 16; -fx-padding: 20; -fx-max-width: 820;">
+          <children>
+            <Label style="-fx-font-size: 15px; -fx-font-weight: 700;" text="How It Works" />
+                  <TilePane>
+                     <children>
+                <VBox spacing="8.0" style="-fx-pref-width: 220;">
+                  <children>
+                    <Label prefHeight="17.0" prefWidth="109.0" style="-fx-font-size: 13px; -fx-font-weight: 700;" text="Choose Your Path">
+                                 <VBox.margin>
+                                    <Insets right="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                    <Label style="-fx-font-size: 11.8px;" text="Search games, use our questionnaire, or build from scratch" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets right="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                  </children>
+                </VBox>
+
+                      <VBox spacing="8" style="-fx-pref-width: 220;">
+                  <children>
+                    <Label style="-fx-font-size: 13px; -fx-font-weight: 700;" text="Save Your Build">
+                                 <VBox.margin>
+                                    <Insets right="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                    <Label style="-fx-font-size: 11.8px;" text="Login and save builds for future reference" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets right="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                  </children>
+                </VBox>
+
+                      <VBox prefHeight="50.0" prefWidth="300.0" spacing="8.0" style="-fx-pref-width: 220;">
+                  <children>
+                    <Label style="-fx-font-size: 13px; -fx-font-weight: 700;" text="Build &amp; Validate">
+                                 <VBox.margin>
+                                    <Insets right="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                    <Label style="-fx-font-size: 11.8px;" text="Select compatible parts with real-time validation" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets right="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                  </children>
+                </VBox>
+                     </children>
+                  </TilePane>
+          </children>
+        </VBox>
+      </children>
+    </VBox>
+  </center>
+</BorderPane>
