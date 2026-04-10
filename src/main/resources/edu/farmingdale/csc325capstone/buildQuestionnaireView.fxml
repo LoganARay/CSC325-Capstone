@@ -1,14 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="edu.farmingdale.csc325capstone.QuestionnaireController"
+      spacing="20"
+      style="-fx-background-color: #1b2838;">
 
-</AnchorPane>
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <VBox spacing="12"
+          style="-fx-background-color: #2a475e; -fx-background-radius: 8;">
+
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <Label fx:id="questionCounter"
+               text="Question 1 of 7"
+               style="-fx-text-fill: #c7d5e0; -fx-font-size: 12px;"/>
+
+        <Label fx:id="questionText"
+                text="What is your budget range?"
+               style="-fx-text-fill: white; -fx-font-size: 17px; -fx-font-weight: bold;"
+               wrapText="true"/>
+
+        <Label  fx:id="questionHint"
+                text="This drives the overall tier of PC recommended."
+               style="-fx-text-fill: #8ba3b5; -fx-font-size: 12px; -fx-font-style: italic;"
+               wrapText="true"/>
+
+        <VBox fx:id="budgetOptions" spacing="8">
+        <Button fx:id="budgetBtn1" text="Under 500"
+                style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                maxWidth="Infinity"/>
+
+        <Button fx:id="budgetBtn2" text="500 - 1,000"
+                style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                maxWidth="Infinity"/>
+
+        <Button fx:id="budgetBtn3" text="1,000 - 1,500"
+                style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                maxWidth="Infinity"/>
+
+        <Button fx:id="budgetBtn4" text="1,500+"
+                style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                maxWidth="Infinity"/>
+        </VBox>
+
+        <VBox fx:id="playStyleOptions" spacing="8">
+            <Button fx:id="playBtn1" text="Online competitive multiplayer"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+            <Button fx:id="playBtn2" text="Online casual / co-op with friends"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+            <Button fx:id="playBtn3" text="Solo / offline single-player"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+            <Button fx:id="playBtn4" text="A mix of everything"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+        </VBox>
+
+
+    </VBox>
+        <Button fx:id="nextButton" text="Next"
+                style="-fx-background-color: #4c6b22; -fx-text-fill: white; -fx-background-radius: 6; -fx-border-radius: 6; -fx-font-size: 14px;"
+                onAction="#onNextClicked"
+                maxWidth="Infinity"/>
+
+</VBox>
