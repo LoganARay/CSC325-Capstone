@@ -68,6 +68,66 @@
                     maxWidth="Infinity"/>
         </VBox>
 
+        <VBox fx:id="performanceOptions" spacing="8">
+            <Button fx:id="perfBtn1" text="1080p / 60 fps"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+            <Button fx:id="perfBtn2" text="1080p / 144+ fps"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+            <Button fx:id="perfBtn3" text="1440p / high settings"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+            <Button fx:id="perfBtn4" text="4K / max settings"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+        </VBox>
+
+        <VBox fx:id="storageOptions" spacing="8">
+            <Button fx:id="storageBtn1" text="256 - 500 GB"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+            <Button fx:id="storageBtn2" text="1 TB"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+            <Button fx:id="storageBtn3" text="2 TB"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+            <Button fx:id="storageBtn4" text="2 TB+"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+        </VBox>
+
+        <VBox fx:id="priorityOptions" spacing="8">
+            <Button fx:id="priorityBtn1" text="Best raw performance"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+            <Button fx:id="priorityBtn2" text="Best value for money"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+            <Button fx:id="priorityBtn3" text="Reliability / brand reputation"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+            <Button fx:id="priorityBtn4" text="Looks / aesthetics"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+        </VBox>
+
+        <VBox fx:id="longevityOptions" spacing="8">
+            <Button fx:id="longevityBtn1" text="1 - 2 years"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+            <Button fx:id="longevityBtn2" text="3 - 4 years"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+            <Button fx:id="longevityBtn3" text="5+ years"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+            <Button fx:id="longevityBtn4" text="Not sure"
+                    style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;"
+                    maxWidth="Infinity"/>
+        </VBox>
+
 
     </VBox>
         <Button fx:id="nextButton" text="Next"

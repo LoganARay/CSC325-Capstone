@@ -8,6 +8,10 @@ public class QuestionnaireController {
     private String selectedBudget;
     private int currentQuestion = 1;
     private String selectedPlayStyle;
+    private String selectedPerformance;
+    private String selectedStorage;
+    private String selectedPriority;
+    private String selectedLongevity;
 
     @FXML
     private Button budgetBtn1;
@@ -51,6 +55,50 @@ public class QuestionnaireController {
     @FXML
     private Button playBtn4;
 
+    @FXML
+    private VBox performanceOptions;
+    @FXML
+    private Button perfBtn1;
+    @FXML
+    private Button perfBtn2;
+    @FXML
+    private Button perfBtn3;
+    @FXML
+    private Button perfBtn4;
+
+    @FXML
+    private VBox storageOptions;
+    @FXML
+    private Button storageBtn1;
+    @FXML
+    private Button storageBtn2;
+    @FXML
+    private Button storageBtn3;
+    @FXML
+    private Button storageBtn4;
+
+    @FXML
+    private VBox priorityOptions;
+    @FXML
+    private Button priorityBtn1;
+    @FXML
+    private Button priorityBtn2;
+    @FXML
+    private Button priorityBtn3;
+    @FXML
+    private Button priorityBtn4;
+
+    @FXML
+    private VBox longevityOptions;
+    @FXML
+    private Button longevityBtn1;
+    @FXML
+    private Button longevityBtn2;
+    @FXML
+    private Button longevityBtn3;
+    @FXML
+    private Button longevityBtn4;
+
 
 
     @FXML
@@ -64,6 +112,31 @@ public class QuestionnaireController {
         budgetBtn2.setOnAction(e -> selectBudget(budgetBtn2, "$500 - $1,000") );
         budgetBtn3.setOnAction(e -> selectBudget(budgetBtn3, "1000_1500"));
         budgetBtn4.setOnAction(e -> selectBudget(budgetBtn4, "1500_plus"));
+
+        playBtn1.setOnAction(e -> selectOption(playBtn1, "online_competitive", "playStyle"));
+        playBtn2.setOnAction(e -> selectOption(playBtn2, "online_casual", "playStyle"));
+        playBtn3.setOnAction(e -> selectOption(playBtn3, "solo_offline", "playStyle"));
+        playBtn4.setOnAction(e -> selectOption(playBtn4, "mix", "playStyle"));
+        perfBtn1.setOnAction(e -> selectOption(perfBtn1, "1080_60", "performance"));
+        perfBtn2.setOnAction(e -> selectOption(perfBtn2, "1080_144", "performance"));
+        perfBtn3.setOnAction(e -> selectOption(perfBtn3, "1440_high", "performance"));
+        perfBtn4.setOnAction(e -> selectOption(perfBtn4, "4k", "performance"));
+
+        storageBtn1.setOnAction(e -> selectOption(storageBtn1, "256_500gb", "storage"));
+        storageBtn2.setOnAction(e -> selectOption(storageBtn2, "1tb", "storage"));
+        storageBtn3.setOnAction(e -> selectOption(storageBtn3, "2tb", "storage"));
+        storageBtn4.setOnAction(e -> selectOption(storageBtn4, "2tb_plus", "storage"));
+
+        priorityBtn1.setOnAction(e -> selectOption(priorityBtn1, "performance", "priority"));
+        priorityBtn2.setOnAction(e -> selectOption(priorityBtn2, "value", "priority"));
+        priorityBtn3.setOnAction(e -> selectOption(priorityBtn3, "reliability", "priority"));
+        priorityBtn4.setOnAction(e -> selectOption(priorityBtn4, "aesthetics", "priority"));
+
+        longevityBtn1.setOnAction(e -> selectOption(longevityBtn1, "1_2_years", "longevity"));
+        longevityBtn2.setOnAction(e -> selectOption(longevityBtn2, "3_4_years", "longevity"));
+        longevityBtn3.setOnAction(e -> selectOption(longevityBtn3, "5_plus_years", "longevity"));
+        longevityBtn4.setOnAction(e -> selectOption(longevityBtn4, "unsure", "longevity"));
+        loadQuestion(1);
     }
     private void selectBudget(Button selected, String value){
         budgetBtn1.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
@@ -91,6 +164,17 @@ public class QuestionnaireController {
         questionCounter.setText("Question " + questionNumber + " of 7");
         budgetOptions.setVisible(false);
         budgetOptions.setManaged(false);
+        playStyleOptions.setVisible(false);
+        playStyleOptions.setManaged(false);
+        performanceOptions.setVisible(false);
+        performanceOptions.setManaged(false);
+        storageOptions.setVisible(false);
+        storageOptions.setManaged(false);
+        priorityOptions.setVisible(false);
+        priorityOptions.setManaged(false);
+        longevityOptions.setVisible(false);
+        longevityOptions.setManaged(false);
+
             if (questionNumber == 1) {
                 budgetOptions.setVisible(true);
                 budgetOptions.setManaged(true);
@@ -103,24 +187,74 @@ public class QuestionnaireController {
             if (questionNumber == 3) {
                 questionText.setText("How do you mostly play games?");
                 questionHint.setText("Affects whether online performance or offline experience is prioritized.");
+                playStyleOptions.setVisible(true);
+                playStyleOptions.setManaged(true);
             }
             if (questionNumber == 4) {
                 questionText.setText("What framerate and resolution are you targeting?");
                 questionHint.setText("Higher FPS and resolution need a stronger GPU.");
+                performanceOptions.setVisible(true);
+                performanceOptions.setManaged(true);
+
             }
             if (questionNumber == 5) {
                 questionText.setText("How much storage do you think you need?");
                 questionHint.setText("Game libraries eat storage fast.");
+                storageOptions.setVisible(true);
+                storageOptions.setManaged(true);
+
             }
             if (questionNumber == 6) {
                 questionText.setText("If you had to pick one priority, what matters most?");
                 questionHint.setText("Used to break ties when two configs have a similar price.");
+                priorityOptions.setVisible(true);
+                priorityOptions.setManaged(true);
             }
             if (questionNumber == 7) {
                 questionText.setText("How long do you want this PC to last before upgrading?");
                 questionHint.setText("Longer lifespan means recommending higher-tier components now.");
+                longevityOptions.setVisible(true);
+                longevityOptions.setManaged(true);
             }
         }
+    private void selectOption(Button selected, String value, String questionType) {
+        if (questionType.equals("playStyle")) {
+            playBtn1.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            playBtn2.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            playBtn3.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            playBtn4.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            selectedPlayStyle = value;
+        }
+        if (questionType.equals("performance")) {
+            perfBtn1.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            perfBtn2.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            perfBtn3.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            perfBtn4.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            selectedPerformance = value;
+        }
+        if (questionType.equals("storage")) {
+            storageBtn1.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            storageBtn2.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            storageBtn3.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            storageBtn4.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            selectedStorage = value;
+        }
+        if (questionType.equals("priority")) {
+            priorityBtn1.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            priorityBtn2.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            priorityBtn3.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            priorityBtn4.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            selectedPriority = value;
+        }
+        if (questionType.equals("longevity")) {
+            longevityBtn1.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            longevityBtn2.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            longevityBtn3.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            longevityBtn4.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
+            selectedLongevity = value;
+        }
+        selected.setStyle("-fx-background-color: #4c6b22; -fx-text-fill: white; -fx-background-radius: 6; -fx-border-color: #8bc34a; -fx-border-radius: 6;");
+    }
     }
 
 
