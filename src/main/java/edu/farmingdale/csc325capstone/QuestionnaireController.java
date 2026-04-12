@@ -108,6 +108,17 @@ public class QuestionnaireController {
     private VBox gameSearch;
     @FXML
     private TextField searchField;
+    @FXML
+    private VBox gameList;
+    @FXML
+    private Label gameArea;
+
+    private MenuItem item1=new MenuItem(" ");
+    private MenuItem item2=new MenuItem(" ");
+    private MenuItem item3=new MenuItem(" ");
+    private MenuItem item4=new MenuItem(" ");
+    private MenuItem item5=new MenuItem(" ");
+
 
     private ContextMenu cm=new ContextMenu();
 
@@ -125,6 +136,12 @@ public class QuestionnaireController {
         budgetBtn2.setOnAction(e -> selectBudget(budgetBtn2, "$500 - $1,000") );
         budgetBtn3.setOnAction(e -> selectBudget(budgetBtn3, "1000_1500"));
         budgetBtn4.setOnAction(e -> selectBudget(budgetBtn4, "1500_plus"));
+
+        item1.setOnAction(e -> gameArea.setText(gameArea.getText() + "\n" + item1.getText()));
+        item2.setOnAction(e -> gameArea.setText(gameArea.getText() + "\n" + item2.getText()));
+        item3.setOnAction(e -> gameArea.setText(gameArea.getText() + "\n" + item3.getText()));
+        item4.setOnAction(e -> gameArea.setText(gameArea.getText() + "\n" + item4.getText()));
+        item5.setOnAction(e -> gameArea.setText(gameArea.getText() + "\n" + item5.getText()));
 
         searchField.textProperty().addListener((obs, oldValue, newValue) -> {
             if(newValue==null || newValue.length()<2){
@@ -160,7 +177,26 @@ public class QuestionnaireController {
                             String name = (String) game.get("Name");
                             if (newValue.length() <= name.length()) {
                                 if ((name.toUpperCase()).contains(newValue.toUpperCase())) {
-                                    cm.getItems().add(new MenuItem(name));
+                                    if(count==0){
+                                        item1.setText(name);
+                                        cm.getItems().add(item1);
+                                    }
+                                    if(count==1){
+                                        item2.setText(name);
+                                        cm.getItems().add(item2);
+                                    }
+                                    if(count==2){
+                                        item3.setText(name);
+                                        cm.getItems().add(item3);
+                                    }
+                                    if(count==3){
+                                        item4.setText(name);
+                                        cm.getItems().add(item4);
+                                    }
+                                    if(count==4){
+                                        item5.setText(name);
+                                        cm.getItems().add(item5);
+                                    }
                                     count++;
                                 }
                             }
@@ -241,6 +277,8 @@ public class QuestionnaireController {
         priorityOptions.setManaged(false);
         longevityOptions.setVisible(false);
         longevityOptions.setManaged(false);
+        gameList.setVisible(false);
+        gameList.setManaged(false);
 
         if (questionNumber == 1) {
             budgetOptions.setVisible(true);
@@ -252,7 +290,8 @@ public class QuestionnaireController {
             questionHint.setText("Search and add up to 5 games.");
             gameSearch.setVisible(true);
             gameSearch.setManaged(true);
-
+            gameList.setVisible(true);
+            gameList.setManaged(true);
         }
         if (questionNumber == 3) {
             questionText.setText("How do you mostly play games?");
