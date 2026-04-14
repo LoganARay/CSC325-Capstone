@@ -1,0 +1,7666 @@
+[
+  {
+    "id": "mobo_001",
+    "name": "Asus PRIME B650-PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 159.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_002",
+    "name": "MSI B650 GAMING PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 169.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_003",
+    "name": "MSI MAG B650 TOMAHAWK WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 189.42,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_004",
+    "name": "Gigabyte X870E AORUS ELITE WIFI7",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 325.31,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_005",
+    "name": "Asus PRIME B550M-A WIFI II",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_006",
+    "name": "Gigabyte B650 EAGLE AX",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 157.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_007",
+    "name": "Asus TUF GAMING B850-PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 217.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_008",
+    "name": "ASRock B650M Pro RS WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 139.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_009",
+    "name": "MSI MAG X870 TOMAHAWK WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 269.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_010",
+    "name": "Gigabyte A520M K V2",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 68.47,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_011",
+    "name": "Asus B650E MAX GAMING WIFI W",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 149.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_012",
+    "name": "MSI PRO B650-S WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 135.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_013",
+    "name": "Gigabyte B550M K",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_014",
+    "name": "ASRock B850I Lightning WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 253.44,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Mini ITX",
+      "max_ram": 128,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_015",
+    "name": "MSI PRO B550M-VC WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_016",
+    "name": "Asus TUF GAMING B650-PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 159.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_017",
+    "name": "Gigabyte X870 EAGLE WIFI7",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 229.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_018",
+    "name": "Gigabyte X870 AORUS ELITE WIFI7 ICE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 299.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_019",
+    "name": "MSI B550M PRO-VDH WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 109.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_020",
+    "name": "Asus ROG STRIX X870E-E GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 478.01,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_021",
+    "name": "ASRock B850M-X WiFi R2.0",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 129.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_022",
+    "name": "Gigabyte B850 EAGLE WIFI6E",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 179.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_023",
+    "name": "MSI MAG B850 TOMAHAWK MAX WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 219.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_024",
+    "name": "Gigabyte B760M GAMING PLUS WIFI DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 139.49,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_025",
+    "name": "Asus ROG STRIX B650-A GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 164.95,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_026",
+    "name": "Gigabyte B650M GAMING PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 159.94,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_027",
+    "name": "MSI MAG B550 TOMAHAWK MAX WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 169.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_028",
+    "name": "Gigabyte B850 AORUS ELITE WIFI7",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 232.67,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_029",
+    "name": "Gigabyte B650 GAMING X AX V2",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 184.49,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_030",
+    "name": "Asus ROG STRIX X870-A GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 318.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_031",
+    "name": "ASRock A620I LIGHTNING WIFI",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 159.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Mini ITX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_032",
+    "name": "Asus TUF GAMING B550-PLUS WIFI II",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 148.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_033",
+    "name": "Asus TUF GAMING B650-E WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 199.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_034",
+    "name": "MSI B450M-A PRO MAX II",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 97.09,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_035",
+    "name": "MSI PRO B650M-P",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 149.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_036",
+    "name": "ASRock B450M/ac R2.0",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 74.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_037",
+    "name": "Asus TUF GAMING B850M-PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 219.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_038",
+    "name": "ASRock B450M-HDV R4.0",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 69.98,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_039",
+    "name": "Gigabyte B850 AORUS ELITE WIFI7 ICE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 239.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_040",
+    "name": "MSI PRO B760M-P DDR4",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_041",
+    "name": "Asus ROG STRIX B550-F GAMING WIFI II",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 169.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_042",
+    "name": "Gigabyte B850M GAMING X WIFI6E",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 159.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_043",
+    "name": "Asus ROG CROSSHAIR X870E HERO",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 649.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_044",
+    "name": "Gigabyte A520I AC",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_045",
+    "name": "Gigabyte B550M AORUS ELITE AX",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 149.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_046",
+    "name": "ASRock B850M Pro-A WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 140.98,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_047",
+    "name": "ASRock B650M PG Lightning Wifi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 191.66,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_048",
+    "name": "MSI MPG B550 GAMING PLUS",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 104.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_049",
+    "name": "MSI A520M-A PRO",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 67.62,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_050",
+    "name": "MSI PRO B650M-A WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 145.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_051",
+    "name": "Asus ROG STRIX B650E-F GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 254.25,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_052",
+    "name": "Asus ROG STRIX B850-A GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 239.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_053",
+    "name": "ASRock B550M Pro4",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_054",
+    "name": "MSI MAG X670E TOMAHAWK WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 248.71,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_055",
+    "name": "Asus ROG STRIX B850-I GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 299.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Mini ITX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_056",
+    "name": "Asus ROG STRIX B650E-I GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 219.95,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Mini ITX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_057",
+    "name": "MSI MPG X870E CARBON WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 499.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_058",
+    "name": "Gigabyte B850 GAMING WIFI6",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 179.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_059",
+    "name": "MSI B850 GAMING PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 199.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_060",
+    "name": "Asus TUF GAMING X870-PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 266.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_061",
+    "name": "MSI B550-A PRO",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 125.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_062",
+    "name": "Asus ROG CROSSHAIR X870E EXTREME",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 999.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "E-ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_063",
+    "name": "ASRock B850M Pro RS WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 149.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_064",
+    "name": "Gigabyte X870E AORUS PRO ICE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 329.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_065",
+    "name": "Gigabyte B650 AORUS ELITE AX",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 185.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_066",
+    "name": "Gigabyte A620I AX",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 138.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Mini ITX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_067",
+    "name": "Gigabyte X870I AORUS PRO ICE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 284.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Mini ITX",
+      "max_ram": 128,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_068",
+    "name": "MSI B650M GAMING PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 219.51,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_069",
+    "name": "Asus ROG STRIX B850-F GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 269.18,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_070",
+    "name": "ASRock X870 Pro RS",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 179.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_071",
+    "name": "MSI PRO A620M-E",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 154.9,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_072",
+    "name": "Asus TUF GAMING B650E-PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 189.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_073",
+    "name": "Gigabyte B850 GAMING X WIFI6E",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 197.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_074",
+    "name": "Gigabyte B550 GAMING X V2",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 129.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_075",
+    "name": "ASRock B650M-HDV/M.2",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 138.63,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_076",
+    "name": "MSI MAG X870E TOMAHAWK WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 309.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_077",
+    "name": "Gigabyte B550 EAGLE WIFI6",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 129.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_078",
+    "name": "MSI PRO H610M-G DDR4",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 93.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_079",
+    "name": "MSI MEG X870E GODLIKE",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 999.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "E-ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_080",
+    "name": "ASRock X870 Pro RS WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 240.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_081",
+    "name": "Gigabyte B850M AORUS ELITE WIFI6E ICE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 199.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_082",
+    "name": "ASRock A520M-HDV",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 62.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_083",
+    "name": "ASRock B550 Phantom Gaming 4/ac",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_084",
+    "name": "Gigabyte X870 AORUS ELITE WIFI7",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 262.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_085",
+    "name": "Gigabyte X870 GAMING WIFI6",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 189.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_086",
+    "name": "ASRock A620M-HDV/M.2",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 129.14,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_087",
+    "name": "Asus ProArt X870E-CREATOR WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 517.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_088",
+    "name": "ASRock B650 PG LIGHTNING",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 129.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_089",
+    "name": "MSI MAG B550 TOMAHAWK",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 139.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_090",
+    "name": "Gigabyte B550 UD AC",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 119.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_091",
+    "name": "Gigabyte B650M D3HP AX",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 139.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_092",
+    "name": "Asus PRIME B650M-A AX II",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 168.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_093",
+    "name": "ASRock B650I Lightning Wifi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 199.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Mini ITX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_094",
+    "name": "ASRock X870E Taichi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 468.95,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "E-ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_095",
+    "name": "MSI MPG X870E EDGE TI WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 289.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_096",
+    "name": "ASRock Phantom Gaming X870E Nova WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 299.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_097",
+    "name": "MSI PRO X870E-P WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 244.94,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_098",
+    "name": "MSI PRO B850-P WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 199.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_099",
+    "name": "ASRock B850 Riptide WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 199.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_100",
+    "name": "MSI B840 GAMING PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 149.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_101",
+    "name": "ASRock B650M Pro RS",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 220.07,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_102",
+    "name": "Asus TUF GAMING A520M-PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 110.46,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_103",
+    "name": "ASRock B650 Steel Legend WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 280.35,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_104",
+    "name": "Gigabyte B650 AORUS ELITE AX ICE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 199.74,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_105",
+    "name": "MSI X670E GAMING PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 189.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_106",
+    "name": "Gigabyte B650 AORUS ELITE AX V2",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 199.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_107",
+    "name": "Asus ROG STRIX X870-I GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 448.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Mini ITX",
+      "max_ram": 128,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_108",
+    "name": "ASRock B850M Steel Legend WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 179.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_109",
+    "name": "Asus TUF GAMING B650M-PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 259.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_110",
+    "name": "Gigabyte B550M DS3H AC",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_111",
+    "name": "Gigabyte B650M GAMING WIFI6E",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 177.17,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_112",
+    "name": "MSI PRO B760-P WIFI DDR4",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 159.95,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_113",
+    "name": "Gigabyte B650 EAGLE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 212.19,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_114",
+    "name": "MSI X870 GAMING PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 249.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_115",
+    "name": "Gigabyte A520M S2H",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 72.98,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_116",
+    "name": "Asus Prime B450M-A II",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 140.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_117",
+    "name": "Gigabyte B850I AORUS PRO",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 259.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Mini ITX",
+      "max_ram": 128,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_118",
+    "name": "Gigabyte A520M DS3H V2",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 101.9,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_119",
+    "name": "MSI B550 GAMING GEN3",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 124.58,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_120",
+    "name": "MSI MAG B850M MORTAR WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 239.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_121",
+    "name": "Gigabyte B550 AORUS ELITE AX V2",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 149.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_122",
+    "name": "ASRock B850 Steel Legend WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 209.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_123",
+    "name": "MSI MPG B650I EDGE WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 289.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Mini ITX",
+      "max_ram": 128,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_124",
+    "name": "Gigabyte B550I AORUS PRO AX",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 189.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_125",
+    "name": "Asus ROG STRIX B550-A GAMING",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 241.13,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_126",
+    "name": "NZXT N7 B650E",
+    "category": "Motherboard",
+    "brand": "NZXT",
+    "price": 260.88,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_127",
+    "name": "Gigabyte X870E AORUS PRO",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 349.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_128",
+    "name": "MSI MPG B850I EDGE TI WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 249.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Mini ITX",
+      "max_ram": 128,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_129",
+    "name": "ASRock B650 PRO RS",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 147.02,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_130",
+    "name": "Gigabyte B650E AORUS ELITE X AX ICE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 209.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_131",
+    "name": "MSI PRO B840-P WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 159.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_132",
+    "name": "ASRock B550M-ITX/ac",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_133",
+    "name": "Gigabyte X870E AORUS MASTER",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 499.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_134",
+    "name": "ASRock B850 Pro-A",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 139.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_135",
+    "name": "Asus ROG STRIX B850-E GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 339.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_136",
+    "name": "MSI MAG B650M MORTAR WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 198.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_137",
+    "name": "ASRock B650M Pro X3D WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 139.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_138",
+    "name": "MSI PRO X870-P WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 273.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_139",
+    "name": "Asus PRIME B550-PLUS AC-HES",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 129.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_140",
+    "name": "Asus PRIME X870-P WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 219.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_141",
+    "name": "Gigabyte B650M AORUS ELITE AX",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 199.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_142",
+    "name": "ASRock B550 Phantom Gaming-ITX/ax",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 149.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_143",
+    "name": "ASRock B850M Riptide WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 169.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_144",
+    "name": "Gigabyte B760M DS3H DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 109.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_145",
+    "name": "Gigabyte B650M AORUS ELITE AX ICE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 199.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_146",
+    "name": "Gigabyte B550M DS3H",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 137.64,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_147",
+    "name": "MSI PRO B650-P WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 169.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_148",
+    "name": "ASRock B650M-H/M.2+",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_149",
+    "name": "ASRock X870 Steel Legend WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 259.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_150",
+    "name": "Gigabyte B650I AORUS ULTRA",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 237.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Mini ITX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_151",
+    "name": "Gigabyte A620M S2H",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 110.82,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_152",
+    "name": "Asus ROG STRIX B450-F GAMING II",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 269.27,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_153",
+    "name": "Asus ROG STRIX X870-F GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 419.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_154",
+    "name": "Gigabyte B450M DS3H",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 153.26,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_155",
+    "name": "Asus PRIME B840-PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 149.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_156",
+    "name": "ASRock B850 LiveMixer WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 189.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_157",
+    "name": "Asus TUF GAMING B550M-PLUS WIFI II",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 199.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_158",
+    "name": "ASRock B450M PRO4 R2.0",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_159",
+    "name": "ASRock A620M Pro RS WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 148.93,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_160",
+    "name": "Asus ROG STRIX X670E-E GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 384.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_161",
+    "name": "ASRock H510M-HDV/M.2 SE",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 94.31,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_162",
+    "name": "Asus ROG STRIX B550-F GAMING",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 219.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_163",
+    "name": "ASRock B550M-HDV",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 89.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_164",
+    "name": "MSI PRO B650-A WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 169.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_165",
+    "name": "ASRock B850M-X WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 124.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_166",
+    "name": "Gigabyte B550M AORUS ELITE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 134.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_167",
+    "name": "ASRock Phantom Gaming X870 Riptide WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 249.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_168",
+    "name": "Asus PRIME B650M-A WIFI II",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 237.07,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_169",
+    "name": "MSI MPG B850 EDGE TI WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 309.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_170",
+    "name": "MSI PRO B760M-A WIFI DDR4",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 154.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_171",
+    "name": "Gigabyte B550M GAMING X WIFI6",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 154.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_172",
+    "name": "MSI B650M PROJECT ZERO",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 229.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_173",
+    "name": "Asus ROG STRIX B450-F GAMING",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 129.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_174",
+    "name": "ASRock X870E Taichi Lite",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 299.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "E-ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_175",
+    "name": "NZXT N9 X870E",
+    "category": "Motherboard",
+    "brand": "NZXT",
+    "price": 459.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_176",
+    "name": "Asus ROG CROSSHAIR X870E APEX",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 749.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_177",
+    "name": "Asus TUF GAMING X670E-PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 235.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_178",
+    "name": "Gigabyte B650I AX",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 223.75,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Mini ITX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_179",
+    "name": "Gigabyte B650 GAMING X AX",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 166.63,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_180",
+    "name": "Gigabyte X670 AORUS ELITE AX",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 239.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_181",
+    "name": "MSI PRO B850M-P WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 179.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_182",
+    "name": "Gigabyte B450M K",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 99.95,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_183",
+    "name": "Gigabyte X870E AORUS ELITE WIFI7 ICE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 329.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_184",
+    "name": "Gigabyte X870E AORUS XTREME AI TOP",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 799.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "E-ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_185",
+    "name": "Asus TUF GAMING B650-PLUS",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 159.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_186",
+    "name": "Gigabyte B650M S2H",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 147.47,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_187",
+    "name": "MSI B550M PRO-VDH",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 153.09,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_188",
+    "name": "ASRock B450M Steel Legend",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 92.67,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_189",
+    "name": "ASRock B850 Pro-A WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 177.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_190",
+    "name": "NZXT N9 X870E",
+    "category": "Motherboard",
+    "brand": "NZXT",
+    "price": 459.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_191",
+    "name": "ASRock B850M Pro RS",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 149.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_192",
+    "name": "Asus B650E MAX GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 169.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_193",
+    "name": "Asus TUF GAMING B850-BTF WIFI W",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 279.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_194",
+    "name": "MSI PRO B650M-B",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 154.86,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_195",
+    "name": "MSI B450M PRO-VDH MAX",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 110.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_196",
+    "name": "Asus PRIME B650-PLUS",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 174.02,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_197",
+    "name": "ASRock B850M-X",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 111.98,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_198",
+    "name": "Asus ROG STRIX B650E-E GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 404.73,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_199",
+    "name": "Gigabyte B850M DS3H",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 154.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_200",
+    "name": "ASRock B650M PG RIPTIDE WIFI",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 185.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_201",
+    "name": "MSI X870E GAMING PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 329.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_202",
+    "name": "Gigabyte B650M D3HP",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 169.44,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_203",
+    "name": "Asus TUF GAMING A620M-PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 155.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_204",
+    "name": "ASRock B550 Phantom Gaming 4",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_205",
+    "name": "Gigabyte X870 GAMING X WIFI7",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 259.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_206",
+    "name": "Asus TUF GAMING X870E-PLUS WIFI7",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 359.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_207",
+    "name": "Asus X870 MAX GAMING WIFI7",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 233.65,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_208",
+    "name": "Asus ROG STRIX X570-E GAMING WIFI II",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 495.31,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_209",
+    "name": "MSI B760 GAMING PLUS WIFI DDR4",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 243.73,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_210",
+    "name": "Gigabyte X870 AORUS STEALTH ICE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 309.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_211",
+    "name": "Gigabyte B550 AORUS ELITE V2",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 190.78,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_212",
+    "name": "Asus PRIME B450M-K II",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 111.64,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_213",
+    "name": "Asus PRIME B550-PLUS",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 169.78,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_214",
+    "name": "Asus TUF GAMING B450-PLUS II",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 192.85,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_215",
+    "name": "Gigabyte B850 EAGLE WIFI7 ICE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 342.89,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_216",
+    "name": "ASRock B650M PG Lightning",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 192.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_217",
+    "name": "Gigabyte B650E AORUS STEALTH ICE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 422.04,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_218",
+    "name": "MSI PRO H610M-G WIFI DDR4",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 119.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_219",
+    "name": "Gigabyte B850M EAGLE WIFI6E ICE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 164.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_220",
+    "name": "ASRock A520M-ITX/ac",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 150.01,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_221",
+    "name": "ASRock B850 Pro RS",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 177.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_222",
+    "name": "Asus PRIME B650M-A II-CSM",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 159.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_223",
+    "name": "MSI MPG X670E CARBON WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 479.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_224",
+    "name": "Asus PRIME A520M-A II/CSM",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 78.86,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_225",
+    "name": "Asus X870 AYW GAMING WIFI W",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 219.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_226",
+    "name": "ASRock H470M-HVS",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 59.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_227",
+    "name": "ASRock A620M Pro RS",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 154.16,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_228",
+    "name": "MSI MPG B650 EDGE WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 179.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_229",
+    "name": "ASRock B450M/AC",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 84.29,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_230",
+    "name": "Asus ROG STRIX B850-G GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 259.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_231",
+    "name": "ASRock B650 Pro RS WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 160.98,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_232",
+    "name": "Gigabyte H610M H V3 DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 130.93,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_233",
+    "name": "Asus PRIME B650M-K",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 188.27,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_234",
+    "name": "Asus PRIME A620M-K",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 144.63,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_235",
+    "name": "Gigabyte H410M H V2",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 108.61,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_236",
+    "name": "MSI MEG X670E ACE",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 369.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "E-ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_237",
+    "name": "Asus PRIME B550M-A AC",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 109.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_238",
+    "name": "MSI B450 Gaming Plus MAX",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 162.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_239",
+    "name": "Asus TUF GAMING B550-PLUS",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 207.05,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_240",
+    "name": "ASRock A520M-HVS",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 85.67,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_241",
+    "name": "Asus PRIME B450M-A",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 127.78,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_242",
+    "name": "MSI PRO Z790-P WIFI DDR4",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 205.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_243",
+    "name": "Gigabyte A520 AORUS ELITE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 135.14,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_244",
+    "name": "Gigabyte A620M GAMING X",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 188.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_245",
+    "name": "Asus ROG STRIX X670E-A GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 264.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_246",
+    "name": "ASRock B850 Pro RS WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 189.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_247",
+    "name": "Gigabyte B450 AORUS PRO WIFI (rev. 1.0)",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 227.26,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_248",
+    "name": "Gigabyte B850M AORUS ELITE WIFI6E",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 307.15,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_249",
+    "name": "ASRock B450 Pro4 R2.0",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 129.91,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_250",
+    "name": "ASRock B550M Phantom Gaming 4",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_251",
+    "name": "Asus ROG Crosshair VIII Dark Hero",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 730.56,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_252",
+    "name": "Asus ROG STRIX X670E-F GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 418.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_253",
+    "name": "Gigabyte B850 AORUS STEALTH ICE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 264.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_254",
+    "name": "MSI MPG Z490 GAMING EDGE WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 438.88,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_255",
+    "name": "Gigabyte B850 EAGLE ICE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 271.76,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_256",
+    "name": "Gigabyte B850M D3HP",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 196.72,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_257",
+    "name": "Asus PRIME B550M-K",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 135.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_258",
+    "name": "Asus PRIME B450-PLUS",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 168.31,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_259",
+    "name": "Asus PRIME H510M-K",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 108.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_260",
+    "name": "MSI MAG Z690 TOMAHAWK WIFI DDR4",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 399.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_261",
+    "name": "Gigabyte B850 AI TOP",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 319.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_262",
+    "name": "Gigabyte B550 EAGLE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 147.45,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_263",
+    "name": "MSI MPG X570 GAMING PLUS",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 512.22,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_264",
+    "name": "Gigabyte X570 AORUS ELITE WIFI",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 368.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_265",
+    "name": "ASRock B550M Steel Legend",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 164.84,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_266",
+    "name": "Asus PRIME B650M-R",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 182.42,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_267",
+    "name": "Asus X870 MAX GAMING WIFI7 W",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 235.84,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_268",
+    "name": "ASRock X670E Steel Legend",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 512.24,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_269",
+    "name": "Gigabyte X670 GAMING X AX V2",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 229.95,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_270",
+    "name": "Gigabyte B550M DS3H AC R2",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 109.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_271",
+    "name": "Asus PRIME X570-P",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 358.29,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_272",
+    "name": "MSI PRO A620M-B",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 161.13,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_273",
+    "name": "Asus TUF GAMING B550M-PLUS",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 157.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_274",
+    "name": "Gigabyte H610I DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 161.13,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_275",
+    "name": "Asus PRIME X670E-PRO WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 349.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_276",
+    "name": "Asus PRIME B560M-A",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 219.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_277",
+    "name": "ASRock B850M Pro-A",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 199.13,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_278",
+    "name": "MSI X470 GAMING PLUS MAX",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 199.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_279",
+    "name": "Asus TUF GAMING B450M-PLUS II",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 164.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_280",
+    "name": "MSI PRO B840M-B",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 157.77,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_281",
+    "name": "Gigabyte B650 UD AX (rev. 1.0)",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 169.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_282",
+    "name": "Gigabyte B760M DS3H AX DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 178.81,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_283",
+    "name": "Gigabyte B760 GAMING X DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 355.26,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_284",
+    "name": "MSI MPG Z490 GAMING PLUS",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 337.04,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_285",
+    "name": "Asus PRIME H510M-A",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 152.09,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_286",
+    "name": "MSI B450-A PRO MAX",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 240.73,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_287",
+    "name": "Gigabyte X570 AORUS ELITE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 349.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_288",
+    "name": "Asus TUF GAMING B850M-PLUS",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 334.12,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_289",
+    "name": "Gigabyte B650 UD AC",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 169.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_290",
+    "name": "ASRock B450 Steel Legend",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 172.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_291",
+    "name": "Asus ROG STRIX Z490-E GAMING",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 363.66,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_292",
+    "name": "Asus TUF GAMING A520M-PLUS II",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 130.24,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_293",
+    "name": "ASRock X570 Phantom Gaming 4",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 270.44,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_294",
+    "name": "Gigabyte X570 I AORUS PRO WIFI",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 400.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_295",
+    "name": "ASRock B450 Pro4",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 121.55,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_296",
+    "name": "ASRock B650E PG-ITX WIFI",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 349.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Mini ITX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_297",
+    "name": "Gigabyte H610M S2H V2 DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_298",
+    "name": "Asus PRIME X570-PRO",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 429.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_299",
+    "name": "Biostar B650MT",
+    "category": "Motherboard",
+    "brand": "Biostar",
+    "price": 125.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_300",
+    "name": "ASRock B550 Pro4",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 161.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_301",
+    "name": "MSI PRO B550M-P GEN3",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 95.95,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_302",
+    "name": "MSI MEG X570 UNIFY",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 399.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_303",
+    "name": "Asus ROG Strix X570-I Gaming",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 538.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_304",
+    "name": "Gigabyte B650M AORUS ELITE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 204.73,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_305",
+    "name": "ASRock X570 Phantom Gaming 4S",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 2945.06,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_306",
+    "name": "Asus ROG STRIX Z590-E GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 514.9,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_307",
+    "name": "Gigabyte H610M S2H V3 DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 109.95,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_308",
+    "name": "Asus PRIME B840M-A WIFI-CSM",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 179.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_309",
+    "name": "Asus TUF GAMING X570-PLUS",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 388.83,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_310",
+    "name": "Asus PROART B650-CREATOR",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 330.21,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_311",
+    "name": "Gigabyte B840M DS3H",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 137.63,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_312",
+    "name": "Gigabyte B650M DS3H",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 209.83,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_313",
+    "name": "Asus PRIME X870-P",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 363.29,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_314",
+    "name": "Asus PRIME X670-P WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 269.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_315",
+    "name": "Gigabyte B760M D3HP DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 144.87,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_316",
+    "name": "Asus TUF Gaming Z590-PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 338.5,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_317",
+    "name": "Asus PRIME B550M-A",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 146.27,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_318",
+    "name": "MSI MAG B760 TOMAHAWK WIFI DDR4",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 189.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_319",
+    "name": "Asus ROG Crosshair VIII Hero (WI-FI)",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 719.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_320",
+    "name": "MSI PRO B850M-A WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 199.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_321",
+    "name": "MSI MPG Z690 EDGE WIFI DDR4",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 386.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_322",
+    "name": "Gigabyte B850M EAGLE WIFI6E",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 164.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_323",
+    "name": "MSI A520M PRO",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 118.83,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_324",
+    "name": "Asus PRIME Z490-P",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 305.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_325",
+    "name": "Asus ROG Strix X570-E Gaming",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 539.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_326",
+    "name": "MSI MAG B550M MORTAR MAX WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 159.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_327",
+    "name": "ASRock B550 PG Riptide",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 189.57,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_328",
+    "name": "Gigabyte B450 AORUS ELITE V2",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 301.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_329",
+    "name": "Asus PRIME B850-PLUS WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 199.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_330",
+    "name": "ASRock A620M-HDV/M.2+",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 148.67,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_331",
+    "name": "Asus PRIME A620M-A-CSM",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 129.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_332",
+    "name": "Gigabyte B650M K",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 195.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_333",
+    "name": "ASRock B550 Steel Legend",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 205.35,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_334",
+    "name": "Gigabyte B650 AERO G",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 229.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_335",
+    "name": "Asus ROG Strix X570-F Gaming",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 483.67,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_336",
+    "name": "Gigabyte GA-AB350-GAMING 3",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 279.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_337",
+    "name": "MSI Z590 PRO WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 381.49,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_338",
+    "name": "MSI MAG Z790 TOMAHAWK WIFI DDR4",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 349.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_339",
+    "name": "Gigabyte B760I AORUS PRO DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 209.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_340",
+    "name": "Gigabyte B550 AORUS PRO AC",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 306.49,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_341",
+    "name": "Asus TUF B450-PLUS GAMING",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 218.89,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_342",
+    "name": "Asus TUF GAMING B650M-E",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 255.1,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_343",
+    "name": "MSI B560M PRO-E",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 179.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_344",
+    "name": "ASRock X870 Pro-A WiFi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 199.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_345",
+    "name": "MSI MPG X570 GAMING PRO CARBON WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 399.89,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_346",
+    "name": "Asus TUF B450M-PLUS GAMING",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 289.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_347",
+    "name": "MSI PRO B660M-A DDR4",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 289.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_348",
+    "name": "ASRock B650M PG RIPTIDE",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 185.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_349",
+    "name": "Gigabyte B760 DS3H AX DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 195.6,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_350",
+    "name": "MSI B350M BAZOOKA",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 118.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_351",
+    "name": "Gigabyte B460M DS3H V2",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 191.56,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_352",
+    "name": "Gigabyte B660 DS3H DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 203.34,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_353",
+    "name": "Gigabyte X670E AORUS XTREME (rev. 1.0)",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 949.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "E-ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_354",
+    "name": "ASRock X670E PG Lightning",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 373.52,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_355",
+    "name": "MSI Z590-A PRO",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 299.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_356",
+    "name": "Biostar B450MH",
+    "category": "Motherboard",
+    "brand": "Biostar",
+    "price": 109.9,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 32,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_357",
+    "name": "Gigabyte Z690 AORUS ELITE AX DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 377.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_358",
+    "name": "MSI MPG B550 GAMING CARBON WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 376.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_359",
+    "name": "Gigabyte B550M AORUS PRO-P",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 211.49,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_360",
+    "name": "Gigabyte X570 AORUS MASTER",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 530.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_361",
+    "name": "MSI B850 GAMING PLUS WIFI PZ",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 249.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_362",
+    "name": "MSI B450 Gaming Plus",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 179.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_363",
+    "name": "ASRock X570 Steel Legend",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 314.69,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_364",
+    "name": "Asus Pro B550M-C/CSM",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 144.83,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_365",
+    "name": "Asus TUF GAMING B550-PLUS (WI-FI)",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 289.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_366",
+    "name": "Gigabyte A520M DS3H AC",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 123.5,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_367",
+    "name": "Asus TUF GAMING Z490-PLUS (WI-FI)",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 370.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_368",
+    "name": "Asus ROG MAXIMUS XII HERO (WI-FI)",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 490.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_369",
+    "name": "Gigabyte Z690 GAMING X DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 367.49,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_370",
+    "name": "Asus TUF GAMING B650EM-E WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 209.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_371",
+    "name": "Gigabyte B550 AORUS ELITE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 246.49,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_372",
+    "name": "MSI B840M GAMING PLUS WIFI6E",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 222.47,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_373",
+    "name": "Gigabyte X570S AORUS MASTER",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 575.72,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_374",
+    "name": "Asus PRIME B840M-A-CSM",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 210.16,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_375",
+    "name": "MSI B850M GAMING PLUS WIFI6E",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 247.17,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_376",
+    "name": "ASRock B450M-HDV",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 149.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 32,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_377",
+    "name": "Gigabyte Z590I AORUS ULTRA",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 389.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_378",
+    "name": "Asus TUF GAMING B550M-PLUS (WI-FI)",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 274.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_379",
+    "name": "Asus Strix B550-XE Gaming WiFi",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 391.02,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_380",
+    "name": "Asus ROG STRIX Z590-A GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 478.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_381",
+    "name": "Gigabyte X570 AORUS PRO WIFI",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 448.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_382",
+    "name": "Asus PRIME B550M-A/CSM",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 189.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_383",
+    "name": "ASRock X670E Pro RS",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 551.13,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_384",
+    "name": "Gigabyte B840M D2H",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 169.54,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_385",
+    "name": "Gigabyte Z590 AORUS ELITE AX",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 377.9,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_386",
+    "name": "Gigabyte Z790 AORUS ELITE AX DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 250.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_387",
+    "name": "Gigabyte Z590 UD AC",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 329.65,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_388",
+    "name": "MSI MPG X570S EDGE MAX WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 734.79,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_389",
+    "name": "Gigabyte B650 AORUS PRO AX",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 498.87,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_390",
+    "name": "Gigabyte X570 UD",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 274.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_391",
+    "name": "Gigabyte Z790 AORUS ELITE DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 255.81,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_392",
+    "name": "MSI MAG B560M MORTAR WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 299.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_393",
+    "name": "Gigabyte A520M DS3H",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 108.46,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_394",
+    "name": "MSI MPG Z590 GAMING CARBON WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 399.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_395",
+    "name": "Gigabyte Z490 UD",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 293.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_396",
+    "name": "ASRock B550 Extreme4",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 184.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_397",
+    "name": "Asus PRIME B650M-A WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 348.42,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_398",
+    "name": "Gigabyte Z690 UD AX DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 471.78,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_399",
+    "name": "ASRock A520M Pro4",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_400",
+    "name": "MSI MEG X570 ACE",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 459.78,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_401",
+    "name": "Gigabyte X570S AERO G",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 527.9,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_402",
+    "name": "Asus ROG Crosshair VIII Impact",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 589.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "MINI DTX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_403",
+    "name": "Asus PRO A520M-C II/CSM",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 92.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_404",
+    "name": "Gigabyte H610M S2H DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 173.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_405",
+    "name": "Gigabyte Z490 AORUS XTREME",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 1018.9,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "E-ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_406",
+    "name": "MSI MPG X570S CARBON MAX WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 647.19,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_407",
+    "name": "MSI PRO Z690-P DDR4",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 169.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_408",
+    "name": "Gigabyte Z590 VISION G",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 385.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_409",
+    "name": "Gigabyte B550 AORUS MASTER",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 406.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_410",
+    "name": "Biostar H510MHP 2.0",
+    "category": "Motherboard",
+    "brand": "Biostar",
+    "price": 93.84,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_411",
+    "name": "Asus PRIME B840M-A WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 259.7,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_412",
+    "name": "Asus PRIME B450M-A/CSM",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 199.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_413",
+    "name": "MSI MPG Z790 EDGE WIFI DDR4",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 599.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_414",
+    "name": "Gigabyte Z590 UD",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 278.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_415",
+    "name": "Gigabyte Z690I AORUS ULTRA DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 256.9,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_416",
+    "name": "MSI MEG Z490I UNIFY",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 393.48,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_417",
+    "name": "Gigabyte B550 AORUS PRO V2",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 291.49,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_418",
+    "name": "Gigabyte Z690M AORUS ELITE AX DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 265.89,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_419",
+    "name": "Asus ROG STRIX Z590-I GAMING WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 549.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_420",
+    "name": "ASRock A520M Phantom Gaming 4",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 96.49,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_421",
+    "name": "ASRock X570D4U-2L2T",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 419.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_422",
+    "name": "MSI MPG Z590 GAMING PLUS",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 433.89,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_423",
+    "name": "Asus ROG Crosshair VIII Formula",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 630.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_424",
+    "name": "Gigabyte Z590 AORUS PRO AX",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 410.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_425",
+    "name": "Asus PRO Q570M-C/CSM",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 75.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_426",
+    "name": "MSI X470 GAMING PRO CARBON",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 399.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_427",
+    "name": "Asus Pro B650M-CT-CSM",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 149.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_428",
+    "name": "Asus ProArt B550-CREATOR",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 239.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_429",
+    "name": "Gigabyte H410M S2H V2",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 119.9,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_430",
+    "name": "Gigabyte Z490 AORUS ELITE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 475.49,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_431",
+    "name": "MSI B850 GAMING PLUS WIFI6E",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 263.27,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_432",
+    "name": "Gigabyte B760 GAMING X AX DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 263.83,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_433",
+    "name": "Asus ROG STRIX Z490-I GAMING",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 499.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_434",
+    "name": "Gigabyte Z590 AORUS MASTER",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 407.37,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_435",
+    "name": "Asus ROG MAXIMUS XII FORMULA",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 654.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_436",
+    "name": "Gigabyte X570 AORUS XTREME",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 995.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "E-ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_437",
+    "name": "Asus PRIME A520M-E",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 159.9,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_438",
+    "name": "Asus Pro WS X570-ACE",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 579.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_439",
+    "name": "Gigabyte GA-AX370-Gaming K5",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 236.49,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_440",
+    "name": "Gigabyte Z490 GAMING X",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 298.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_441",
+    "name": "Asus Pro B560M-CT/CSM",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 159.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_442",
+    "name": "ASRock B550 PG Velocita",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 260.37,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_443",
+    "name": "Asus PRIME A320M-E",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 237.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_444",
+    "name": "MSI MAG B460 TOMAHAWK",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 278.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_445",
+    "name": "MSI MAG A520M VECTOR WIFI",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 176.8,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_446",
+    "name": "Gigabyte H610M D3W DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 147.89,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_447",
+    "name": "Gigabyte Z490 AORUS ELITE AC",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 398.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_448",
+    "name": "ASRock X570D4U",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 304.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_449",
+    "name": "ASRock Z590M Pro4",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 299.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_450",
+    "name": "Gigabyte Z490 AORUS MASTER",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 510.9,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_451",
+    "name": "Asus ROG MAXIMUS XII EXTREME",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 996.85,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "E-ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_452",
+    "name": "Gigabyte H510M S2H",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 159.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_453",
+    "name": "MSI PRO B660M-G DDR4",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 672.84,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_454",
+    "name": "MSI MEG B550 UNIFY-X",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 455.59,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_455",
+    "name": "Gigabyte B560 AORUS PRO AX",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 390.49,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_456",
+    "name": "Gigabyte Z690 AORUS ELITE DDR4",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 302.89,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1700",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_457",
+    "name": "MSI MAG B460M MORTAR",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 299.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_458",
+    "name": "Asus PRIME B650M-A-CSM",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 287.37,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_459",
+    "name": "ASRock Z590M Phantom Gaming 4",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 248.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_460",
+    "name": "MSI MEG Z490 ACE",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 486.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_461",
+    "name": "MSI X370 XPOWER GAMING TITANIUM",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 542.89,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 64,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_462",
+    "name": "ASRock Z490M Pro4",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 380.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_463",
+    "name": "Asus Pro A620M-DASH-CSM",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 154.46,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 96,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_464",
+    "name": "Gigabyte Z590I VISION D",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 459.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_465",
+    "name": "Gigabyte B460M GAMING HD",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 217.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_466",
+    "name": "Gigabyte Z590 AORUS ELITE",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 379.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_467",
+    "name": "ASRock Z490 Taichi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 910.54,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_468",
+    "name": "ASRock Z590 Phantom Gaming-ITX/TB4",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 519.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Mini ITX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_469",
+    "name": "Asus Pro H510M-CT/CSM",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 183.48,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "Micro ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_470",
+    "name": "MSI PRESTIGE X570 CREATION",
+    "category": "Motherboard",
+    "brand": "MSI",
+    "price": 928.87,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM4",
+      "ram_type": "DDR4",
+      "form_factor": "E-ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_471",
+    "name": "Gigabyte Z590 AORUS XTREME",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 699.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "E-ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_472",
+    "name": "ASRock Z590 Taichi",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 794.25,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_473",
+    "name": "Asus ROG MAXIMUS XII APEX",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 509.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  },
+  {
+    "id": "mobo_474",
+    "name": "Asus TUF GAMING B850-E WIFI",
+    "category": "Motherboard",
+    "brand": "Asus",
+    "price": 229.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "ATX",
+      "max_ram": 256,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_475",
+    "name": "Supermicro C9Z490-PGW",
+    "category": "Motherboard",
+    "brand": "Supermicro",
+    "price": 1050.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_476",
+    "name": "ASRock Z590 PG Velocita",
+    "category": "Motherboard",
+    "brand": "ASRock",
+    "price": 636.87,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_477",
+    "name": "Gigabyte Z490 VISION D",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 741.98,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "ATX",
+      "max_ram": 128,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_478",
+    "name": "Biostar B650M-SILVER",
+    "category": "Motherboard",
+    "brand": "Biostar",
+    "price": 201.28,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "AM5",
+      "ram_type": "DDR5",
+      "form_factor": "Micro ATX",
+      "max_ram": 192,
+      "memory_slots": 4
+    }
+  },
+  {
+    "id": "mobo_479",
+    "name": "Gigabyte Z590 AORUS TACHYON",
+    "category": "Motherboard",
+    "brand": "Gigabyte",
+    "price": 573.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "socket": "LGA1200",
+      "ram_type": "DDR4",
+      "form_factor": "E-ATX",
+      "max_ram": 64,
+      "memory_slots": 2
+    }
+  }
+]

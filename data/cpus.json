@@ -1,0 +1,2270 @@
+[
+  {
+    "id": "cpu_001",
+    "name": "AMD Ryzen 7 7800X3D",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 340.05,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "AM5",
+      "tdp": 120,
+      "base_clock": 4.2,
+      "boost_clock": 5.0,
+      "integrated_graphics": "Radeon",
+      "microarchitecture": "Zen 4"
+    }
+  },
+  {
+    "id": "cpu_002",
+    "name": "AMD Ryzen 5 7600X",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 170.49,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "AM5",
+      "tdp": 105,
+      "base_clock": 4.7,
+      "boost_clock": 5.3,
+      "integrated_graphics": "Radeon",
+      "microarchitecture": "Zen 4"
+    }
+  },
+  {
+    "id": "cpu_003",
+    "name": "AMD Ryzen 7 7700X",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 242.98,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "AM5",
+      "tdp": 105,
+      "base_clock": 4.5,
+      "boost_clock": 5.4,
+      "integrated_graphics": "Radeon",
+      "microarchitecture": "Zen 4"
+    }
+  },
+  {
+    "id": "cpu_004",
+    "name": "AMD Ryzen 5 5500",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 74.22,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.6,
+      "boost_clock": 4.2,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_005",
+    "name": "AMD Ryzen 5 5600X",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 158.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.7,
+      "boost_clock": 4.6,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_006",
+    "name": "AMD Ryzen 5 5600",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 125.61,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.5,
+      "boost_clock": 4.4,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_007",
+    "name": "AMD Ryzen 7 5800X",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 179.95,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "AM4",
+      "tdp": 105,
+      "base_clock": 3.8,
+      "boost_clock": 4.7,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_008",
+    "name": "Intel Core i7-14700K",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 297.17,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 20,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.4,
+      "boost_clock": 5.6,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_009",
+    "name": "Intel Core i9-14900K",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 439.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 24,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.2,
+      "boost_clock": 6.0,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_010",
+    "name": "Intel Core i5-12400F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 108.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.5,
+      "boost_clock": 4.4,
+      "integrated_graphics": null,
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_011",
+    "name": "AMD Ryzen 5 3600",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 79.75,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.6,
+      "boost_clock": 4.2,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 2"
+    }
+  },
+  {
+    "id": "cpu_012",
+    "name": "AMD Ryzen 5 7600",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 196.97,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "AM5",
+      "tdp": 65,
+      "base_clock": 3.8,
+      "boost_clock": 5.1,
+      "integrated_graphics": "Radeon",
+      "microarchitecture": "Zen 4"
+    }
+  },
+  {
+    "id": "cpu_013",
+    "name": "AMD Ryzen 7 5700X",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 154.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.4,
+      "boost_clock": 4.6,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_014",
+    "name": "AMD Ryzen 9 7900X",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 314.11,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 12,
+      "socket": "AM5",
+      "tdp": 170,
+      "base_clock": 4.7,
+      "boost_clock": 5.6,
+      "integrated_graphics": "Radeon",
+      "microarchitecture": "Zen 4"
+    }
+  },
+  {
+    "id": "cpu_015",
+    "name": "Intel Core i5-14600K",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 189.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 14,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.5,
+      "boost_clock": 5.3,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_016",
+    "name": "AMD Ryzen 7 5700X3D",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 313.3,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "AM4",
+      "tdp": 105,
+      "base_clock": 3.0,
+      "boost_clock": 4.1,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_017",
+    "name": "Intel Core i5-14400F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 125.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 10,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.5,
+      "boost_clock": 4.7,
+      "integrated_graphics": null,
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_018",
+    "name": "AMD Ryzen 7 5800XT",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 140.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "AM4",
+      "tdp": 105,
+      "base_clock": 3.8,
+      "boost_clock": 4.8,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_019",
+    "name": "Intel Core i7-12700K",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 214.15,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 12,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.6,
+      "boost_clock": 5.0,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_020",
+    "name": "AMD Ryzen 5 7600X3D",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 433.5,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "AM5",
+      "tdp": 65,
+      "base_clock": 4.1,
+      "boost_clock": 4.7,
+      "integrated_graphics": "Radeon",
+      "microarchitecture": "Zen 4"
+    }
+  },
+  {
+    "id": "cpu_021",
+    "name": "AMD Ryzen 5 5600G",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 134.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.9,
+      "boost_clock": 4.4,
+      "integrated_graphics": "Radeon Vega 7",
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_022",
+    "name": "AMD Ryzen 7 7700",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 293.97,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "AM5",
+      "tdp": 65,
+      "base_clock": 3.6,
+      "boost_clock": 5.3,
+      "integrated_graphics": "Radeon",
+      "microarchitecture": "Zen 4"
+    }
+  },
+  {
+    "id": "cpu_023",
+    "name": "Intel Core i5-13400F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 151.47,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 10,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.5,
+      "boost_clock": 4.6,
+      "integrated_graphics": null,
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_024",
+    "name": "Intel Core i7-12700KF",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 174.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 12,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.6,
+      "boost_clock": 5.0,
+      "integrated_graphics": null,
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_025",
+    "name": "AMD Ryzen 9 5900X",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 254.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 12,
+      "socket": "AM4",
+      "tdp": 105,
+      "base_clock": 3.7,
+      "boost_clock": 4.8,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_026",
+    "name": "AMD Ryzen 7 3700X",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 142.94,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.6,
+      "boost_clock": 4.4,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 2"
+    }
+  },
+  {
+    "id": "cpu_027",
+    "name": "Intel Core i5-12600KF",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 129.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 10,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.7,
+      "boost_clock": 4.9,
+      "integrated_graphics": null,
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_028",
+    "name": "Intel Core i5-12600K",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 148.19,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 10,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.7,
+      "boost_clock": 4.9,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_029",
+    "name": "AMD Ryzen 7 5700G",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 174.97,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.8,
+      "boost_clock": 4.6,
+      "integrated_graphics": "Radeon Vega 8",
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_030",
+    "name": "AMD Ryzen 9 5950X",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 274.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 16,
+      "socket": "AM4",
+      "tdp": 105,
+      "base_clock": 3.4,
+      "boost_clock": 4.9,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_031",
+    "name": "AMD Ryzen 7 5800X3D",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 704.86,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "AM4",
+      "tdp": 105,
+      "base_clock": 3.4,
+      "boost_clock": 4.5,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_032",
+    "name": "Intel Core i3-12100F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 79.45,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "LGA1700",
+      "tdp": 58,
+      "base_clock": 3.3,
+      "boost_clock": 4.3,
+      "integrated_graphics": null,
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_033",
+    "name": "AMD Ryzen 9 7950X",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 449.96,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 16,
+      "socket": "AM5",
+      "tdp": 170,
+      "base_clock": 4.5,
+      "boost_clock": 5.7,
+      "integrated_graphics": "Radeon",
+      "microarchitecture": "Zen 4"
+    }
+  },
+  {
+    "id": "cpu_034",
+    "name": "Intel Core i5-14600KF",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 197.98,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 14,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.5,
+      "boost_clock": 5.3,
+      "integrated_graphics": null,
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_035",
+    "name": "AMD Ryzen 5 4500",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 78.38,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.6,
+      "boost_clock": 4.1,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 2"
+    }
+  },
+  {
+    "id": "cpu_036",
+    "name": "AMD Ryzen 7 5700",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 134.96,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.7,
+      "boost_clock": 4.6,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_037",
+    "name": "Intel Core i7-14700KF",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 313.95,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 20,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.4,
+      "boost_clock": 5.6,
+      "integrated_graphics": null,
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_038",
+    "name": "Intel Core i9-12900K",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 285.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 16,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.2,
+      "boost_clock": 5.2,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_039",
+    "name": "AMD Ryzen 9 7950X3D",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 769.27,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 16,
+      "socket": "AM5",
+      "tdp": 120,
+      "base_clock": 4.2,
+      "boost_clock": 5.7,
+      "integrated_graphics": "Radeon",
+      "microarchitecture": "Zen 4"
+    }
+  },
+  {
+    "id": "cpu_040",
+    "name": "Intel Core i9-14900KF",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 419.97,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 24,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.2,
+      "boost_clock": 6.0,
+      "integrated_graphics": null,
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_041",
+    "name": "Intel Core i7-13700K",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 390.33,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 16,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.4,
+      "boost_clock": 5.4,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_042",
+    "name": "Intel Core i5-10400F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 137.44,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 2.9,
+      "boost_clock": 4.3,
+      "integrated_graphics": null,
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_043",
+    "name": "Intel Core i9-14900KS",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 639.97,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 24,
+      "socket": "LGA1700",
+      "tdp": 150,
+      "base_clock": 3.2,
+      "boost_clock": 6.2,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_044",
+    "name": "AMD Ryzen 5 5600GT",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 135.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.6,
+      "boost_clock": 4.6,
+      "integrated_graphics": "Radeon Vega 7",
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_045",
+    "name": "Intel Core i5-13600KF",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 195.9,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 14,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.5,
+      "boost_clock": 5.1,
+      "integrated_graphics": null,
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_046",
+    "name": "AMD Ryzen 9 5900XT",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 249.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 16,
+      "socket": "AM4",
+      "tdp": 105,
+      "base_clock": 3.3,
+      "boost_clock": 4.8,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_047",
+    "name": "Intel Core i7-14700F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 294.58,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 20,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.1,
+      "boost_clock": 5.4,
+      "integrated_graphics": null,
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_048",
+    "name": "AMD Ryzen 9 7900",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 342.94,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 12,
+      "socket": "AM5",
+      "tdp": 65,
+      "base_clock": 3.7,
+      "boost_clock": 5.4,
+      "integrated_graphics": "Radeon",
+      "microarchitecture": "Zen 4"
+    }
+  },
+  {
+    "id": "cpu_049",
+    "name": "AMD Ryzen 3 3200G",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 73.45,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.6,
+      "boost_clock": 4.0,
+      "integrated_graphics": "Radeon Vega 8",
+      "microarchitecture": "Zen+"
+    }
+  },
+  {
+    "id": "cpu_050",
+    "name": "AMD Ryzen 5 3400G",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 85.08,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.7,
+      "boost_clock": 4.2,
+      "integrated_graphics": "Radeon Vega 11",
+      "microarchitecture": "Zen+"
+    }
+  },
+  {
+    "id": "cpu_051",
+    "name": "Intel Core i9-13900K",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 434.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 24,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.0,
+      "boost_clock": 5.8,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_052",
+    "name": "Intel Core i5-12400",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 143.55,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.5,
+      "boost_clock": 4.4,
+      "integrated_graphics": "Intel UHD Graphics 730",
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_053",
+    "name": "AMD Ryzen 5 3600X",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 171.97,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "AM4",
+      "tdp": 95,
+      "base_clock": 3.8,
+      "boost_clock": 4.4,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 2"
+    }
+  },
+  {
+    "id": "cpu_054",
+    "name": "Intel Core i3-14100F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 90.05,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "LGA1700",
+      "tdp": 58,
+      "base_clock": 3.5,
+      "boost_clock": 4.7,
+      "integrated_graphics": null,
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_055",
+    "name": "Intel Core i9-12900KF",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 265.68,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 16,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.2,
+      "boost_clock": 5.2,
+      "integrated_graphics": null,
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_056",
+    "name": "AMD Ryzen 5 5600XT",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 144.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.7,
+      "boost_clock": 4.7,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_057",
+    "name": "Intel Core i5-13600K",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 299.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 14,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.5,
+      "boost_clock": 5.1,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_058",
+    "name": "AMD Ryzen 3 4100",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 75.29,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.8,
+      "boost_clock": 4.0,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 2"
+    }
+  },
+  {
+    "id": "cpu_059",
+    "name": "AMD Ryzen 3 3100",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 96.43,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.6,
+      "boost_clock": 3.9,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 2"
+    }
+  },
+  {
+    "id": "cpu_060",
+    "name": "Intel Core i7-13700KF",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 299.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 16,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.4,
+      "boost_clock": 5.4,
+      "integrated_graphics": null,
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_061",
+    "name": "Intel Core i7-10700K",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 349.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "LGA1200",
+      "tdp": 125,
+      "base_clock": 3.8,
+      "boost_clock": 5.1,
+      "integrated_graphics": "Intel UHD Graphics 630",
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_062",
+    "name": "Intel Core i5-14400",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 175.98,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 10,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.5,
+      "boost_clock": 4.7,
+      "integrated_graphics": "Intel UHD Graphics 730",
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_063",
+    "name": "AMD Ryzen 7 7700",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 393.08,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "AM5",
+      "tdp": 65,
+      "base_clock": 3.6,
+      "boost_clock": 5.3,
+      "integrated_graphics": "Radeon",
+      "microarchitecture": "Zen 4"
+    }
+  },
+  {
+    "id": "cpu_064",
+    "name": "AMD Ryzen 7 7800X3D",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 431.66,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "AM5",
+      "tdp": 120,
+      "base_clock": 4.2,
+      "boost_clock": 5.0,
+      "integrated_graphics": "Radeon",
+      "microarchitecture": "Zen 4"
+    }
+  },
+  {
+    "id": "cpu_065",
+    "name": "Intel Core i5-11400F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 192.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 2.6,
+      "boost_clock": 4.4,
+      "integrated_graphics": null,
+      "microarchitecture": "Rocket Lake"
+    }
+  },
+  {
+    "id": "cpu_066",
+    "name": "AMD Ryzen 7 3800X",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 269.8,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "AM4",
+      "tdp": 105,
+      "base_clock": 3.9,
+      "boost_clock": 4.5,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 2"
+    }
+  },
+  {
+    "id": "cpu_067",
+    "name": "Intel Core i7-12700F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 247.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 12,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.1,
+      "boost_clock": 4.9,
+      "integrated_graphics": null,
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_068",
+    "name": "Intel Core i7-11700K",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 293.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "LGA1200",
+      "tdp": 125,
+      "base_clock": 3.6,
+      "boost_clock": 5.0,
+      "integrated_graphics": "Intel UHD Graphics 750",
+      "microarchitecture": "Rocket Lake"
+    }
+  },
+  {
+    "id": "cpu_069",
+    "name": "Intel Core i3-12100",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 113.58,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "LGA1700",
+      "tdp": 60,
+      "base_clock": 3.3,
+      "boost_clock": 4.3,
+      "integrated_graphics": "Intel UHD Graphics 730",
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_070",
+    "name": "Intel Core i5-10400",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 139.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 2.9,
+      "boost_clock": 4.3,
+      "integrated_graphics": "Intel UHD Graphics 630",
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_071",
+    "name": "Intel Core i3-14100",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 119.95,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "LGA1700",
+      "tdp": 60,
+      "base_clock": 3.5,
+      "boost_clock": 4.7,
+      "integrated_graphics": "Intel UHD Graphics 730",
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_072",
+    "name": "Intel Core i3-13100F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 85.34,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "LGA1700",
+      "tdp": 58,
+      "base_clock": 3.4,
+      "boost_clock": 4.5,
+      "integrated_graphics": null,
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_073",
+    "name": "Intel Core i9-10900K",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 548.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 10,
+      "socket": "LGA1200",
+      "tdp": 125,
+      "base_clock": 3.7,
+      "boost_clock": 5.3,
+      "integrated_graphics": "Intel UHD Graphics 630",
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_074",
+    "name": "Intel Core i5-13400",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 164.05,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 10,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.5,
+      "boost_clock": 4.6,
+      "integrated_graphics": "Intel UHD Graphics 730",
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_075",
+    "name": "Intel Core i7-13700F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 255.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 16,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.1,
+      "boost_clock": 5.2,
+      "integrated_graphics": null,
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_076",
+    "name": "AMD Ryzen 5 5500GT",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 141.92,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.6,
+      "boost_clock": 4.4,
+      "integrated_graphics": "Radeon Vega 7",
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_077",
+    "name": "Intel Core i9-13900KF",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 435.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 24,
+      "socket": "LGA1700",
+      "tdp": 125,
+      "base_clock": 3.0,
+      "boost_clock": 5.8,
+      "integrated_graphics": null,
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_078",
+    "name": "Intel Core i7-14700",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 306.55,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 20,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.1,
+      "boost_clock": 5.4,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_079",
+    "name": "Intel Core i9-11900K",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 449.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "LGA1200",
+      "tdp": 125,
+      "base_clock": 3.5,
+      "boost_clock": 5.3,
+      "integrated_graphics": "Intel UHD Graphics 750",
+      "microarchitecture": "Rocket Lake"
+    }
+  },
+  {
+    "id": "cpu_080",
+    "name": "Intel Core i7-10700F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 325.26,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 2.9,
+      "boost_clock": 4.8,
+      "integrated_graphics": null,
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_081",
+    "name": "Intel Core i3-10100F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 100.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 3.6,
+      "boost_clock": 4.3,
+      "integrated_graphics": null,
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_082",
+    "name": "Intel Core i7-11700F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 229.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 2.5,
+      "boost_clock": 4.9,
+      "integrated_graphics": null,
+      "microarchitecture": "Rocket Lake"
+    }
+  },
+  {
+    "id": "cpu_083",
+    "name": "Intel Core i5-13500",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 234.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 14,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.5,
+      "boost_clock": 4.8,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_084",
+    "name": "Intel Core i7-12700",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 289.97,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 12,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.1,
+      "boost_clock": 4.9,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_085",
+    "name": "Intel Core i5-10600K",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 174.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "LGA1200",
+      "tdp": 125,
+      "base_clock": 4.1,
+      "boost_clock": 4.8,
+      "integrated_graphics": "Intel UHD Graphics 630",
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_086",
+    "name": "Intel Core i7-10700",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 399.69,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 2.9,
+      "boost_clock": 4.8,
+      "integrated_graphics": "Intel UHD Graphics 630",
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_087",
+    "name": "AMD Ryzen 9 3950X",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 455.95,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 16,
+      "socket": "AM4",
+      "tdp": 105,
+      "base_clock": 3.5,
+      "boost_clock": 4.7,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 2"
+    }
+  },
+  {
+    "id": "cpu_088",
+    "name": "Intel Core i5-14500",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 238.09,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 14,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.6,
+      "boost_clock": 5.0,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_089",
+    "name": "Intel Core i5-11400",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 159.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 2.6,
+      "boost_clock": 4.4,
+      "integrated_graphics": "Intel UHD Graphics 730",
+      "microarchitecture": "Rocket Lake"
+    }
+  },
+  {
+    "id": "cpu_090",
+    "name": "Intel Core i9-13900KS",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 429.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 24,
+      "socket": "LGA1700",
+      "tdp": 150,
+      "base_clock": 3.0,
+      "boost_clock": 6.0,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_091",
+    "name": "Intel Core i9-12900KS",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 379.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 16,
+      "socket": "LGA1700",
+      "tdp": 150,
+      "base_clock": 3.4,
+      "boost_clock": 5.5,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_092",
+    "name": "Intel Core i3-10100",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 99.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 3.6,
+      "boost_clock": 4.3,
+      "integrated_graphics": "Intel UHD Graphics 630",
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_093",
+    "name": "Intel Core i5-12500",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 179.92,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 3.0,
+      "boost_clock": 4.6,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_094",
+    "name": "Intel Core i7-10700KF",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 245.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "LGA1200",
+      "tdp": 125,
+      "base_clock": 3.8,
+      "boost_clock": 5.1,
+      "integrated_graphics": null,
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_095",
+    "name": "Intel Core i3-10105F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 143.53,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 3.7,
+      "boost_clock": 4.4,
+      "integrated_graphics": null,
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_096",
+    "name": "Intel Core i7-11700KF",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 354.57,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "LGA1200",
+      "tdp": 125,
+      "base_clock": 3.6,
+      "boost_clock": 5.0,
+      "integrated_graphics": null,
+      "microarchitecture": "Rocket Lake"
+    }
+  },
+  {
+    "id": "cpu_097",
+    "name": "Intel Core i7-11700",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 377.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 2.5,
+      "boost_clock": 4.9,
+      "integrated_graphics": "Intel UHD Graphics 750",
+      "microarchitecture": "Rocket Lake"
+    }
+  },
+  {
+    "id": "cpu_098",
+    "name": "Intel Core i3-13100",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 125.25,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "LGA1700",
+      "tdp": 60,
+      "base_clock": 3.4,
+      "boost_clock": 4.5,
+      "integrated_graphics": "Intel UHD Graphics 730",
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_099",
+    "name": "Intel Core i9-11900KF",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 399.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "LGA1200",
+      "tdp": 125,
+      "base_clock": 3.5,
+      "boost_clock": 5.3,
+      "integrated_graphics": null,
+      "microarchitecture": "Rocket Lake"
+    }
+  },
+  {
+    "id": "cpu_100",
+    "name": "Intel Core i7-13700",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 319.93,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 16,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.1,
+      "boost_clock": 5.2,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_101",
+    "name": "AMD Ryzen 3 3300X",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 110.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.8,
+      "boost_clock": 4.3,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 2"
+    }
+  },
+  {
+    "id": "cpu_102",
+    "name": "Intel Core i9-14900F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 499.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 24,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.0,
+      "boost_clock": 5.8,
+      "integrated_graphics": null,
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_103",
+    "name": "AMD Ryzen 5 3600XT",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 609.9,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "AM4",
+      "tdp": 95,
+      "base_clock": 3.8,
+      "boost_clock": 4.5,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 2"
+    }
+  },
+  {
+    "id": "cpu_104",
+    "name": "Intel Core i5-11600KF",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 169.89,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "LGA1200",
+      "tdp": 125,
+      "base_clock": 3.9,
+      "boost_clock": 4.9,
+      "integrated_graphics": null,
+      "microarchitecture": "Rocket Lake"
+    }
+  },
+  {
+    "id": "cpu_105",
+    "name": "Intel Core i3-10105",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 99.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 3.7,
+      "boost_clock": 4.4,
+      "integrated_graphics": "Intel UHD Graphics 630",
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_106",
+    "name": "Intel Core i5-10600KF",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 236.92,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "LGA1200",
+      "tdp": 125,
+      "base_clock": 4.1,
+      "boost_clock": 4.8,
+      "integrated_graphics": null,
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_107",
+    "name": "AMD Ryzen 5 5600T",
+    "category": "CPU",
+    "brand": "AMD",
+    "price": 160.19,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "AM4",
+      "tdp": 65,
+      "base_clock": 3.5,
+      "boost_clock": 4.5,
+      "integrated_graphics": null,
+      "microarchitecture": "Zen 3"
+    }
+  },
+  {
+    "id": "cpu_108",
+    "name": "Intel Core i9-14900",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 571.86,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 24,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.0,
+      "boost_clock": 5.8,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Raptor Lake Refresh"
+    }
+  },
+  {
+    "id": "cpu_109",
+    "name": "Intel Core i5-10500",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 229.95,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 3.1,
+      "boost_clock": 4.5,
+      "integrated_graphics": "Intel UHD Graphics 630",
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_110",
+    "name": "Intel Core i9-10980XE",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 1004.04,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 18,
+      "socket": "LGA1200",
+      "tdp": 165,
+      "base_clock": 3.0,
+      "boost_clock": 4.8,
+      "integrated_graphics": null,
+      "microarchitecture": "Cascade Lake"
+    }
+  },
+  {
+    "id": "cpu_111",
+    "name": "Intel Core i9-13900",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 414.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 24,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.0,
+      "boost_clock": 5.6,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_112",
+    "name": "Intel Core i5-12600",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 249.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 3.3,
+      "boost_clock": 4.8,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_113",
+    "name": "Intel Core i9-10900",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 390.77,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 10,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 2.8,
+      "boost_clock": 5.2,
+      "integrated_graphics": "Intel UHD Graphics 630",
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_114",
+    "name": "Intel Core i9-10900X",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 479.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 10,
+      "socket": "LGA1200",
+      "tdp": 165,
+      "base_clock": 3.7,
+      "boost_clock": 4.7,
+      "integrated_graphics": null,
+      "microarchitecture": "Cascade Lake"
+    }
+  },
+  {
+    "id": "cpu_115",
+    "name": "Intel Core i9-13900F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 516.43,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 24,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.0,
+      "boost_clock": 5.6,
+      "integrated_graphics": null,
+      "microarchitecture": "Raptor Lake"
+    }
+  },
+  {
+    "id": "cpu_116",
+    "name": "Intel Core i5-11600",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 140.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 2.8,
+      "boost_clock": 4.8,
+      "integrated_graphics": "Intel UHD Graphics 750",
+      "microarchitecture": "Rocket Lake"
+    }
+  },
+  {
+    "id": "cpu_117",
+    "name": "Intel Core i5-11500",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 160.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 2.7,
+      "boost_clock": 4.6,
+      "integrated_graphics": "Intel UHD Graphics 750",
+      "microarchitecture": "Rocket Lake"
+    }
+  },
+  {
+    "id": "cpu_118",
+    "name": "Intel Core i9-11900F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 329.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 2.5,
+      "boost_clock": 5.2,
+      "integrated_graphics": null,
+      "microarchitecture": "Rocket Lake"
+    }
+  },
+  {
+    "id": "cpu_119",
+    "name": "Intel Core i9-12900F",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 359.89,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 16,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.4,
+      "boost_clock": 5.1,
+      "integrated_graphics": null,
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_120",
+    "name": "Intel Core i9-12900",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 391.4,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 16,
+      "socket": "LGA1700",
+      "tdp": 65,
+      "base_clock": 2.4,
+      "boost_clock": 5.1,
+      "integrated_graphics": "Intel UHD Graphics 770",
+      "microarchitecture": "Alder Lake"
+    }
+  },
+  {
+    "id": "cpu_121",
+    "name": "Intel Core i5-10600",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 529.95,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 6,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 3.3,
+      "boost_clock": 4.8,
+      "integrated_graphics": "Intel UHD Graphics 630",
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_122",
+    "name": "Intel Core i9-10920X",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 769.87,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 12,
+      "socket": "LGA1200",
+      "tdp": 165,
+      "base_clock": 3.5,
+      "boost_clock": 4.8,
+      "integrated_graphics": null,
+      "microarchitecture": "Cascade Lake"
+    }
+  },
+  {
+    "id": "cpu_123",
+    "name": "Intel Core i9-11900",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 390.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 2.5,
+      "boost_clock": 5.2,
+      "integrated_graphics": "Intel UHD Graphics 750",
+      "microarchitecture": "Rocket Lake"
+    }
+  },
+  {
+    "id": "cpu_124",
+    "name": "Intel Core i9-10940X",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 699.99,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 14,
+      "socket": "LGA1200",
+      "tdp": 165,
+      "base_clock": 3.3,
+      "boost_clock": 4.8,
+      "integrated_graphics": null,
+      "microarchitecture": "Cascade Lake"
+    }
+  },
+  {
+    "id": "cpu_125",
+    "name": "Intel Core i7-10700K Avengers Collector's Edition",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 741.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 8,
+      "socket": "LGA1200",
+      "tdp": 125,
+      "base_clock": 3.8,
+      "boost_clock": 5.1,
+      "integrated_graphics": "Intel UHD Graphics 630",
+      "microarchitecture": "Comet Lake"
+    }
+  },
+  {
+    "id": "cpu_126",
+    "name": "Intel Core i3-10320",
+    "category": "CPU",
+    "brand": "Intel",
+    "price": 120.0,
+    "link": null,
+    "year": null,
+    "specs": {
+      "cores": 4,
+      "socket": "LGA1200",
+      "tdp": 65,
+      "base_clock": 3.8,
+      "boost_clock": 4.6,
+      "integrated_graphics": "Intel UHD Graphics 630",
+      "microarchitecture": "Comet Lake"
+    }
+  }
+]
