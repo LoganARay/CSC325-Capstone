@@ -15,7 +15,7 @@ public class HelloApplication extends Application {
        // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         //Scene scene = new Scene(fxmlLoader.load(), 320, 240);
 
-        scene = new Scene(loadFXML("homeView.fxml"));
+        scene = new Scene(loadFXML("homeView.fxml"), 950, 750);
         stage.setTitle("Steam Builder");
 
         stage.setScene(scene);
@@ -25,6 +25,7 @@ public class HelloApplication extends Application {
 
     public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
+
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
