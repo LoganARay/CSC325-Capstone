@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" style="-fx-background-color: #1b2838;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.14-internal" fx:controller="edu.farmingdale.csc325capstone.QuestionnaireController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <VBox spacing="12" style="-fx-background-color: #2a475e; -fx-background-radius: 8;">
+
+        <padding>
+            <Insets bottom="20" left="20" right="20" top="20" />
+        </padding>
+
+        <Label fx:id="questionCounter" style="-fx-text-fill: #c7d5e0; -fx-font-size: 12px;" text="Question 1 of 7" />
+
+        <Label fx:id="questionText" style="-fx-text-fill: white; -fx-font-size: 17px; -fx-font-weight: bold;" text="What is your budget range?" wrapText="true" />
+
+        <Label fx:id="questionHint" style="-fx-text-fill: #8ba3b5; -fx-font-size: 12px; -fx-font-style: italic;" text="This drives the overall tier of PC recommended." wrapText="true" />
+
+        <VBox fx:id="budgetOptions" spacing="8">
+            <Button fx:id="budgetBtn1" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="Under 500" />
+
+            <Button fx:id="budgetBtn2" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="500 - 1,000" />
+
+            <Button fx:id="budgetBtn3" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="1,000 - 1,500" />
+
+            <Button fx:id="budgetBtn4" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="1,500+" />
+        </VBox>
+
+        <VBox fx:id="gameList" spacing="8">
+            <Label fx:id="gameArea" maxWidth="Infinity" text="Selected Games: " />
+        </VBox>
+
+        <VBox fx:id="gameSearch" spacing="8">
+            <TextField fx:id="searchField" maxWidth="Infinity" promptText="Search..." />
+        </VBox>
+
+        <VBox fx:id="playStyleOptions" spacing="8">
+            <Button fx:id="playBtn1" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="Online competitive multiplayer" />
+            <Button fx:id="playBtn2" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="Online casual / co-op with friends" />
+            <Button fx:id="playBtn3" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="Solo / offline single-player" />
+            <Button fx:id="playBtn4" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="A mix of everything" />
+        </VBox>
+
+        <VBox fx:id="performanceOptions" spacing="8">
+            <Button fx:id="perfBtn1" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="1080p / 60 fps" />
+            <Button fx:id="perfBtn2" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="1080p / 144+ fps" />
+            <Button fx:id="perfBtn3" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="1440p / high settings" />
+            <Button fx:id="perfBtn4" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="4K / max settings" />
+        </VBox>
+
+        <VBox fx:id="storageOptions" spacing="8">
+            <Button fx:id="storageBtn1" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="256 - 500 GB" />
+            <Button fx:id="storageBtn2" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="1 TB" />
+            <Button fx:id="storageBtn3" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="2 TB" />
+            <Button fx:id="storageBtn4" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="2 TB+" />
+        </VBox>
+
+        <VBox fx:id="priorityOptions" spacing="8">
+            <Button fx:id="priorityBtn1" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="Best raw performance" />
+            <Button fx:id="priorityBtn2" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="Best value for money" />
+            <Button fx:id="priorityBtn3" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="Reliability / brand reputation" />
+            <Button fx:id="priorityBtn4" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="Looks / aesthetics" />
+        </VBox>
+
+        <VBox fx:id="longevityOptions" spacing="8">
+            <Button fx:id="longevityBtn1" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="1 - 2 years" />
+            <Button fx:id="longevityBtn2" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="3 - 4 years" />
+            <Button fx:id="longevityBtn3" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="5+ years" />
+            <Button fx:id="longevityBtn4" maxWidth="Infinity" style="-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;" text="Not sure" />
+        </VBox>
+
+
+    </VBox>
+    <Button fx:id="nextButton" maxWidth="Infinity" onAction="#onNextClicked" style="-fx-background-color: #4c6b22; -fx-text-fill: white; -fx-background-radius: 6; -fx-border-radius: 6; -fx-font-size: 14px;" text="Next" />
+
+</VBox>
