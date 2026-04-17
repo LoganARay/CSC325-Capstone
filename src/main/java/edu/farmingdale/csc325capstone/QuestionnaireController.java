@@ -115,6 +115,8 @@ public class QuestionnaireController {
     private VBox gameList;
     @FXML
     private Label gameArea;
+    @FXML
+    private VBox mainContainer;
 
     private MenuItem item1=new MenuItem(" ");
     private MenuItem item2=new MenuItem(" ");
@@ -376,6 +378,17 @@ public class QuestionnaireController {
         longevityOptions.setVisible(false);
         longevityOptions.setManaged(false);
         nextButton.setVisible(false);
+        Button viewDealButton = new Button("View Deal →");
+        viewDealButton.setMaxWidth(Double.MAX_VALUE);
+        viewDealButton.setStyle("-fx-background-color: #4c6b22; -fx-text-fill: white; -fx-background-radius: 6; -fx-border-radius: 6; -fx-font-size: 14px;");
+        viewDealButton.setOnAction(e -> {
+            try {
+                java.awt.Desktop.getDesktop().browse(new java.net.URI(pc.getLink()));
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+        mainContainer.getChildren().add(viewDealButton);
     }
 
     private void loadQuestion(int questionNumber) {

@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox spacing="20" style="-fx-background-color: #1b2838;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.14-internal" fx:controller="edu.farmingdale.csc325capstone.QuestionnaireController">
+<VBox fx:id="mainContainer" spacing="20" style="-fx-background-color: #1b2838;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.14-internal" fx:controller="edu.farmingdale.csc325capstone.QuestionnaireController">
 
     <padding>
         <Insets bottom="20" left="20" right="20" top="20" />
