@@ -1,24 +1,25 @@
 package edu.farmingdale.csc325capstone;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+
 import java.io.IOException;
 
 public class SandboxViewController {
     @FXML
-    private ComboBox<?> caseCombo;
+    private ComboBox<String> caseCombo;
 
     @FXML
     private Button clearButton;
 
     @FXML
-    private ComboBox<?> cpuCombo;
+    private ComboBox<String> cpuCombo;
 
     @FXML
-    private ComboBox<?> gpuCombo;
+    private ComboBox<String> gpuCombo;
 
     @FXML
     private Button homeButton;
@@ -27,19 +28,19 @@ public class SandboxViewController {
     private Button loginButton;
 
     @FXML
-    private ComboBox<?> motherboardCombo;
+    private ComboBox<String> motherboardCombo;
 
     @FXML
-    private ComboBox<?> psuCombo;
+    private ComboBox<String> psuCombo;
 
     @FXML
-    private ComboBox<?> ramCombo;
+    private ComboBox<String> ramCombo;
 
     @FXML
     private Button saveButton;
 
     @FXML
-    private ComboBox<?> storageCombo;
+    private ComboBox<String> storageCombo;
 
     @FXML
     private Label totalCostLabel;
@@ -57,7 +58,17 @@ public class SandboxViewController {
     private Button viewSavedButton;
 
 
-
+    @FXML
+    public void initialize(){
+        setCases();
+        setCpus();
+        setMotherboards();
+        setGpus();
+        setRam();
+        setStorage();
+        setGpus();
+        setPsu();
+    }
     @FXML
     void handleHome(ActionEvent event) throws IOException {
         HelloApplication.setRoot("homeView.fxml");
@@ -100,5 +111,39 @@ public class SandboxViewController {
 
     }
 
+    public void setCases(){
+        ObservableList<String> names= (FXCollections.observableArrayList(HelloApplication.getNamesParts(HelloApplication.cases)));
+        caseCombo.setItems(names);
+    }
+
+    public void setCpus(){
+        ObservableList<String> names= (FXCollections.observableArrayList(HelloApplication.getNamesParts(HelloApplication.cpus)));
+        cpuCombo.setItems(names);
+    }
+
+    public void setGpus(){
+        ObservableList<String> names= (FXCollections.observableArrayList(HelloApplication.getNamesParts(HelloApplication.gpus)));
+        gpuCombo.setItems(names);
+    }
+
+    public void setRam(){
+        ObservableList<String> names= (FXCollections.observableArrayList(HelloApplication.getNamesParts(HelloApplication.ram)));
+        ramCombo.setItems(names);
+    }
+
+    public void setMotherboards(){
+        ObservableList<String> names= (FXCollections.observableArrayList(HelloApplication.getNamesParts(HelloApplication.motherboards)));
+        motherboardCombo.setItems(names);
+    }
+
+    public void setPsu(){
+        ObservableList<String> names= (FXCollections.observableArrayList(HelloApplication.getNamesParts(HelloApplication.psus)));
+        psuCombo.setItems(names);
+    }
+
+    public void setStorage(){
+        ObservableList<String> names= (FXCollections.observableArrayList(HelloApplication.getNamesParts(HelloApplication.storage)));
+        storageCombo.setItems(names);
+    }
 }
 
