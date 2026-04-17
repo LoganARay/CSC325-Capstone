@@ -1,5 +1,6 @@
 package edu.farmingdale.csc325capstone;
 
+import edu.farmingdale.csc325capstone.service.FirebaseService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,6 +15,9 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
        // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         //Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+
+        // Initialize Firebase once when the app starts
+        FirebaseService.initialize();
 
         scene = new Scene(loadFXML("homeView.fxml"));
         stage.setTitle("Steam Builder");

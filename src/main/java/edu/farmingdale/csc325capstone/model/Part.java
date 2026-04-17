@@ -117,4 +117,13 @@ public class Part {
                 ", specs=" + specs +
                 '}';
     }
+    public double getSpecAsDouble(String key, double defaultValue) {
+        if (specs == null) return defaultValue;
+        Object val = specs.get(key);
+        if (val instanceof Number) return ((Number) val).doubleValue();
+        if (val instanceof String) {
+            try { return Double.parseDouble((String) val); } catch (NumberFormatException e) {}
+        }
+        return defaultValue;
+    }
 }
