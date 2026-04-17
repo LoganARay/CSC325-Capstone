@@ -44,10 +44,14 @@ public class HelloApplication extends Application {
             ram=c.loadRepo("ram");
             storage=c.loadRepo("storage");
 
+<<<<<<< GUI-css-styling
+        scene = new Scene(loadFXML("homeView.fxml"), 950, 750);
+=======
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
         scene = new Scene(loadFXML("homeView.fxml"));
+>>>>>>> master
         stage.setTitle("Steam Builder");
 
         stage.setScene(scene);

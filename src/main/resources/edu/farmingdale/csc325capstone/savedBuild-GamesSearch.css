@@ -1,0 +1,72 @@
+.title {
+    -fx-font-size: 25px;
+    -fx-font-family: "System";
+    -fx-font-weight: bold;
+    -fx-text-fill: #f7f9ff;
+}
+
+.partSection {
+    -fx-font-size: 15px;
+    -fx-font-family: "System";
+    -fx-font-weight: bold;
+    -fx-text-fill: #f2f5ff;
+}
+
+.partField-label {
+    -fx-font-size: 12px;
+    -fx-font-family: "System";
+    -fx-font-weight: bold;
+    -fx-text-fill: #e4e9ff;
+}
+
+.normalText {
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
+}
+
+.cardVbox {
+    -fx-background-radius: 10;
+    -fx-background-color: #101730;
+    -fx-border-color: rgba(56, 75, 117, .1);
+    
+    -fx-border-radius: 10;
+}
+
+.primaryButton {
+    -fx-font-size: 12px;
+    -fx-font-family: "System";
+    -fx-font-weight: bold;
+    -fx-padding: 8 15;
+    -fx-background-radius: 10;
+    -fx-background-color: #1f4fff;
+    -fx-text-fill: white;
+}
+
+.primaryButton:hover {
+    -fx-background-color: #8fa7ff;
+}
+
+
+.root {
+    -fx-background-color: #070b1a;
+    
+    
+
+}
+
+
+.list-view {
+    
+    -fx-control-inner-background: #101730;
+    -fx-border-color: rgba(56, 75, 117, .1);
+    -fx-background-radius: 10;
+    -fx-prompt-text-fill: white;
+    -fx-text-fill: white;
+    
+}
+
+.text-field {
+    -fx-background-color: #121a32;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
