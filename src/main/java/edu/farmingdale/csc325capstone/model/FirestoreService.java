@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
+import edu.farmingdale.csc325capstone.FirestoreContent;
 
 public class FirestoreService {
     private final Firestore db;
@@ -44,19 +45,21 @@ public class FirestoreService {
         buildRef.set(buildData);
     }
 
-    public void getBuildsForUser(String userId, BuildsCallback callback) {
-        db.collection("users").document(userId).collection("builds")
-                .orderBy("timestamp", Query.Direction.DESCENDING)
-                .get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
-                    List<Map<String, Object>> builds = new ArrayList<>();
-                    for (QueryDocumentSnapshot doc : queryDocumentSnapshots) {
-                        builds.add(doc.getData());
-                    }
-                    callback.onSuccess(builds);
-                })
-                .addOnFailureListener(callback::onFailure);
-    }
+   /*
+public void getBuildsForUser(String userId, BuildsCallback callback) {
+    db.collection("users").document(userId).collection("builds")
+            .orderBy("timestamp", Query.Direction.DESCENDING)
+            .get()
+            .addOnSuccessListener(queryDocumentSnapshots -> {
+                List<Map<String, Object>> builds = new ArrayList<>();
+                for (QueryDocumentSnapshot doc : queryDocumentSnapshots) {
+                    builds.add(doc.getData());
+                }
+                callback.onSuccess(builds);
+            })
+            .addOnFailureListener(callback::onFailure);
+}
+*/
 
     public interface BuildsCallback {
         void onSuccess(List<Map<String, Object>> builds);

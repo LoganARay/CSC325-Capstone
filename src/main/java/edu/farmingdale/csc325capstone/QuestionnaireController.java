@@ -6,6 +6,9 @@ import javafx.fxml.FXML;
 import javafx.geometry.Side;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
+import edu.farmingdale.csc325capstone.model.PreBuilt;
+import edu.farmingdale.csc325capstone.service.PreBuiltService;
+import java.util.List;
 
 import java.util.*;
 import java.util.concurrent.ExecutionException;
@@ -253,12 +256,126 @@ public class QuestionnaireController {
         if (selectedBudget == null) {
             return;
         }
+        if (currentQuestion == 7) {
+            getRecommendation();
+            return;
+        }
         currentQuestion++;
         if (currentQuestion > 7) {
             currentQuestion = 7;
             return;
         }
         loadQuestion(currentQuestion);
+    }
+    private void getRecommendation() {
+        new Thread(() -> {
+            try {
+                PreBuiltService service = new PreBuiltService();
+                List<PreBuilt> allPCs = service.getAllPreBuilts();
+
+                PreBuilt best = null;
+                int bestScore = -1;
+
+                for (PreBuilt pc : allPCs) {
+                    if (!isWithinBudget(pc)) continue;
+                    int score = scorePC(pc);
+                    if (score > bestScore) {
+                        bestScore = score;
+                        best = pc;
+                    }
+                }
+
+                final PreBuilt recommendation = best;
+                javafx.application.Platform.runLater(() -> showRecommendation(recommendation));
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
+    }
+    private boolean isWithinBudget(PreBuilt pc) {
+        double price = pc.getPrice();
+        switch (selectedBudget) {
+            case "under_500":     return price < 500;
+            case "$500 - $1,000": return price >= 500 && price <= 1000;
+            case "1000_1500":     return price >= 1000 && price <= 1500;
+            case "1500_plus":     return price > 1500;
+            default:              return true;
+        }
+    }
+    private int scorePC(PreBuilt pc) {
+        int score = 0;
+        String gpu = pc.getGPU() != null ? pc.getGPU().toLowerCase() : "";
+        String ram = pc.getRAM() != null ? pc.getRAM().toLowerCase() : "";
+        String storage = pc.getStorage() != null ? pc.getStorage().toLowerCase() : "";
+
+        // Score based on performance target
+        if ("4k".equals(selectedPerformance)) {
+            if (gpu.contains("4090") || gpu.contains("4080") || gpu.contains("3090")) score += 3;
+            else if (gpu.contains("4070") || gpu.contains("3080")) score += 2;
+            else if (gpu.contains("4060") || gpu.contains("3070")) score += 1;
+        } else if ("1440_high".equals(selectedPerformance)) {
+            if (gpu.contains("4070") || gpu.contains("3080") || gpu.contains("3070")) score += 3;
+            else if (gpu.contains("4060") || gpu.contains("3060")) score += 2;
+        } else if ("1080_144".equals(selectedPerformance)) {
+            if (gpu.contains("3060") || gpu.contains("4060") || gpu.contains("2070")) score += 3;
+            else if (gpu.contains("3050") || gpu.contains("2060")) score += 2;
+        } else {
+            score += 1;
+        }
+
+        // Score based on storage
+        if ("2tb_plus".equals(selectedStorage)) {
+            if (storage.contains("4tb") || storage.contains("3tb")) score += 3;
+            else if (storage.contains("2tb")) score += 2;
+        } else if ("2tb".equals(selectedStorage)) {
+            if (storage.contains("2tb")) score += 3;
+            else if (storage.contains("1tb")) score += 1;
+        } else if ("1tb".equals(selectedStorage)) {
+            if (storage.contains("1tb")) score += 3;
+        } else {
+            score += 1;
+        }
+
+        // Score based on RAM
+        if (ram.contains("32gb")) score += 2;
+        else if (ram.contains("16gb")) score += 1;
+
+        // Score based on longevity
+        if ("5_plus_years".equals(selectedLongevity)) {
+            if (gpu.contains("4080") || gpu.contains("4090")) score += 3;
+            else if (gpu.contains("4070") || gpu.contains("3080")) score += 2;
+        } else if ("3_4_years".equals(selectedLongevity)) {
+            if (gpu.contains("4060") || gpu.contains("3070")) score += 2;
+        }
+
+        return score;
+    }
+    private void showRecommendation(PreBuilt pc) {
+        if (pc == null) {
+            questionCounter.setText("No match found");
+            questionText.setText("Sorry, no pre-built PC matched your budget and preferences.");
+            questionHint.setText("Try adjusting your budget or preferences.");
+            return;
+        }
+
+        questionCounter.setText("Your Recommendation");
+        questionText.setText(pc.getName());
+        questionHint.setText("Price: $" + pc.getPrice() + " | GPU: " + pc.getGPU() + " | RAM: " + pc.getRAM() + " | Storage: " + pc.getStorage());
+
+        budgetOptions.setVisible(false);
+        budgetOptions.setManaged(false);
+        playStyleOptions.setVisible(false);
+        playStyleOptions.setManaged(false);
+        performanceOptions.setVisible(false);
+        performanceOptions.setManaged(false);
+        storageOptions.setVisible(false);
+        storageOptions.setManaged(false);
+        priorityOptions.setVisible(false);
+        priorityOptions.setManaged(false);
+        longevityOptions.setVisible(false);
+        longevityOptions.setManaged(false);
+        nextButton.setVisible(false);
     }
 
     private void loadQuestion(int questionNumber) {
