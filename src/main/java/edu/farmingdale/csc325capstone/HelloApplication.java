@@ -11,9 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ExecutionException;
 
 public class HelloApplication extends Application {
@@ -76,20 +74,18 @@ public class HelloApplication extends Application {
         }
     }
 
-    public static ArrayList<String> getNamesParts(Map<String, Map<String, Object>> part){
-        ArrayList<String> names= new ArrayList<String>();
+    public static HashMap<String, String> getNamesParts(Map<String, Map<String, Object>> part){
+        HashMap<String, String> ids= new HashMap<String, String>();
+        Set<String> source= part.keySet();
+        Object[] id = source.toArray();
+        int count=0;
         for(Map<String, Object> name: part.values()){
-            names.add(name.get("name") + "");
+            if((double)name.get("price")!=0.0) {
+                ids.put(name.get("name") + "", id[count] + "");
+            }
+            count++;
         }
-        return names;
-    }
-
-    public static ArrayList<String> getNamesCpus(){
-        ArrayList<String> names= new ArrayList<String>();
-        for(Map<String, Object> name: cpus.values()){
-            names.add(name.get("name") + "");
-        }
-        return names;
+        return ids;
     }
 
 

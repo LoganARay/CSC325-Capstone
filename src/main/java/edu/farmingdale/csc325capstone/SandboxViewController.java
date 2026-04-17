@@ -1,5 +1,7 @@
 package edu.farmingdale.csc325capstone;
 
+import com.google.cloud.firestore.Firestore;
+import edu.farmingdale.csc325capstone.PcParts.UserBuilds;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -7,6 +9,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SandboxViewController {
     @FXML
@@ -57,17 +61,106 @@ public class SandboxViewController {
     @FXML
     private Button viewSavedButton;
 
+    private HashMap<String, String> caseCalls;
+    private HashMap<String, String> cpuCalls;
+    private HashMap<String, String> motherboardCalls;
+    private HashMap<String, String> gpuCalls;
+    private HashMap<String, String> ramCalls;
+    private HashMap<String, String> storageCalls;
+    private HashMap<String, String> psuCalls;
+
+    private UserBuilds build=null;
 
     @FXML
     public void initialize(){
+        FirestoreContent contxtFirebase = new FirestoreContent();
+        Firestore fstore = contxtFirebase.firebase();
         setCases();
         setCpus();
         setMotherboards();
         setGpus();
         setRam();
         setStorage();
-        setGpus();
         setPsu();
+
+        caseCombo.setOnAction(event -> {
+            String selected = caseCombo.getValue();
+            String dir= caseCalls.get(selected);
+            if(build==null){
+                build=new UserBuilds();
+
+            }
+            build.setCaseDir(dir);
+            System.out.println(build.getTotalValue()+"");
+            totalCostNumber.setText(build.getTotalValue()+"");
+        });
+
+        cpuCombo.setOnAction(event -> {
+            String selected = cpuCombo.getValue();
+            String dir= cpuCalls.get(selected);
+            if(build==null){
+                build=new UserBuilds();
+            }
+            build.setCpuDir(dir);
+            System.out.println(build.getTotalValue()+"");
+            totalCostNumber.setText(build.getTotalValue()+"");
+        });
+
+        gpuCombo.setOnAction(event -> {
+            String selected = gpuCombo.getValue();
+            String dir= gpuCalls.get(selected);
+            if(build==null){
+                build=new UserBuilds();
+            }
+            build.setGpuDir(dir);
+            System.out.println(build.getTotalValue()+"");
+            totalCostNumber.setText(build.getTotalValue()+"");
+        });
+
+        motherboardCombo.setOnAction(event -> {
+            String selected = motherboardCombo.getValue();
+            String dir= motherboardCalls.get(selected);
+            if(build==null){
+                build=new UserBuilds();
+            }
+            build.setMotherboardDir(dir);
+            System.out.println(build.getTotalValue()+"");
+            totalCostNumber.setText(build.getTotalValue()+"");
+        });
+
+        storageCombo.setOnAction(event -> {
+            String selected = storageCombo.getValue();
+            String dir= storageCalls.get(selected);
+            if(build==null){
+                build=new UserBuilds();
+            }
+            build.setStorageDir(dir);
+            System.out.println(build.getTotalValue()+"");
+            totalCostNumber.setText(build.getTotalValue()+"");
+        });
+
+        ramCombo.setOnAction(event -> {
+            String selected = ramCombo.getValue();
+            String dir= ramCalls.get(selected);
+            if(build==null){
+                build=new UserBuilds();
+            }
+            build.setRamDir(dir);
+            System.out.println(build.getTotalValue()+"");
+            totalCostNumber.setText(build.getTotalValue()+"");
+        });
+
+        psuCombo.setOnAction(event -> {
+            String selected = psuCombo.getValue();
+            String dir= psuCalls.get(selected);
+            if(build==null){
+                build=new UserBuilds();
+            }
+            build.setPsusDir(dir);
+            totalWattage.setText(build.getWattage() + "");
+            System.out.println(build.getTotalValue()+"");
+            totalCostNumber.setText(build.getTotalValue()+"");
+        });
     }
     @FXML
     void handleHome(ActionEvent event) throws IOException {
@@ -112,37 +205,44 @@ public class SandboxViewController {
     }
 
     public void setCases(){
-        ObservableList<String> names= (FXCollections.observableArrayList(HelloApplication.getNamesParts(HelloApplication.cases)));
+        caseCalls=HelloApplication.getNamesParts(HelloApplication.cases);
+        ObservableList<String> names= (FXCollections.observableArrayList(caseCalls.keySet()));
         caseCombo.setItems(names);
     }
 
     public void setCpus(){
-        ObservableList<String> names= (FXCollections.observableArrayList(HelloApplication.getNamesParts(HelloApplication.cpus)));
+        cpuCalls= HelloApplication.getNamesParts(HelloApplication.cpus);
+        ObservableList<String> names= (FXCollections.observableArrayList(cpuCalls.keySet()));
         cpuCombo.setItems(names);
     }
 
     public void setGpus(){
-        ObservableList<String> names= (FXCollections.observableArrayList(HelloApplication.getNamesParts(HelloApplication.gpus)));
+        gpuCalls=HelloApplication.getNamesParts(HelloApplication.gpus);
+        ObservableList<String> names= (FXCollections.observableArrayList(gpuCalls.keySet()));
         gpuCombo.setItems(names);
     }
 
     public void setRam(){
-        ObservableList<String> names= (FXCollections.observableArrayList(HelloApplication.getNamesParts(HelloApplication.ram)));
+        ramCalls=HelloApplication.getNamesParts(HelloApplication.ram);
+        ObservableList<String> names= (FXCollections.observableArrayList(ramCalls.keySet()));
         ramCombo.setItems(names);
     }
 
     public void setMotherboards(){
-        ObservableList<String> names= (FXCollections.observableArrayList(HelloApplication.getNamesParts(HelloApplication.motherboards)));
+        motherboardCalls=HelloApplication.getNamesParts(HelloApplication.motherboards);
+        ObservableList<String> names= (FXCollections.observableArrayList(motherboardCalls.keySet()));
         motherboardCombo.setItems(names);
     }
 
     public void setPsu(){
-        ObservableList<String> names= (FXCollections.observableArrayList(HelloApplication.getNamesParts(HelloApplication.psus)));
+        psuCalls=HelloApplication.getNamesParts(HelloApplication.psus);
+        ObservableList<String> names= (FXCollections.observableArrayList(psuCalls.keySet()));
         psuCombo.setItems(names);
     }
 
     public void setStorage(){
-        ObservableList<String> names= (FXCollections.observableArrayList(HelloApplication.getNamesParts(HelloApplication.storage)));
+        storageCalls=HelloApplication.getNamesParts(HelloApplication.storage);
+        ObservableList<String> names= (FXCollections.observableArrayList(storageCalls.keySet()));
         storageCombo.setItems(names);
     }
 }
