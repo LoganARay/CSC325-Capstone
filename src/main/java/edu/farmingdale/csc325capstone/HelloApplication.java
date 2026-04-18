@@ -4,6 +4,7 @@ import com.google.cloud.firestore.CollectionReference;
 import com.google.cloud.firestore.DocumentSnapshot;
 import com.google.cloud.firestore.Firestore;
 import edu.farmingdale.csc325capstone.PcParts.SandBoxParts;
+import edu.farmingdale.csc325capstone.model.Part;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
@@ -91,6 +92,27 @@ public class HelloApplication extends Application {
 
     public static void setCurrentUser(String name, String email, String password, HashMap<String, Object> builds){
         user= new User(name, email, password, builds);
+    }
+
+    public static Part getPartByName(Map<String, Map<String, Object>> partMap, String name, String category) {
+        for (Map.Entry<String, Map<String, Object>> entry : partMap.entrySet()) {
+            Map<String, Object> data = entry.getValue();
+            if (name.equals(data.get("name"))) {
+                Part part = new Part();
+                part.setId(entry.getKey());
+                part.setName((String) data.get("name"));
+                part.setCategory(category);
+                part.setBrand((String) data.get("brand"));
+                Object priceObj = data.get("price");
+                part.setPrice(priceObj instanceof Number ? ((Number) priceObj).doubleValue() : 0.0);
+                part.setLink((String) data.get("link"));
+                Object yearObj = data.get("year");
+                part.setYear(yearObj instanceof Number ? ((Number) yearObj).intValue() : null);
+                part.setSpecs((Map<String, Object>) data.get("specs"));
+                return part;
+            }
+        }
+        return null;
     }
 
 
