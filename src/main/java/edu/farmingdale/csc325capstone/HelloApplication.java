@@ -27,6 +27,8 @@ public class HelloApplication extends Application {
     public static Map<String, Map<String, Object>> psus;
     public static Map<String, Map<String, Object>> ram;
     public static Map<String, Map<String, Object>> storage;
+
+    public static User user=null;
     @Override
     public void start(Stage stage) throws IOException {
         // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
@@ -41,7 +43,6 @@ public class HelloApplication extends Application {
             psus=c.loadRepo("psus");
             ram=c.loadRepo("ram");
             storage=c.loadRepo("storage");
-
         scene = new Scene(loadFXML("homeView.fxml"), 950, 750);
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -86,6 +87,10 @@ public class HelloApplication extends Application {
             count++;
         }
         return ids;
+    }
+
+    public static void setCurrentUser(String name, String email, String password, HashMap<String, Object> builds){
+        user= new User(name, email, password, builds);
     }
 
 

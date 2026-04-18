@@ -1,6 +1,8 @@
 package edu.farmingdale.csc325capstone;
 
+import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.Firestore;
+import edu.farmingdale.csc325capstone.PcParts.SandBoxParts;
 import edu.farmingdale.csc325capstone.PcParts.UserBuilds;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -160,6 +162,43 @@ public class SandboxViewController {
             totalWattage.setText(build.getWattage() + "");
             System.out.println(build.getTotalValue()+"");
             totalCostNumber.setText(build.getTotalValue()+"");
+        });
+
+        saveButton.setOnAction(e->{
+            if(cpuCombo.getValue()==null || gpuCombo.getValue()==null || storageCombo.getValue()==null
+                    || ramCombo.getValue()==null || motherboardCombo.getValue()==null
+                    || caseCombo.getValue()==null || psuCombo.getValue()==null){
+                System.out.println("All fields not filled");
+            }
+            else{
+                if(HelloApplication.user==null){
+                    System.out.println("Not logged in");
+                }
+                else{
+                    fstore.collection("Users").document(HelloApplication.user.getEmail())
+                            .update("builds", build.formatParts());
+                    Map<String, Object> u= (Map<String, Object>) fstore.collection("Users").document(HelloApplication.user.getEmail());
+                    SandBoxParts r= new SandBoxParts();
+                    Map<String, Map<String, Object>> users;
+                    try {
+                        users = r.loadRepo("Users");
+                    } catch (Exception ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    Map<String, Object> replacement= users.get(HelloApplication.user.getEmail());
+                    HelloApplication.setCurrentUser(replacement.get("name") + "", replacement.get("email") + "",
+                            replacement.get("password") + "", (HashMap<String, Object>) replacement.get("builds"));
+                    caseCombo.setValue(null);
+                    gpuCombo.setValue(null);
+                    psuCombo.setValue(null);
+                    cpuCombo.setValue(null);
+                    motherboardCombo.setValue(null);
+                    ramCombo.setValue(null);
+                    storageCombo.setValue(null);
+                    totalWattage.setText("0");
+                    totalCostNumber.setText("0");
+                }
+            }
         });
     }
     @FXML

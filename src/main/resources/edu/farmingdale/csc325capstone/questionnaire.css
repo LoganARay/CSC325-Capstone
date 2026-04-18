@@ -1,0 +1,62 @@
+.root {
+    -fx-background-color: #070b1a;
+}
+
+.question-card {
+    -fx-background-color: #101730;
+    -fx-background-radius: 10;
+    -fx-border-color: #384b75;
+    -fx-border-radius: 10;
+}
+
+.question-counter {
+    -fx-font-size: 12px;
+    -fx-text-fill: #8fa7ff;
+}
+
+.question-text {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f7f9ff;
+}
+
+.question-hint {
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+    -fx-text-fill: #8fa7ff;
+}
+
+.answer-button {
+    -fx-background-color: #121a32;
+    -fx-text-fill: #f2f5ff;
+    -fx-background-radius: 6;
+    -fx-border-color: #384b75;
+    -fx-border-radius: 6;
+    -fx-font-size: 13px;
+}
+
+.answer-button:hover {
+    -fx-background-color: #1a2540;
+}
+
+.answer-button-selected {
+    -fx-background-color: #1f4fff;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-border-color: #8fa7ff;
+    -fx-border-radius: 6;
+    -fx-font-size: 13px;
+}
+
+.next-button {
+    -fx-background-color: #1f4fff;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.next-button:hover {
+    -fx-background-color: #8fa7ff;
+}

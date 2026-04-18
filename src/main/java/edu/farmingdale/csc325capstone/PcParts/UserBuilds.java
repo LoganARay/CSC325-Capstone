@@ -2,6 +2,7 @@ package edu.farmingdale.csc325capstone.PcParts;
 
 import edu.farmingdale.csc325capstone.HelloApplication;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class UserBuilds {
@@ -109,5 +110,17 @@ public class UserBuilds {
     public String getWattage(){
         Map<String, Object> temp= (Map<String, Object>) HelloApplication.psus.get(psusDir).get("specs");
         return temp.get("wattage") + "";
+    }
+
+    public HashMap<String, Object> formatParts(){
+        HashMap<String, Object> temp= new HashMap<String, Object>();
+        temp.put("case", caseDir);
+        temp.put("cpu", cpuDir);
+        temp.put("gpu", gpuDir);
+        temp.put("motherboard", motherboardDir);
+        temp.put("ram", ramDir);
+        temp.put("psus", psusDir);
+        temp.put("storage", storageDir);
+        return temp;
     }
 }
