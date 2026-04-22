@@ -1,0 +1,10 @@
+# Example Structure
+1. Project Name (**Steam Builder**)
+2. Description (Breif one-line description)
+3. Table of Contents (Allowing the user to  navigate the visual demo more easly)
+4. Visual Demo (GIF/PNG of the Application being used /tutorial/) 
+5. Installation (Guide for how to run the application)
+6. Usage (Examples of success full code runs) 
+7. Features (What features the application has)
+8. Contributions (User Contribution files)
+9. License (?)
