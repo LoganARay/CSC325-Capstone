@@ -9,84 +9,84 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.csc325capstone.SandboxViewController">
+<AnchorPane prefHeight="650.0" prefWidth="800.0" stylesheets="@savedBuild-GamesSearch.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.csc325capstone.SandboxViewController">
   <children>
     <HBox layoutY="56.8" prefHeight="546.0" prefWidth="800.0" spacing="24" style="-fx-padding: 20 24;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0">
       <children>
         <VBox prefWidth="520" spacing="12">
           <children>
-            <Label text="Build Your PC">
+            <Label style="-fx-font-size: 30;" styleClass="title" text="Build Your PC">
                      <font>
                         <Font name="System Bold" size="30.0" />
                      </font></Label>
 
             <VBox spacing="6">
               <children>
-                <Label text="CPU">
+                <Label styleClass="partSection" text="CPU">
                            <font>
                               <Font size="15.0" />
                            </font></Label>
-                <ComboBox fx:id="cpuCombo" prefWidth="500" promptText="Search CPU..." />
+                <ComboBox fx:id="cpuCombo" prefWidth="500" promptText="Search CPU..." styleClass="list-view" />
               </children>
             </VBox>
 
             <VBox spacing="6">
               <children>
-                <Label text="GPU">
+                <Label styleClass="partSection" text="GPU">
                            <font>
                               <Font size="15.0" />
                            </font></Label>
-                <ComboBox fx:id="gpuCombo" prefWidth="500" promptText="Search GPU..." />
+                <ComboBox fx:id="gpuCombo" prefWidth="500" promptText="Search GPU..." styleClass="list-view" />
               </children>
             </VBox>
 
             <VBox spacing="6">
               <children>
-                <Label text="RAM">
+                <Label styleClass="partSection" text="RAM">
                            <font>
                               <Font size="15.0" />
                            </font></Label>
-                <ComboBox fx:id="ramCombo" prefWidth="500" promptText="Search RAM..." />
+                <ComboBox fx:id="ramCombo" prefWidth="500" promptText="Search RAM..." styleClass="list-view" />
               </children>
             </VBox>
 
             <VBox spacing="6">
               <children>
-                <Label text="Motherboard">
+                <Label styleClass="partSection" text="Motherboard">
                            <font>
                               <Font size="15.0" />
                            </font></Label>
-                <ComboBox fx:id="motherboardCombo" prefWidth="500" promptText="Search Motherboard..." />
+                <ComboBox fx:id="motherboardCombo" prefWidth="500" promptText="Search Motherboard..." styleClass="list-view" />
               </children>
             </VBox>
 
             <VBox spacing="6">
               <children>
-                <Label style="-fx-font-weight: 600;" text="Storage">
+                <Label styleClass="partSection" text="Storage">
                            <font>
                               <Font size="15.0" />
                            </font></Label>
-                <ComboBox fx:id="storageCombo" prefWidth="500" promptText="Search Storage..." />
+                <ComboBox fx:id="storageCombo" prefWidth="500" promptText="Search Storage..." styleClass="list-view" />
               </children>
             </VBox>
 
             <VBox spacing="6">
               <children>
-                <Label text="PSU">
+                <Label styleClass="partSection" text="PSU">
                            <font>
                               <Font size="15.0" />
                            </font></Label>
-                <ComboBox fx:id="psuCombo" prefWidth="500" promptText="Search PSU..." />
+                <ComboBox fx:id="psuCombo" prefWidth="500" promptText="Search PSU..." styleClass="list-view" />
               </children>
             </VBox>
 
             <VBox spacing="6">
               <children>
-                <Label text="Case">
+                <Label styleClass="partSection" text="Case">
                            <font>
                               <Font size="15.0" />
                            </font></Label>
-                <ComboBox fx:id="caseCombo" prefWidth="500" promptText="Search Case..." />
+                <ComboBox fx:id="caseCombo" prefWidth="500" promptText="Search Case..." styleClass="list-view" />
               </children>
             </VBox>
           </children>
@@ -94,25 +94,25 @@
 
         <VBox prefHeight="471.0" prefWidth="212.0" spacing="12">
           <children>
-            <Label text="Summary">
+            <Label styleClass="title" text="Summary">
                      <font>
                         <Font name="System Bold" size="25.0" />
                      </font></Label>
 
             <VBox spacing="4">
               <children>
-                <Label text="Total Cost">
+                <Label styleClass="partSection" text="Total Cost">
                            <font>
                               <Font size="15.0" />
                            </font></Label>
                         <HBox prefHeight="19.0" prefWidth="210.0">
                            <children>
-                              <Label fx:id="totalCostLabel" text="\$">
+                              <Label fx:id="totalCostLabel" style="-fx-font-size: 20;" styleClass="partSection" text="\$">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="totalCostNumber" text=" 0">
+                              <Label fx:id="totalCostNumber" style="-fx-font-size: 20;" styleClass="partSection" text=" 0">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -124,18 +124,18 @@
 
             <VBox spacing="4">
               <children>
-                <Label text="Total Wattage">
+                <Label styleClass="partSection" text="Total Wattage">
                            <font>
                               <Font size="15.0" />
                            </font></Label>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                      <Label fx:id="totalWattage" text="0">
+                      <Label fx:id="totalWattage" styleClass="partSection" text="0">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="totalWLabel" text=" W">
+                              <Label fx:id="totalWLabel" styleClass="partSection" text=" W">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font>
@@ -147,11 +147,11 @@
 
             <HBox spacing="8">
               <children>
-                <Button fx:id="clearButton" onAction="#clearBuildHandle" text="Clear">
+                <Button fx:id="clearButton" onAction="#clearBuildHandle" styleClass="primaryButton" text="Clear">
                            <font>
                               <Font size="15.0" />
                            </font></Button>
-                <Button fx:id="saveButton" onAction="#saveBuildHandle" text="Save">
+                <Button fx:id="saveButton" onAction="#saveBuildHandle" styleClass="primaryButton" text="Save">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -164,10 +164,10 @@
         </VBox>
       </children>
     </HBox>
-      <Button fx:id="homeButton" layoutX="536.0" layoutY="10.0" onAction="#handleHome" style="-fx-background-radius: 12; -fx-padding: 6 16; -fx-font-size: 13px; -fx-font-weight: 700;" text="Home" />
-      <Button fx:id="viewSavedButton" layoutX="623.0" layoutY="10.0" onAction="#handleViewSavedBuild" style="-fx-background-radius: 12; -fx-padding: 6 16; -fx-font-size: 13; -fx-font-weight: 700;" text="Saved" />
-      <Button fx:id="loginButton" layoutX="703.0" layoutY="10.0" onAction="#handleLogin" style="-fx-background-radius: 12; -fx-padding: 6 16; -fx-font-size: 13; -fx-font-weight: 700;" text="Login" />
-      <Label layoutX="10.0" layoutY="10.0" text="Steam Builder">
+      <Button fx:id="homeButton" layoutX="536.0" layoutY="10.0" onAction="#handleHome" style="-fx-background-radius: 12; -fx-padding: 6 16; -fx-font-size: 13px; -fx-font-weight: 700;" styleClass="primaryButton" text="Home" />
+      <Button fx:id="viewSavedButton" layoutX="623.0" layoutY="10.0" onAction="#handleViewSavedBuild" style="-fx-background-radius: 12; -fx-padding: 6 16; -fx-font-size: 13; -fx-font-weight: 700;" styleClass="primaryButton" text="Saved" />
+      <Button fx:id="loginButton" layoutX="703.0" layoutY="10.0" onAction="#handleLogin" style="-fx-background-radius: 12; -fx-padding: 6 16; -fx-font-size: 13; -fx-font-weight: 700;" styleClass="primaryButton" text="Login" />
+      <Label layoutX="10.0" layoutY="10.0" styleClass="title" text="Steam Builder">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>

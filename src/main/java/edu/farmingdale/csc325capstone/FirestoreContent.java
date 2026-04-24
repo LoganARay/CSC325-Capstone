@@ -5,8 +5,6 @@ import com.google.cloud.firestore.Firestore;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.cloud.FirestoreClient;
-import com.google.auth.Credentials;
-import edu.farmingdale.csc325capstone.FirestoreContent;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="750.0" prefWidth="950.0" stylesheets="@savedBuild-GamesSearch.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.csc325capstone.gameSearchController">
+  <children>
+    <HBox alignment="CENTER_LEFT" spacing="16" style="-fx-padding: 12 16;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label styleClass="title" text="Steam Builder" />
+            <Region prefHeight="36.0" prefWidth="495.0" />
+        <HBox alignment="CENTER_RIGHT" spacing="10" AnchorPane.rightAnchor="0.0">
+          <children>
+            <Button fx:id="homeButton" onAction="#handleHome" styleClass="primaryButton" text="Home" />
+            <Button fx:id="savedButton" onAction="#handleSavedBuild" styleClass="primaryButton" text="Saved" />
+            <Button fx:id="loginButton" onAction="#handleLogin" styleClass="primaryButton" text="Login" />
+          </children>
+        </HBox>
+      </children>
+    </HBox>
+
+    <HBox spacing="12" style="-fx-padding: 14;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+      <children>
+        <!-- Left: search + list -->
+        <VBox prefHeight="674.0" prefWidth="370.0" spacing="8">
+          <children>
+            <Label styleClass="title" text="Game Requirements" />
+            <TextField fx:id="searchField" promptText="Search games..." />
+            <ListView fx:id="gamesListView" prefHeight="520" prefWidth="338.0" />
+          </children>
+        </VBox>
+
+        <!-- Right: details -->
+        <VBox prefHeight="674.0" prefWidth="510.0" spacing="6">
+          <children>
+            <Label styleClass="title" text="Select a Game" />
+            <Label fx:id="gameStudioLabel" styleClass="normalText" text="Game name here" />
+
+            <Label styleClass="partSection" text="Minimum Requirements" />
+            <VBox spacing="3" style="-fx-padding: 8;" styleClass="cardVbox">
+              <children>
+                <Label styleClass="partField-label" text="CPU" />
+                <Label fx:id="minCpuLabel" styleClass="normalText" text="set CPU info" />
+              </children>
+            </VBox>
+            <VBox spacing="3" style="-fx-padding: 8;" styleClass="cardVbox">
+              <children>
+                <Label styleClass="partField-label" text="GPU" />
+                <Label fx:id="minGpuLabel" styleClass="normalText" text="" />
+              </children>
+            </VBox>
+            <VBox spacing="3" style="-fx-padding: 8;" styleClass="cardVbox">
+              <children>
+                <Label styleClass="partField-label" text="RAM" />
+                <Label fx:id="minRamLabel" styleClass="normalText" text="" />
+              </children>
+            </VBox>
+
+            <Label styleClass="partSection" text="Recommended Requirements" />
+            <VBox spacing="3" style="-fx-padding: 8;" styleClass="cardVbox">
+              <children>
+                <Label styleClass="partField-label" text="CPU" />
+                <Label fx:id="recCpuLabel" styleClass="normalText" text="" />
+              </children>
+            </VBox>
+            <VBox spacing="3" style="-fx-padding: 8;" styleClass="cardVbox">
+              <children>
+                <Label styleClass="partField-label" text="GPU" />
+                <Label fx:id="recGpuLabel" styleClass="normalText" text="" />
+              </children>
+            </VBox>
+            <VBox spacing="3" style="-fx-padding: 8;" styleClass="cardVbox">
+              <children>
+                <Label styleClass="partField-label" text="RAM" />
+                <Label fx:id="recRamLabel" styleClass="normalText" text="" />
+              </children>
+            </VBox>
+            <VBox spacing="3" style="-fx-padding: 8;" styleClass="cardVbox">
+              <children>
+                <Label styleClass="partField-label" text="Storage" />
+                <Label fx:id="recStorageLabel" styleClass="normalText" text="" />
+              </children>
+            </VBox>
+
+            <Button fx:id="buildButton" onAction="#buildButtonHandle" styleClass="primaryButton" text="Build PC for This Game" />
+          </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+        </VBox>
+      </children>
+    </HBox>
+  </children>
+</AnchorPane>

@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import java.io.IOException;
 
 
+
 public class homeController {
     @FXML
     private Button homeButton;
@@ -23,7 +24,7 @@ public class homeController {
 
     @FXML
     private void handleFindGames(ActionEvent event) throws IOException{
-        HelloApplication.setRoot("findGames.fxml");
+        HelloApplication.setRoot("gameSearch.fxml");
     }
 
     @FXML
@@ -44,7 +45,7 @@ public class homeController {
 
     @FXML
     private void handleSavedBuild(ActionEvent event) throws IOException {
-        HelloApplication.setRoot("savedBuildsView.fxml");
+        HelloApplication.setRoot("savedBuilds.fxml");
     }
 
     @FXML
