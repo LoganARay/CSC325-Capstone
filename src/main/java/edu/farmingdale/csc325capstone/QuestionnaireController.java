@@ -9,7 +9,9 @@ import javafx.scene.layout.VBox;
 import edu.farmingdale.csc325capstone.model.PreBuilt;
 import edu.farmingdale.csc325capstone.service.PreBuiltService;
 import java.util.List;
-
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import java.util.*;
 import java.util.concurrent.ExecutionException;
 
@@ -117,6 +119,13 @@ public class QuestionnaireController {
     private Label gameArea;
     @FXML
     private VBox mainContainer;
+    @FXML
+    private ImageView pcImageView;
+    @FXML
+    private HBox imageContainer;
+
+    @FXML
+    private VBox rightPanel;
 
     private MenuItem item1=new MenuItem(" ");
     private MenuItem item2=new MenuItem(" ");
@@ -269,6 +278,11 @@ public class QuestionnaireController {
         }
         loadQuestion(currentQuestion);
     }
+    @FXML
+    private void onHomeClicked() throws Exception {
+        HelloApplication.setRoot("homeView.fxml");
+    }
+
     private void getRecommendation() {
         new Thread(() -> {
             try {
@@ -378,9 +392,27 @@ public class QuestionnaireController {
         longevityOptions.setVisible(false);
         longevityOptions.setManaged(false);
         nextButton.setVisible(false);
+
+        if (pc.getImageURL() != null && !pc.getImageURL().isEmpty()) {
+            Image image = new Image(pc.getImageURL(), true);
+            pcImageView.setImage(image);
+
+            javafx.scene.shape.Rectangle clip = new javafx.scene.shape.Rectangle(500, 350);
+            clip.setArcWidth(20);
+            clip.setArcHeight(20);
+            pcImageView.setClip(clip);
+
+            imageContainer.setVisible(true);
+            imageContainer.setManaged(true);
+        }
+
+        rightPanel.getChildren().removeIf(node -> node instanceof Button && ((Button) node).getText().equals("View Deal →"));
         Button viewDealButton = new Button("View Deal →");
         viewDealButton.setMaxWidth(Double.MAX_VALUE);
-        viewDealButton.setStyle("-fx-background-color: #4c6b22; -fx-text-fill: white; -fx-background-radius: 6; -fx-border-radius: 6; -fx-font-size: 14px;");
+        viewDealButton.setStyle("-fx-background-color: #2d6a2d; -fx-text-fill: white; -fx-background-radius: 8; -fx-border-radius: 8; -fx-font-size: 15px; -fx-font-weight: bold;");
+        viewDealButton.setOnMouseEntered(e -> viewDealButton.setStyle("-fx-background-color: #4c9a4c; -fx-text-fill: white; -fx-background-radius: 8; -fx-border-radius: 8; -fx-font-size: 15px; -fx-font-weight: bold;"));
+        viewDealButton.setOnMouseExited(e -> viewDealButton.setStyle("-fx-background-color: #2d6a2d; -fx-text-fill: white; -fx-background-radius: 8; -fx-border-radius: 8; -fx-font-size: 15px; -fx-font-weight: bold;"));
+        viewDealButton.setPrefHeight(50);
         viewDealButton.setOnAction(e -> {
             try {
                 java.awt.Desktop.getDesktop().browse(new java.net.URI(pc.getLink()));
@@ -388,7 +420,7 @@ public class QuestionnaireController {
                 ex.printStackTrace();
             }
         });
-        mainContainer.getChildren().add(viewDealButton);
+        rightPanel.getChildren().add(viewDealButton);
     }
 
     private void loadQuestion(int questionNumber) {
