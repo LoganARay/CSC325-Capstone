@@ -102,3 +102,25 @@
     -fx-background-color: white;
     -fx-padding: 10;
 }
+.context-menu {
+    -fx-background-color: #121a32;
+    -fx-border-color: #384b75;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.menu-item {
+    -fx-background-color: #121a32;
+}
+
+.menu-item .label {
+    -fx-text-fill: #f2f5ff;
+}
+
+.menu-item:focused {
+    -fx-background-color: #1f4fff;
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: white;
+}
