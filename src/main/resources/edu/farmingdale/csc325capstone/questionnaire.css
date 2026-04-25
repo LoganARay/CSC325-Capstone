@@ -1,12 +1,27 @@
 .root {
     -fx-background-color: #070b1a;
+    -fx-prompt-text-fill: white;
+    -fx-text-fill: white;
 }
+
+.text-field {
+    -fx-background-color: #1b2838;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+
+.normalText {
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
+}
+
 
 .question-card {
     -fx-background-color: #101730;
     -fx-background-radius: 10;
     -fx-border-color: #384b75;
     -fx-border-radius: 10;
+
 }
 
 .question-counter {
