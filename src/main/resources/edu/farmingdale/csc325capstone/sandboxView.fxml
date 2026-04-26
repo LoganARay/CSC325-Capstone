@@ -4,12 +4,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="650.0" prefWidth="800.0" stylesheets="@savedBuild-GamesSearch.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.csc325capstone.SandboxViewController">
+<AnchorPane prefHeight="650.0" prefWidth="1000.0" stylesheets="@savedBuild-GamesSearch.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.csc325capstone.SandboxViewController">
   <children>
     <HBox layoutY="56.8" prefHeight="546.0" prefWidth="800.0" spacing="24" style="-fx-padding: 20 24;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0">
       <children>
@@ -92,7 +93,7 @@
           </children>
         </VBox>
 
-        <VBox prefHeight="471.0" prefWidth="212.0" spacing="12">
+        <VBox prefHeight="471.0" prefWidth="400.0" spacing="12">
           <children>
             <Label styleClass="title" text="Summary">
                      <font>
@@ -160,6 +161,8 @@
                            </HBox.margin></Button>
               </children>
             </HBox>
+                  <Button fx:id="analyzeBuild" mnemonicParsing="false" onAction="#handleAnalyzeBuild" prefHeight="25.0" prefWidth="135.0" text="Analyze Build" />
+                  <TextArea fx:id="aiOutputArea" editable="false" prefHeight="224.0" prefWidth="210.0" wrapText="true" />
           </children>
         </VBox>
       </children>
