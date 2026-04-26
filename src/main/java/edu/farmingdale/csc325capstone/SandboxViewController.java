@@ -2,11 +2,17 @@ package edu.farmingdale.csc325capstone;
 
 import com.google.cloud.firestore.Firestore;
 import edu.farmingdale.csc325capstone.PcParts.UserBuilds;
+import edu.farmingdale.csc325capstone.service.AppState;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+
+import edu.farmingdale.csc325capstone.model.Part;
+import edu.farmingdale.csc325capstone.service.PartService;
+import edu.farmingdale.csc325capstone.service.AIService;
+
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -61,6 +67,10 @@ public class SandboxViewController {
     @FXML
     private Button viewSavedButton;
 
+    @FXML
+    private TextArea aiOutputArea;
+
+
     private HashMap<String, String> caseCalls;
     private HashMap<String, String> cpuCalls;
     private HashMap<String, String> motherboardCalls;
@@ -68,6 +78,9 @@ public class SandboxViewController {
     private HashMap<String, String> ramCalls;
     private HashMap<String, String> storageCalls;
     private HashMap<String, String> psuCalls;
+
+    private PartService partService = new PartService();
+    private AIService aiService = new AIService();
 
     private UserBuilds build=null;
 
@@ -244,6 +257,47 @@ public class SandboxViewController {
         storageCalls=HelloApplication.getNamesParts(HelloApplication.storage);
         ObservableList<String> names= (FXCollections.observableArrayList(storageCalls.keySet()));
         storageCombo.setItems(names);
+    }
+    private Part findSelectedPart(String selectedName, String collection) {
+        if (selectedName == null) return null;
+
+        try {
+            for (Part p : partService.getPartsByCollection(collection)) {
+                if (selectedName.equals(p.getName())) return p;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @FXML
+    private void handleAnalyzeBuild(ActionEvent event) {
+        java.util.List<Part> selectedParts = new java.util.ArrayList<>();
+
+        Part cpu = findSelectedPart(cpuCombo.getValue(), "cpus");
+        Part gpu = findSelectedPart(gpuCombo.getValue(), "gpus");
+        Part ram = findSelectedPart(ramCombo.getValue(), "ram");
+        Part motherboard = findSelectedPart(motherboardCombo.getValue(), "motherboards");
+        Part storage = findSelectedPart(storageCombo.getValue(), "storage");
+        Part psu = findSelectedPart(psuCombo.getValue(), "psus");
+        Part pcCase = findSelectedPart(caseCombo.getValue(), "cases");
+
+        if (cpu != null) selectedParts.add(cpu);
+        if (gpu != null) selectedParts.add(gpu);
+        if (ram != null) selectedParts.add(ram);
+        if (motherboard != null) selectedParts.add(motherboard);
+        if (storage != null) selectedParts.add(storage);
+        if (psu != null) selectedParts.add(psu);
+        if (pcCase != null) selectedParts.add(pcCase);
+
+        if (selectedParts.isEmpty()) {
+            aiOutputArea.setText("Please select at least one part before analyzing.");
+            return;
+        }
+
+        String result = aiService.analyzeBuild(selectedParts, AppState.openAiApiKey);
+        aiOutputArea.setText(result);
     }
 }
 
