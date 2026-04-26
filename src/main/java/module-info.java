@@ -10,6 +10,9 @@ module edu.farmingdale.csc325capstone {
     requires com.google.api.apicommon;
     requires google.cloud.core;
 
+    requires okhttp3;
+    requires org.json;
+
     opens edu.farmingdale.csc325capstone.model to com.fasterxml.jackson.databind, google.cloud.firestore;
 
 
