@@ -30,8 +30,7 @@ public class SandboxViewController {
     @FXML
     private Button homeButton;
 
-    @FXML
-    private Button loginButton;
+
 
     @FXML
     private ComboBox<String> motherboardCombo;
@@ -61,7 +60,22 @@ public class SandboxViewController {
     private Label totalWattage;
 
     @FXML
+    private Label RAMAmount;
+
+    @FXML
+    private Label RAMLabel;
+
+    @FXML
+    private Label StorageLabel;
+
+    @FXML
+    private Label StorageAmount;
+
+    @FXML
     private Button viewSavedButton;
+
+    @FXML
+    private Button analyzeButton;
 
     private HashMap<String, String> caseCalls;
     private HashMap<String, String> cpuCalls;
@@ -97,7 +111,7 @@ public class SandboxViewController {
     }
 
     @FXML
-    void handleViewSavedBuild(ActionEvent event) throws IOException {
+    void handleSavedBuild(ActionEvent event) throws IOException {
         HelloApplication.setRoot("savedBuildsView.fxml");
     }
 
@@ -109,6 +123,11 @@ public class SandboxViewController {
     @FXML
     private void saveBuildHandle(ActionEvent event) throws IOException {
         saveBuildLogic();
+    }
+
+    @FXML
+    private void analyzeBuildHandle(ActionEvent event) throws IOException {
+
     }
 
 

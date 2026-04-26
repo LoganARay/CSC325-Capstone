@@ -13,11 +13,11 @@
   <children>
     <VBox alignment="CENTER" spacing="6">
       <children>
-        <Label style="-fx-font-size: 35;" styleClass="title" text="Steam Builder">
+        <Label styleClass="SteamBuildertitle" text="Steam Builder">
                <font>
                   <Font name="System Bold" size="35.0" />
                </font></Label>
-        <Label prefHeight="50.0" prefWidth="262.0" styleClass="partSection" text="Welcome back! Please login to your account." textAlignment="CENTER" wrapText="true" />
+        <Label prefHeight="64.0" prefWidth="262.0" style="-fx-font-size: 18;" styleClass="partSection" text="Welcome back! Please login to your account." textAlignment="CENTER" wrapText="true" />
       </children>
     </VBox>
 
@@ -31,13 +31,13 @@
                   <Insets bottom="10.0" />
                </padding></Label>
 
-        <Label style="-fx-font-size: 11.5px;" styleClass="partSection" text="Email" />
+        <Label styleClass="partSection" text="Email" />
         <TextField fx:id="emailField" prefHeight="35.0" prefWidth="222.0" promptText="sample@email.com" style="-fx-background-radius: 10;" styleClass="normalText">
                <VBox.margin>
                   <Insets bottom="15.0" />
                </VBox.margin></TextField>
 
-        <Label style="-fx-font-size: 11.5px;" styleClass="partSection" text="Password" />
+        <Label styleClass="partSection" text="Password" />
         <PasswordField fx:id="passwordField" prefHeight="35.0" prefWidth="222.0" style="-fx-background-radius: 10;" styleClass="normalText">
                <VBox.margin>
                   <Insets bottom="15.0" />
