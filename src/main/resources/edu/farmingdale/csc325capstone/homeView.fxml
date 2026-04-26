@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane stylesheets="@savedBuild-GamesSearch.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.csc325capstone.homeController">
+<BorderPane stylesheets="@savedBuild-GamesSearch.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.csc325capstone.homeController">
   <top>
     <HBox alignment="CENTER_LEFT" spacing="24" style="-fx-padding: 14 28;">
       <children>
@@ -25,6 +25,7 @@
           <Button fx:id="homeButton" onAction="#handleHome" style="-fx-background-radius: 12; -fx-padding: 6 16; -fx-font-size: 13px; -fx-font-weight: 700;" styleClass="primaryButton" text="Home" />
           <Button fx:id="savedButton" onAction="#handleSavedBuild" style="-fx-background-radius: 12; -fx-padding: 6 16; -fx-font-size: 13; -fx-font-weight: 700;" styleClass="primaryButton" text="Saved" />
           <Button fx:id="loginButton" onAction="#handleLogin" style="-fx-background-radius: 12; -fx-padding: 6 16; -fx-font-size: 13; -fx-font-weight: 700;" styleClass="primaryButton" text="Login" />
+               <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#handleOpenSettings" text="⚙" />
         </HBox>
       </children>
     </HBox>
