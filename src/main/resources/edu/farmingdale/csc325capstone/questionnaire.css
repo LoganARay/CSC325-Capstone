@@ -10,18 +10,18 @@
 }
 
 .question-counter {
-    -fx-font-size: 12px;
+    -fx-font-size: 14px;
     -fx-text-fill: #8fa7ff;
 }
 
 .question-text {
-    -fx-font-size: 17px;
+    -fx-font-size: 24px;
     -fx-font-weight: bold;
     -fx-text-fill: #f7f9ff;
 }
 
 .question-hint {
-    -fx-font-size: 12px;
+    -fx-font-size: 14px;
     -fx-font-style: italic;
     -fx-text-fill: #8fa7ff;
 }
@@ -32,7 +32,8 @@
     -fx-background-radius: 6;
     -fx-border-color: #384b75;
     -fx-border-radius: 6;
-    -fx-font-size: 13px;
+    -fx-font-size: 15px;
+    -fx-pref-height: 50px;
 }
 
 .answer-button:hover {
@@ -45,7 +46,8 @@
     -fx-background-radius: 6;
     -fx-border-color: #8fa7ff;
     -fx-border-radius: 6;
-    -fx-font-size: 13px;
+    -fx-font-size: 15px;
+    -fx-pref-height: 50px;
 }
 
 .next-button {
@@ -53,10 +55,72 @@
     -fx-text-fill: white;
     -fx-background-radius: 6;
     -fx-border-radius: 6;
-    -fx-font-size: 14px;
+    -fx-font-size: 15px;
     -fx-font-weight: bold;
+    -fx-pref-height: 50px;
 }
 
 .next-button:hover {
     -fx-background-color: #8fa7ff;
+}
+.text-field {
+    -fx-background-color: #121a32;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #8fa7ff;
+}
+
+.label {
+    -fx-text-fill: #f2f5ff;
+}
+.pc-image-container {
+    -fx-border-color: #384b75;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10;
+}
+.pc-image {
+    -fx-effect: dropshadow(gaussian, transparent, 0, 0, 0, 0);
+    -fx-background-radius: 8;
+}
+.view-deal-button {
+    -fx-background-color: #2d6a2d;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-pref-height: 50px;
+}
+
+.view-deal-button:hover {
+    -fx-background-color: #4c9a4c;
+}
+.pc-image-container {
+    -fx-border-color: #384b75;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-background-color: white;
+    -fx-padding: 10;
+}
+.context-menu {
+    -fx-background-color: #121a32;
+    -fx-border-color: #384b75;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.menu-item {
+    -fx-background-color: #121a32;
+}
+
+.menu-item .label {
+    -fx-text-fill: #f2f5ff;
+}
+
+.menu-item:focused {
+    -fx-background-color: #1f4fff;
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: white;
 }

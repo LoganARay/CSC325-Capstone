@@ -13,6 +13,9 @@ public class PreBuilt {
         private Object USB;
         private Object DisplayPort;
         private boolean IsIntel;
+        private String ImageURL;
+
+        public String getImageURL() { return ImageURL; }
 
         // No-arg constructor required for Firestore
         public PreBuilt() {}
@@ -29,5 +32,6 @@ public class PreBuilt {
         public Object getUSB() { return USB; }
         public Object getDisplayPort() { return DisplayPort; }
         public boolean isIntel() { return IsIntel; }
+        public void setImageURL(String ImageURL) { this.ImageURL = ImageURL; }
     }
 
