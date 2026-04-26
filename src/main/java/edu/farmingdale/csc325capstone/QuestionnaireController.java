@@ -256,6 +256,12 @@ public class QuestionnaireController {
         selected.setStyle("-fx-background-color: #4c6b22; -fx-text-fill: white; -fx-background-radius: 6; -fx-border-color: #8bc34a; -fx-border-radius: 6;");
         selectedBudget = value;
     }
+
+    @FXML
+    private void budgetBtn1(){
+
+    }
+
     @FXML
     private void onNextClicked() {
         if (selectedBudget == null) {

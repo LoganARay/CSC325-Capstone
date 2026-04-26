@@ -41,7 +41,7 @@
             <VBox spacing="3" style="-fx-padding: 8;" styleClass="cardVbox">
               <children>
                 <Label styleClass="partField-label" text="CPU" />
-                <Label fx:id="minCpuLabel" styleClass="normalText" text="set CPU info" />
+                <Label fx:id="minCpuLabel" styleClass="normalText"/>
               </children>
             </VBox>
             <VBox spacing="3" style="-fx-padding: 8;" styleClass="cardVbox">

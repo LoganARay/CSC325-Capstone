@@ -32,8 +32,6 @@ public class HelloApplication extends Application {
     public static User user=null;
     @Override
     public void start(Stage stage) throws IOException {
-        // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        //Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         steamGames= fstore.collection("FullSteamGames");
         SandBoxParts c= new SandBoxParts();
         try {
@@ -90,7 +88,7 @@ public class HelloApplication extends Application {
         return ids;
     }
 
-    public static void setCurrentUser(String name, String email, String password, HashMap<String, Object> builds){
+    public static void setCurrentUser(String name, String email, String password, List<Map<String, Object>> builds){
         user= new User(name, email, password, builds);
     }
 
