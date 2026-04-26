@@ -7,6 +7,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class loginController {
@@ -36,7 +37,7 @@ public class loginController {
             for(Map<String, Object> user: users.values()){
                 if((user.get("email") + "").equals(emailField.getText()) && (user.get("password") + "").equals(passwordField.getText())){
                     System.out.println("Email in use!!!");
-                    HelloApplication.setCurrentUser(user.get("name") + "", user.get("email") + "", user.get("password") + "", (HashMap<String, Object>)user.get("builds"));
+                    HelloApplication.setCurrentUser(user.get("name") + "", user.get("email") + "", user.get("password") + "", (List<Map<String, Object>>)user.get("builds"));
                     try {
                         HelloApplication.setRoot("homeView.fxml");
                     } catch (IOException ex) {

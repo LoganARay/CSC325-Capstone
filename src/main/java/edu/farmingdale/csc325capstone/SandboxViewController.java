@@ -13,8 +13,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 public class SandboxViewController {
+    @FXML
+    private TextField buildName;
+
     @FXML
     private ComboBox<String> caseCombo;
 
@@ -112,7 +116,7 @@ public class SandboxViewController {
 
     @FXML
     void handleSavedBuild(ActionEvent event) throws IOException {
-        HelloApplication.setRoot("savedBuildsView.fxml");
+        HelloApplication.setRoot("savedBuilds.fxml");
     }
 
     @FXML
@@ -121,7 +125,7 @@ public class SandboxViewController {
     }
 
     @FXML
-    private void saveBuildHandle(ActionEvent event) throws IOException {
+    private void saveBuildHandle(ActionEvent event) throws IOException, ExecutionException, InterruptedException {
         saveBuildLogic();
     }
 
@@ -145,11 +149,16 @@ public class SandboxViewController {
         selectedParts.clear();
     }
 
-    public void saveBuildLogic() {
-        //TODO
-
-
-
+    public void saveBuildLogic() throws ExecutionException, InterruptedException {
+        if(HelloApplication.user!=null) {
+            if (cpuCombo.getValue() != null && gpuCombo.getValue() != null
+                    && ramCombo.getValue() != null && motherboardCombo.getValue() != null && storageCombo.getValue() != null
+                    && psuCombo.getValue() != null && caseCombo.getValue() != null && buildName.getText()!=null) {
+                HelloApplication.user.updateBuilds(cpuCalls.get(cpuCombo.getValue()), gpuCalls.get(gpuCombo.getValue()), ramCalls.get(ramCombo.getValue()), motherboardCalls.get(motherboardCombo.getValue()), storageCalls.get(storageCombo.getValue()), psuCalls.get(psuCombo.getValue()), caseCalls.get(caseCombo.getValue()), buildName.getText());
+            }
+        }else{
+            System.out.println("no user");
+        }
     }
 
     private void addSelectionListeners() {
@@ -174,28 +183,28 @@ public class SandboxViewController {
         Part cpu = cpuName == null ? null : HelloApplication.getPartByName(HelloApplication.cpus, cpuName, "CPU");
         Part gpu = gpuName == null ? null : HelloApplication.getPartByName(HelloApplication.gpus, gpuName, "Video Card");
         Part ram = ramName == null ? null : HelloApplication.getPartByName(HelloApplication.ram, ramName, "Memory");
-        Part mobo = moboName == null ? null : HelloApplication.getPartByName(HelloApplication.motherboards, moboName, "Motherboard");
+        Part motherboard = moboName == null ? null : HelloApplication.getPartByName(HelloApplication.motherboards, moboName, "Motherboard");
         Part storage = storageName == null ? null : HelloApplication.getPartByName(HelloApplication.storage, storageName, "Internal Hard Drive");
         Part psu = psuName == null ? null : HelloApplication.getPartByName(HelloApplication.psus, psuName, "Power Supply");
-        Part computerCase = caseName == null ? null : HelloApplication.getPartByName(HelloApplication.cases, caseName, "Case");
+        Part pcCase = caseName == null ? null : HelloApplication.getPartByName(HelloApplication.cases, caseName, "Case");
 
         selectedParts.clear();
         selectedParts.put("cpu", cpu);
         selectedParts.put("gpu", gpu);
         selectedParts.put("ram", ram);
-        selectedParts.put("motherboard", mobo);
+        selectedParts.put("motherboard", motherboard);
         selectedParts.put("storage", storage);
         selectedParts.put("psu", psu);
-        selectedParts.put("case", computerCase);
+        selectedParts.put("case", pcCase);
 
         double total = 0;
         if (cpu != null) total += cpu.getPrice();
         if (gpu != null) total += gpu.getPrice();
         if (ram != null) total += ram.getPrice();
-        if (mobo != null) total += mobo.getPrice();
+        if (motherboard != null) total += motherboard.getPrice();
         if (storage != null) total += storage.getPrice();
         if (psu != null) total += psu.getPrice();
-        if (computerCase != null) total += computerCase.getPrice();
+        if (pcCase != null) total += pcCase.getPrice();
         totalCostNumber.setText(String.format("%.2f", total));
 
         int wattage = 0;
@@ -204,7 +213,7 @@ public class SandboxViewController {
         }
         totalWattage.setText(String.valueOf(wattage));
 
-        checkCompatibility(cpu, gpu, ram, mobo, computerCase, psu);
+        checkCompatibility(cpu, gpu, ram, motherboard, pcCase, psu);
     }
 
     private void checkCompatibility(Part cpu, Part gpu, Part ram, Part mobo, Part computerCase, Part psu) {

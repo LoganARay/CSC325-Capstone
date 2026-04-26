@@ -90,7 +90,7 @@ public class HelloApplication extends Application {
         return ids;
     }
 
-    public static void setCurrentUser(String name, String email, String password, HashMap<String, Object> builds){
+    public static void setCurrentUser(String name, String email, String password, List<Map<String, Object>> builds){
         user= new User(name, email, password, builds);
     }
 
