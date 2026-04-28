@@ -11,14 +11,10 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-
+import javafx.scene.layout.VBox;
 import java.io.IOException;
-import java.util.concurrent.ExecutionException;
 
 public class SandboxViewController {
-    @FXML
-    private TextField buildName;
-
     @FXML
     private ComboBox<String> caseCombo;
 
@@ -34,7 +30,8 @@ public class SandboxViewController {
     @FXML
     private Button homeButton;
 
-
+    @FXML
+    private Button loginButton;
 
     @FXML
     private ComboBox<String> motherboardCombo;
@@ -64,22 +61,10 @@ public class SandboxViewController {
     private Label totalWattage;
 
     @FXML
-    private Label RAMAmount;
-
-    @FXML
-    private Label RAMLabel;
-
-    @FXML
-    private Label StorageLabel;
-
-    @FXML
-    private Label StorageAmount;
-
-    @FXML
     private Button viewSavedButton;
 
     @FXML
-    private Button analyzeButton;
+    private VBox detailsVBox;
 
     private HashMap<String, String> caseCalls;
     private HashMap<String, String> cpuCalls;
@@ -115,8 +100,8 @@ public class SandboxViewController {
     }
 
     @FXML
-    void handleSavedBuild(ActionEvent event) throws IOException {
-        HelloApplication.setRoot("savedBuilds.fxml");
+    void handleViewSavedBuild(ActionEvent event) throws IOException {
+        HelloApplication.setRoot("savedBuildsView.fxml");
     }
 
     @FXML
@@ -125,13 +110,8 @@ public class SandboxViewController {
     }
 
     @FXML
-    private void saveBuildHandle(ActionEvent event) throws IOException, ExecutionException, InterruptedException {
+    private void saveBuildHandle(ActionEvent event) throws IOException {
         saveBuildLogic();
-    }
-
-    @FXML
-    private void analyzeBuildHandle(ActionEvent event) throws IOException {
-
     }
 
 
@@ -147,18 +127,14 @@ public class SandboxViewController {
         totalCostNumber.setText("0");
         totalWattage.setText("0");
         selectedParts.clear();
+        detailsVBox.getChildren().clear();
     }
 
-    public void saveBuildLogic() throws ExecutionException, InterruptedException {
-        if(HelloApplication.user!=null) {
-            if (cpuCombo.getValue() != null && gpuCombo.getValue() != null
-                    && ramCombo.getValue() != null && motherboardCombo.getValue() != null && storageCombo.getValue() != null
-                    && psuCombo.getValue() != null && caseCombo.getValue() != null && buildName.getText()!=null) {
-                HelloApplication.user.updateBuilds(cpuCalls.get(cpuCombo.getValue()), gpuCalls.get(gpuCombo.getValue()), ramCalls.get(ramCombo.getValue()), motherboardCalls.get(motherboardCombo.getValue()), storageCalls.get(storageCombo.getValue()), psuCalls.get(psuCombo.getValue()), caseCalls.get(caseCombo.getValue()), buildName.getText());
-            }
-        }else{
-            System.out.println("no user");
-        }
+    public void saveBuildLogic() {
+        //TODO
+
+
+
     }
 
     private void addSelectionListeners() {
@@ -183,28 +159,28 @@ public class SandboxViewController {
         Part cpu = cpuName == null ? null : HelloApplication.getPartByName(HelloApplication.cpus, cpuName, "CPU");
         Part gpu = gpuName == null ? null : HelloApplication.getPartByName(HelloApplication.gpus, gpuName, "Video Card");
         Part ram = ramName == null ? null : HelloApplication.getPartByName(HelloApplication.ram, ramName, "Memory");
-        Part motherboard = moboName == null ? null : HelloApplication.getPartByName(HelloApplication.motherboards, moboName, "Motherboard");
+        Part mobo = moboName == null ? null : HelloApplication.getPartByName(HelloApplication.motherboards, moboName, "Motherboard");
         Part storage = storageName == null ? null : HelloApplication.getPartByName(HelloApplication.storage, storageName, "Internal Hard Drive");
         Part psu = psuName == null ? null : HelloApplication.getPartByName(HelloApplication.psus, psuName, "Power Supply");
-        Part pcCase = caseName == null ? null : HelloApplication.getPartByName(HelloApplication.cases, caseName, "Case");
+        Part computerCase = caseName == null ? null : HelloApplication.getPartByName(HelloApplication.cases, caseName, "Case");
 
         selectedParts.clear();
         selectedParts.put("cpu", cpu);
         selectedParts.put("gpu", gpu);
         selectedParts.put("ram", ram);
-        selectedParts.put("motherboard", motherboard);
+        selectedParts.put("motherboard", mobo);
         selectedParts.put("storage", storage);
         selectedParts.put("psu", psu);
-        selectedParts.put("case", pcCase);
+        selectedParts.put("case", computerCase);
 
         double total = 0;
         if (cpu != null) total += cpu.getPrice();
         if (gpu != null) total += gpu.getPrice();
         if (ram != null) total += ram.getPrice();
-        if (motherboard != null) total += motherboard.getPrice();
+        if (mobo != null) total += mobo.getPrice();
         if (storage != null) total += storage.getPrice();
         if (psu != null) total += psu.getPrice();
-        if (pcCase != null) total += pcCase.getPrice();
+        if (computerCase != null) total += computerCase.getPrice();
         totalCostNumber.setText(String.format("%.2f", total));
 
         int wattage = 0;
@@ -213,7 +189,9 @@ public class SandboxViewController {
         }
         totalWattage.setText(String.valueOf(wattage));
 
-        checkCompatibility(cpu, gpu, ram, motherboard, pcCase, psu);
+        checkCompatibility(cpu, gpu, ram, mobo, computerCase, psu);
+
+        updateDetailsPanel();
     }
 
     private void checkCompatibility(Part cpu, Part gpu, Part ram, Part mobo, Part computerCase, Part psu) {
@@ -236,6 +214,77 @@ public class SandboxViewController {
                 showAlert("PSU Warning", "PSU wattage (" + (int)psu.getSpecAsDouble("wattage",0) +
                         "W) may be insufficient for estimated " + estimated + "W.");
             }
+        }
+    }
+
+    private void updateDetailsPanel() {
+        detailsVBox.getChildren().clear();
+        addPartDetail("CPU", selectedParts.get("cpu"));
+        addPartDetail("GPU", selectedParts.get("gpu"));
+        addPartDetail("RAM", selectedParts.get("ram"));
+        addPartDetail("Motherboard", selectedParts.get("motherboard"));
+        addPartDetail("Storage", selectedParts.get("storage"));
+        addPartDetail("Power Supply", selectedParts.get("psu"));
+        addPartDetail("Case", selectedParts.get("case"));
+    }
+
+    private void addPartDetail(String label, Part part) {
+        if (part == null) return;
+
+        VBox partBox = new VBox(2);
+        partBox.setStyle("-fx-background-color: #1a2340; -fx-background-radius: 6; -fx-padding: 6;");
+
+        Label nameLabel = new Label(part.getName());
+        nameLabel.setStyle("-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 12px;");
+
+        Label brandPriceLabel = new Label(part.getBrand() + "  |  $" + part.getPrice());
+        brandPriceLabel.setStyle("-fx-text-fill: #c7d5e0; -fx-font-size: 11px;");
+
+        String specsText = getKeySpecsText(part);
+        Label specsLabel = new Label(specsText);
+        specsLabel.setStyle("-fx-text-fill: #8ba3b5; -fx-font-size: 10px;");
+        specsLabel.setWrapText(true);
+
+        partBox.getChildren().addAll(nameLabel, brandPriceLabel, specsLabel);
+        detailsVBox.getChildren().add(partBox);
+    }
+
+    private String getKeySpecsText(Part part) {
+        String category = part.getCategory();
+        Map<String, Object> specs = part.getSpecs();
+        if (specs == null) return "";
+
+        switch (category) {
+            case "CPU":
+                return String.format("Cores: %s | Clock: %s GHz",
+                        specs.getOrDefault("core_count", "?"),
+                        specs.getOrDefault("core_clock", "?"));
+            case "Video Card":
+                return String.format("Chipset: %s | Memory: %s GB",
+                        specs.getOrDefault("chipset", "?"),
+                        specs.getOrDefault("memory", "?"));
+            case "Memory":
+                return String.format("Type: %s | Speed: %s MHz",
+                        specs.getOrDefault("type", "?"),
+                        specs.getOrDefault("speed", "?"));
+            case "Motherboard":
+                return String.format("Socket: %s | Form: %s",
+                        specs.getOrDefault("cpu_socket", "?"),
+                        specs.getOrDefault("form_factor", "?"));
+            case "Internal Hard Drive":
+                return String.format("Capacity: %s GB | Type: %s",
+                        specs.getOrDefault("capacity", "?"),
+                        specs.getOrDefault("type", "?"));
+            case "Power Supply":
+                return String.format("Wattage: %s W | Efficiency: %s",
+                        specs.getOrDefault("wattage", "?"),
+                        specs.getOrDefault("efficiency", "?"));
+            case "Case":
+                return String.format("Type: %s | Max GPU: %s mm",
+                        specs.getOrDefault("type", "?"),
+                        specs.getOrDefault("max_gpu_length", "?"));
+            default:
+                return "";
         }
     }
 
