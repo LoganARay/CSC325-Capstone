@@ -12,9 +12,6 @@ module edu.farmingdale.csc325capstone {
     requires javafx.graphics;
     requires java.desktop;
 
-    requires okhttp3;
-    requires org.json;
-
     opens edu.farmingdale.csc325capstone.model to com.fasterxml.jackson.databind, google.cloud.firestore;
 
 
