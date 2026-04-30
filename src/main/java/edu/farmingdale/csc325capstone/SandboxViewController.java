@@ -1,5 +1,6 @@
 package edu.farmingdale.csc325capstone;
 
+import edu.farmingdale.csc325capstone.PcParts.SandBoxParts;
 import edu.farmingdale.csc325capstone.model.CompatibilityChecker;
 import edu.farmingdale.csc325capstone.model.Part;
 import javafx.application.Platform;
@@ -76,7 +77,11 @@ public class SandboxViewController {
 
 
     @FXML
-    public void initialize(){
+    public void initialize() throws Exception {
+        SandBoxParts s= new SandBoxParts();
+        if(HelloApplication.storage==null){
+            for(int i=0; i<2; i++){ s.fillingOrder();}
+        }
         setCases();
         setCpus();
         setMotherboards();
@@ -113,8 +118,6 @@ public class SandboxViewController {
     private void saveBuildHandle(ActionEvent event) throws IOException {
         saveBuildLogic();
     }
-
-
 
     public void clearBuildLogic() {
         cpuCombo.setValue(null);

@@ -34,12 +34,6 @@ public class HelloApplication extends Application {
         SandBoxParts c= new SandBoxParts();
         try {
             cpus=c.loadRepo("cpus");
-            cases= c.loadRepo("cases");
-            cpus= c.loadRepo("cpus");
-            gpus= c.loadRepo("gpus");
-            ram= c.loadRepo("ram");
-            storage= c.loadRepo("storage");
-            psus= c.loadRepo("psus");
 
         scene = new Scene(loadFXML("homeView.fxml"), 950, 750);
         } catch (Exception e) {
