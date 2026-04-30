@@ -28,6 +28,9 @@ public class SandBoxParts {
         if(HelloApplication.cases==null){
             HelloApplication.cases= loadRepo("cases");
         }
+        else if(HelloApplication.cpus==null){
+            HelloApplication.cpus= loadRepo("cpus");
+        }
         else if(HelloApplication.gpus==null){
             HelloApplication.gpus= loadRepo("gpus");
         }

@@ -14,8 +14,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 public class SandboxViewController {
+
+    @FXML
+    private TextField buildName;
+
     @FXML
     private ComboBox<String> caseCombo;
 
@@ -106,7 +111,7 @@ public class SandboxViewController {
 
     @FXML
     void handleViewSavedBuild(ActionEvent event) throws IOException {
-        HelloApplication.setRoot("savedBuildsView.fxml");
+        HelloApplication.setRoot("savedBuilds.fxml");
     }
 
     @FXML
@@ -115,7 +120,7 @@ public class SandboxViewController {
     }
 
     @FXML
-    private void saveBuildHandle(ActionEvent event) throws IOException {
+    private void saveBuildHandle(ActionEvent event) throws IOException, ExecutionException, InterruptedException {
         saveBuildLogic();
     }
 
@@ -133,11 +138,16 @@ public class SandboxViewController {
         detailsVBox.getChildren().clear();
     }
 
-    public void saveBuildLogic() {
-        //TODO
-
-
-
+    public void saveBuildLogic() throws ExecutionException, InterruptedException {
+        if(HelloApplication.user!=null) {
+            if (cpuCombo.getValue() != null && gpuCombo.getValue() != null
+                    && ramCombo.getValue() != null && motherboardCombo.getValue() != null && storageCombo.getValue() != null
+                    && psuCombo.getValue() != null && caseCombo.getValue() != null && buildName.getText()!=null) {
+                HelloApplication.user.updateBuilds(cpuCalls.get(cpuCombo.getValue()), gpuCalls.get(gpuCombo.getValue()), ramCalls.get(ramCombo.getValue()), motherboardCalls.get(motherboardCombo.getValue()), storageCalls.get(storageCombo.getValue()), psuCalls.get(psuCombo.getValue()), caseCalls.get(caseCombo.getValue()), buildName.getText());
+            }
+        }else{
+            System.out.println("no user");
+        }
     }
 
     private void addSelectionListeners() {

@@ -33,7 +33,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         SandBoxParts c= new SandBoxParts();
         try {
-            cpus=c.loadRepo("cpus");
+            //cpus=c.loadRepo("cpus");
 
         scene = new Scene(loadFXML("homeView.fxml"), 950, 750);
         } catch (Exception e) {
