@@ -20,30 +20,27 @@ public class HelloApplication extends Application {
 
     public  static FirestoreContent contxtFirebase = new FirestoreContent();
     public  static Firestore fstore = contxtFirebase.firebase();
-    public  static CollectionReference steamGames;
-    public static Map<String, Map<String, Object>> cases;
-    public static Map<String, Map<String, Object>> cpus;
-    public static Map<String, Map<String, Object>> gpus;
-    public static Map<String, Map<String, Object>> motherboards;
-    public static Map<String, Map<String, Object>> psus;
-    public static Map<String, Map<String, Object>> ram;
-    public static Map<String, Map<String, Object>> storage;
+    public static Map<String, Map<String, Object>> cases=null;
+    public static Map<String, Map<String, Object>> cpus=null;
+    public static Map<String, Map<String, Object>> gpus=null;
+    public static Map<String, Map<String, Object>> motherboards=null;
+    public static Map<String, Map<String, Object>> psus=null;
+    public static Map<String, Map<String, Object>> ram=null;
+    public static Map<String, Map<String, Object>> storage=null;
 
     public static User user=null;
     @Override
     public void start(Stage stage) throws IOException {
-        // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        //Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        steamGames= fstore.collection("FullSteamGames");
         SandBoxParts c= new SandBoxParts();
         try {
-            cases=c.loadRepo("cases");
             cpus=c.loadRepo("cpus");
-            gpus=c.loadRepo("gpus");
-            motherboards=c.loadRepo("motherboards");
-            psus=c.loadRepo("psus");
-            ram=c.loadRepo("ram");
-            storage=c.loadRepo("storage");
+            cases= c.loadRepo("cases");
+            cpus= c.loadRepo("cpus");
+            gpus= c.loadRepo("gpus");
+            ram= c.loadRepo("ram");
+            storage= c.loadRepo("storage");
+            psus= c.loadRepo("psus");
+
         scene = new Scene(loadFXML("homeView.fxml"), 950, 750);
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -66,15 +63,6 @@ public class HelloApplication extends Application {
         return fxmlLoader.load();
     }
 
-    public static DocumentSnapshot gett(String firstLetter){
-        try {
-            return steamGames.document(firstLetter).get().get();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        } catch (ExecutionException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
     public static HashMap<String, String> getNamesParts(Map<String, Map<String, Object>> part){
         HashMap<String, String> ids= new HashMap<String, String>();

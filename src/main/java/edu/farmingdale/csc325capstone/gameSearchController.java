@@ -110,41 +110,29 @@ public class gameSearchController {
         searchField.textProperty().addListener((obs, oldValue, newValue) -> {
             if(newValue==null || newValue.length()<2){
                 cm.hide();
+                cm.getItems().clear();
+                currentScope=null;
                 return;
             }
             String firstLetter= newValue.substring(0, 1).toUpperCase();
             String secondLetter= newValue.substring(1, 2).toUpperCase();
-            DocumentReference docRef = HelloApplication.steamGames.document(newValue.substring(0,1).toUpperCase());
+            DocumentReference docRef = HelloApplication.fstore.collection("SteamGames").document(newValue.substring(0,1).toUpperCase());
 
             ApiFuture<DocumentSnapshot> future = docRef.get();
             DocumentSnapshot document = null;
             try {
-                document = future.get();
-                ArrayList<String> list=(ArrayList<String>) document.get(newValue.substring(1,2).toUpperCase());
-                if(list==null){
-                    cm.getItems().clear();
-                    MenuItem m= new MenuItem("No Games");
-                    cm.getItems().add(m);
-                    if(!cm.isShowing()){
-                        cm.show(searchField, Side.BOTTOM, 0, 0);
-                    }
-                    System.out.println("Document does NOT exist!");
-                    currentScope=null;
-                    currentGame=null;
-                    return;
-                }else{
+                if(currentScope==null) {
+                    DocumentSnapshot doc = HelloApplication.fstore.collection("SteamGames").document((firstLetter + secondLetter).toUpperCase()).get().get();
 
-                    cm.getItems().clear();
-                    DocumentSnapshot doc = HelloApplication.gett(firstLetter);
-
-                    currentScope = (List<Map<String, Object>>) doc.get(secondLetter);
-
-                    int count=0;
-                    assert currentScope != null;
-                    for(Map<String, Object> game:currentScope){
-                        if(count<=5) {
-                            String name = (String) game.get("Name");
-                            if (newValue.length() <= name.length() && (name.toUpperCase()).substring(0, newValue.length()).equals(newValue.toUpperCase())) {
+                    currentScope = (List<Map<String, Object>>) doc.get("Games");
+                }
+                cm.getItems().clear();
+                int count=0;
+                for(Map<String, Object> game:currentScope){
+                    if(count<=5) {
+                        String name = (String) game.get("Name");
+                        if (newValue.length() <= name.length()) {
+                            if ((name.toUpperCase()).contains(newValue.toUpperCase())) {
                                 if(count==0){
                                     item1.setText(name);
                                     cm.getItems().add(item1);
@@ -168,10 +156,13 @@ public class gameSearchController {
                                 count++;
                             }
                         }
+                    }else{
+                        cm.show(searchField, Side.BOTTOM, 0, 0);
+                        return;
                     }
-                    cm.show(searchField, Side.BOTTOM, 0, 0);
-                    return;
                 }
+                cm.show(searchField, Side.BOTTOM, 0, 0);
+                return;
             } catch (InterruptedException e) {
                 return;
             } catch (ExecutionException e) {
