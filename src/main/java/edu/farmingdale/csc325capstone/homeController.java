@@ -1,6 +1,6 @@
 package edu.farmingdale.csc325capstone;
 
-import edu.farmingdale.csc325capstone.service.AppState;
+import edu.farmingdale.csc325capstone.PcParts.SandBoxParts;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -29,35 +29,48 @@ public class homeController {
     @FXML
     private Button settingsButton;
 
+    private SandBoxParts s= new SandBoxParts();
 
     @FXML
-    private void handleFindGames(ActionEvent event) throws IOException{
+    public void initialize() throws Exception {
+        s.fillingOrder();
+    }
+    @FXML
+    private void handleFindGames(ActionEvent event) throws Exception {
+        s.fillingOrder();
         HelloApplication.setRoot("gameSearch.fxml");
     }
 
     @FXML
-    private void handleQuestionnaire(ActionEvent event) throws IOException{
+    private void handleQuestionnaire(ActionEvent event) throws Exception {
+        s.fillingOrder();
         HelloApplication.setRoot("buildQuestionnaireView.fxml");
     }
 
     @FXML
-    private void handleSandbox(ActionEvent event) throws IOException{
+    private void handleSandbox(ActionEvent event) throws Exception {
+        if(HelloApplication.storage==null){
+            for(int i=0; i<3; i++){ s.fillingOrder();}
+        }
         HelloApplication.setRoot("sandboxView.fxml");
     }
 
 
     @FXML
-    private void handleHome(ActionEvent event) throws IOException {
+    private void handleHome(ActionEvent event) throws Exception {
+        s.fillingOrder();
         HelloApplication.setRoot("homeView.fxml");
     }
 
     @FXML
-    private void handleSavedBuild(ActionEvent event) throws IOException {
+    private void handleSavedBuild(ActionEvent event) throws Exception {
+        s.fillingOrder();
         HelloApplication.setRoot("savedBuilds.fxml");
     }
 
     @FXML
-    private void handleLogin(ActionEvent event) throws IOException {
+    private void handleLogin(ActionEvent event) throws Exception {
+        s.fillingOrder();
         HelloApplication.setRoot("loginView.fxml");
     }
     @FXML

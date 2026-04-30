@@ -10,7 +10,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="650.0" prefWidth="1000.0" stylesheets="@savedBuild-GamesSearch.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.csc325capstone.SandboxViewController">
+<?import javafx.scene.control.TextField?>
+<AnchorPane prefHeight="650.0" prefWidth="800.0" stylesheets="@savedBuild-GamesSearch.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.csc325capstone.SandboxViewController">
   <children>
     <HBox layoutY="56.8" prefHeight="546.0" prefWidth="800.0" spacing="24" style="-fx-padding: 20 24;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0">
       <children>
@@ -20,8 +21,8 @@
                      <font>
                         <Font name="System Bold" size="30.0" />
                      </font></Label>
-
-            <VBox spacing="6">
+              <TextField fx:id="buildName" promptText="New Build" style="-fx-font-size: 20;" styleClass="text-field"></TextField>
+              <VBox spacing="6">
               <children>
                 <Label styleClass="partSection" text="CPU">
                            <font>
@@ -145,6 +146,10 @@
                         </HBox>
               </children>
             </VBox>
+
+              <Label styleClass="partSection" text="Selected Parts" />
+              <VBox fx:id="detailsVBox" spacing="4" prefHeight="200"
+                    style="-fx-padding: 8;" />
 
             <HBox spacing="8">
               <children>
