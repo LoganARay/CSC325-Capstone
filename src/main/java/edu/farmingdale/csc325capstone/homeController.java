@@ -1,6 +1,7 @@
 package edu.farmingdale.csc325capstone;
 
 import edu.farmingdale.csc325capstone.PcParts.SandBoxParts;
+import edu.farmingdale.csc325capstone.service.AppState;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -73,41 +74,5 @@ public class homeController {
         s.fillingOrder();
         HelloApplication.setRoot("loginView.fxml");
     }
-    @FXML
-    private void handleOpenSettings() {
-        Dialog<String> dialog = new Dialog<>();
-        dialog.setTitle("Settings");
-        dialog.setHeaderText("Enter OpenAI API Key");
 
-        // Create input field (hidden like password)
-        PasswordField apiKeyInput = new PasswordField();
-        apiKeyInput.setPromptText("Paste API key here");
-
-        // Layout
-        VBox content = new VBox(10);
-        content.getChildren().add(apiKeyInput);
-        dialog.getDialogPane().setContent(content);
-
-        // Buttons
-        ButtonType saveButton = new ButtonType("Save", ButtonBar.ButtonData.OK_DONE);
-        dialog.getDialogPane().getButtonTypes().addAll(saveButton, ButtonType.CANCEL);
-
-        // When Save is clicked
-        dialog.setResultConverter(dialogButton -> {
-            if (dialogButton == saveButton) {
-                return apiKeyInput.getText();
-            }
-            return null;
-        });
-
-        // Show dialog
-        dialog.showAndWait().ifPresent(key -> {
-            if (key != null && !key.isBlank()) {
-                AppState.openAiApiKey = key;
-                System.out.println("API key set for session.");
-            } else {
-                System.out.println("No key entered.");
-            }
-        });
-    }
 }
