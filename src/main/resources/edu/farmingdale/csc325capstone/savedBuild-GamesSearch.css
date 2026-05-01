@@ -45,6 +45,28 @@
     -fx-border-radius: 10;
 }
 
+.cardVboxHome {
+    -fx-background-radius: 14;
+    -fx-padding: 18;
+    -fx-background-color: #101730;
+    -fx-border-color: rgba(56, 75, 117, .1);
+    -fx-border-radius: 14; 
+    -fx-pref-width: 240;
+    -fx-pref-height: 170;
+}
+
+.cardVboxHomeBottom {
+    -fx-background-radius: 14;
+    -fx-padding: 18;
+    -fx-background-color: #101730;
+    -fx-border-color: rgba(56, 75, 117, .1);
+    -fx-border-radius: 14; 
+    -fx-pref-width: 240;
+    -fx-pref-height: 150;
+}
+
+
+
 .primaryButton {
     -fx-font-size: 14px;
     -fx-font-family: "System";
