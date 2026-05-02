@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane stylesheets="@savedBuild-GamesSearch.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.csc325capstone.homeController">
+<BorderPane prefHeight="750.0" prefWidth="950.0" stylesheets="@savedBuild-GamesSearch.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.csc325capstone.homeController">
   <top>
     <HBox alignment="CENTER_LEFT" spacing="24" style="-fx-padding: 14 28;">
       <children>
@@ -21,9 +21,9 @@
         </HBox>
         <Region HBox.hgrow="ALWAYS" />
         <HBox alignment="CENTER_RIGHT" spacing="10" HBox.hgrow="ALWAYS">
-          <Button fx:id="homeButton" onAction="#handleHome" styleClass="menuButton" text="Home" />
-          <Button fx:id="savedButton" onAction="#handleSavedBuild" styleClass="menuButton" text="Saved" />
           <Button fx:id="loginButton" onAction="#handleLogin" styleClass="menuButton" text="Login" />
+          <Button fx:id="savedButton" onAction="#handleSavedBuild" styleClass="menuButton" text="Saved" />
+          <Button fx:id="homeButton" onAction="#handleHome" styleClass="menuButton" text="Home" />
         </HBox>
       </children>
     </HBox>
@@ -45,12 +45,15 @@
                   <Insets bottom="25.0" />
                </VBox.margin></Label>
 
-        <HBox alignment="CENTER" spacing="18">
+        <HBox alignment="CENTER" prefWidth="1378.0" spacing="18.0">
           <children>
-            <VBox spacing="8" style="-fx-background-radius: 14; -fx-padding: 18; -fx-pref-width: 240; -fx-min-height: 150;" styleClass="cardVbox">
+            <VBox prefHeight="150.0" prefWidth="307.0" spacing="8" styleClass="cardVboxHome">
               <children>
                 <Label styleClass="partSection" text="Search Games" textFill="WHITE" />
-                <Label styleClass="normalText" text="Browse games and see required hardware" textFill="WHITE" wrapText="true" />
+                <Label prefWidth="527.0" styleClass="normalText" text="Browse games and see required hardware" textFill="WHITE" wrapText="true">
+                           <VBox.margin>
+                              <Insets bottom="3.0" />
+                           </VBox.margin></Label>
                         <Button id="findGames" fx:id="findGames" mnemonicParsing="false" onAction="#handleFindGames" styleClass="primaryButton" text="Find Games" textFill="WHITE">
                            <font>
                               <Font size="15.0" />
@@ -62,10 +65,13 @@
                      </HBox.margin>
             </VBox>
 
-            <VBox spacing="8" style="-fx-background-radius: 14; -fx-padding: 18; -fx-pref-width: 240; -fx-min-height: 150;" styleClass="cardVbox">
+            <VBox spacing="8" styleClass="cardVboxHome">
               <children>
                 <Label style="-fx-font-weight: 700;" styleClass="partSection" text="Guided Build" textFill="WHITE" />
-                <Label styleClass="normalText" text="Get recommendations based on your needs" textFill="WHITE" wrapText="true" />
+                <Label styleClass="normalText" text="Get recommendations based on your needs" textFill="WHITE" wrapText="true">
+                           <VBox.margin>
+                              <Insets bottom="3.0" />
+                           </VBox.margin></Label>
                         <Button id="takeQuestionnaire" fx:id="takeQuestionnaire" mnemonicParsing="false" onAction="#handleQuestionnaire" styleClass="primaryButton" text="Take Questionnaire">
                            <font>
                               <Font size="15.0" />
@@ -74,10 +80,13 @@
               </children>
             </VBox>
 
-            <VBox spacing="8" style="-fx-background-radius: 14; -fx-padding: 18; -fx-pref-width: 240; -fx-min-height: 150;" styleClass="cardVbox">
+            <VBox spacing="8" styleClass="cardVboxHome">
               <children>
                 <Label styleClass="partSection" text="Custom Build" textFill="#ffebeb" />
-                <Label styleClass="normalText" text="Select parts with instant compatibility check" textFill="WHITE" wrapText="true" />
+                <Label styleClass="normalText" text="Select parts with instant compatibility check" textFill="WHITE" wrapText="true">
+                           <VBox.margin>
+                              <Insets bottom="3.0" />
+                           </VBox.margin></Label>
                         <Button id="buildSandbox" fx:id="buildSandbox" mnemonicParsing="false" onAction="#handleSandbox" styleClass="primaryButton" text="Build Sandbox">
                            <font>
                               <Font size="15.0" />
@@ -86,14 +95,20 @@
               </children>
             </VBox>
           </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
         </HBox>
 
-        <VBox prefHeight="200.0" prefWidth="770.0" spacing="16" style="-fx-background-radius: 16; -fx-padding: 20; -fx-max-width: 820;">
+        <VBox maxHeight="215.0" maxWidth="820.0" prefHeight="215.0" prefWidth="820.0" spacing="16">
           <children>
-            <Label styleClass="title" text="How It Works" textFill="#fff6f6" />
+            <Label styleClass="title" text="How It Works" textFill="#fff6f6">
+                     <VBox.margin>
+                        <Insets left="30.0" top="8.0" />
+                     </VBox.margin></Label>
                   <HBox alignment="CENTER" prefWidth="728.0" spacing="18.0">
                      <children>
-                        <VBox spacing="8" style="-fx-background-radius: 14; -fx-padding: 18; -fx-pref-width: 240; -fx-min-height: 150;" styleClass="cardVbox">
+                        <VBox spacing="8" styleClass="cardVboxHomeBottom">
                            <children>
                     <Label styleClass="partSection" text="Build &amp; Validate" textFill="#fff7f7">
                                  <VBox.margin>
@@ -107,7 +122,7 @@
                               </Label>
                            </children>
                         </VBox>
-                        <VBox spacing="8" style="-fx-background-radius: 14; -fx-padding: 18; -fx-pref-width: 240; -fx-min-height: 150;" styleClass="cardVbox">
+                        <VBox spacing="8" styleClass="cardVboxHomeBottom">
                            <children>
                     <Label styleClass="partSection" text="Save Your Build" textFill="WHITE">
                                  <VBox.margin>
@@ -121,7 +136,7 @@
                               </Label>
                            </children>
                         </VBox>
-                        <VBox spacing="8" style="-fx-background-radius: 14; -fx-padding: 18; -fx-pref-width: 240; -fx-min-height: 150;" styleClass="cardVbox">
+                        <VBox spacing="8" styleClass="cardVboxHomeBottom">
                            <children>
                               <Label styleClass="partSection" text="Choose Your Path" textFill="WHITE">
                                  <VBox.margin>
