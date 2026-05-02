@@ -100,6 +100,8 @@
                         <Font name="System Bold" size="25.0" />
                      </font></Label>
 
+              <VBox fx:id="detailsVBox" spacing="6" prefHeight="200" style="-fx-padding: 4 0 0 0;" />
+
             <VBox spacing="4">
               <children>
                 <Label styleClass="partSection" text="Total Cost">
@@ -145,10 +147,6 @@
                         </HBox>
               </children>
             </VBox>
-
-              <Label styleClass="partSection" text="Selected Parts" />
-              <VBox fx:id="detailsVBox" spacing="4" prefHeight="200"
-                    style="-fx-padding: 8;" />
 
             <HBox spacing="8">
               <children>
