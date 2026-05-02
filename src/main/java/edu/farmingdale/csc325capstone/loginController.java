@@ -25,7 +25,9 @@ public class loginController {
     @FXML
     private Button goToHome;
 
-    public void initialize(){
+    public void initialize() throws Exception {
+        SandBoxParts s= new SandBoxParts();
+        s.fillingOrder();
         loginButton.setOnAction(e->{
             SandBoxParts r= new SandBoxParts();
             Map<String, Map<String, Object>> users;

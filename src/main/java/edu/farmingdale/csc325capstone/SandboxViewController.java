@@ -1,5 +1,6 @@
 package edu.farmingdale.csc325capstone;
 
+import edu.farmingdale.csc325capstone.PcParts.SandBoxParts;
 import edu.farmingdale.csc325capstone.model.CompatibilityChecker;
 import edu.farmingdale.csc325capstone.model.Part;
 import javafx.application.Platform;
@@ -13,8 +14,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 public class SandboxViewController {
+
+    @FXML
+    private TextField buildName;
+
     @FXML
     private ComboBox<String> caseCombo;
 
@@ -76,7 +82,11 @@ public class SandboxViewController {
 
 
     @FXML
-    public void initialize(){
+    public void initialize() throws Exception {
+        SandBoxParts s= new SandBoxParts();
+        if(HelloApplication.storage==null){
+            for(int i=0; i<2; i++){ s.fillingOrder();}
+        }
         setCases();
         setCpus();
         setMotherboards();
@@ -101,7 +111,7 @@ public class SandboxViewController {
 
     @FXML
     void handleViewSavedBuild(ActionEvent event) throws IOException {
-        HelloApplication.setRoot("savedBuildsView.fxml");
+        HelloApplication.setRoot("savedBuilds.fxml");
     }
 
     @FXML
@@ -110,11 +120,9 @@ public class SandboxViewController {
     }
 
     @FXML
-    private void saveBuildHandle(ActionEvent event) throws IOException {
+    private void saveBuildHandle(ActionEvent event) throws IOException, ExecutionException, InterruptedException {
         saveBuildLogic();
     }
-
-
 
     public void clearBuildLogic() {
         cpuCombo.setValue(null);
@@ -130,11 +138,16 @@ public class SandboxViewController {
         detailsVBox.getChildren().clear();
     }
 
-    public void saveBuildLogic() {
-        //TODO
-
-
-
+    public void saveBuildLogic() throws ExecutionException, InterruptedException {
+        if(HelloApplication.user!=null) {
+            if (cpuCombo.getValue() != null && gpuCombo.getValue() != null
+                    && ramCombo.getValue() != null && motherboardCombo.getValue() != null && storageCombo.getValue() != null
+                    && psuCombo.getValue() != null && caseCombo.getValue() != null && buildName.getText()!=null) {
+                HelloApplication.user.updateBuilds(cpuCalls.get(cpuCombo.getValue()), gpuCalls.get(gpuCombo.getValue()), ramCalls.get(ramCombo.getValue()), motherboardCalls.get(motherboardCombo.getValue()), storageCalls.get(storageCombo.getValue()), psuCalls.get(psuCombo.getValue()), caseCalls.get(caseCombo.getValue()), buildName.getText());
+            }
+        }else{
+            System.out.println("no user");
+        }
     }
 
     private void addSelectionListeners() {
@@ -231,22 +244,22 @@ public class SandboxViewController {
     private void addPartDetail(String label, Part part) {
         if (part == null) return;
 
-        VBox partBox = new VBox(2);
-        partBox.setStyle("-fx-background-color: #1a2340; -fx-background-radius: 6; -fx-padding: 6;");
+        VBox card = new VBox(4);
+        card.setStyle("-fx-background-color: #101730; -fx-background-radius: 6; " + "-fx-padding: 8; -fx-border-color: #2a3a5a; -fx-border-radius: 6;");
 
-        Label nameLabel = new Label(part.getName());
+        Label nameLabel = new Label(label + ": " + part.getName());
         nameLabel.setStyle("-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 12px;");
 
-        Label brandPriceLabel = new Label(part.getBrand() + "  |  $" + part.getPrice());
-        brandPriceLabel.setStyle("-fx-text-fill: #c7d5e0; -fx-font-size: 11px;");
+        Label brandPriceLabel = new Label(part.getBrand() + "  |  $" + String.format("%.2f", part.getPrice()));
+        brandPriceLabel.setStyle("-fx-text-fill: #b0c4de; -fx-font-size: 11px;");
 
         String specsText = getKeySpecsText(part);
         Label specsLabel = new Label(specsText);
         specsLabel.setStyle("-fx-text-fill: #8ba3b5; -fx-font-size: 10px;");
         specsLabel.setWrapText(true);
 
-        partBox.getChildren().addAll(nameLabel, brandPriceLabel, specsLabel);
-        detailsVBox.getChildren().add(partBox);
+        card.getChildren().addAll(nameLabel, brandPriceLabel, specsLabel);
+        detailsVBox.getChildren().add(card);
     }
 
     private String getKeySpecsText(Part part) {
@@ -257,8 +270,8 @@ public class SandboxViewController {
         switch (category) {
             case "CPU":
                 return String.format("Cores: %s | Clock: %s GHz",
-                        specs.getOrDefault("core_count", "?"),
-                        specs.getOrDefault("core_clock", "?"));
+                        specs.getOrDefault("cores", "?"),
+                        specs.getOrDefault("base_clock", "?"));
             case "Video Card":
                 return String.format("Chipset: %s | Memory: %s GB",
                         specs.getOrDefault("chipset", "?"),
