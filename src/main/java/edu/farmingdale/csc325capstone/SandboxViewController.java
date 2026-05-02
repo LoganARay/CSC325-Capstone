@@ -244,22 +244,22 @@ public class SandboxViewController {
     private void addPartDetail(String label, Part part) {
         if (part == null) return;
 
-        VBox partBox = new VBox(2);
-        partBox.setStyle("-fx-background-color: #1a2340; -fx-background-radius: 6; -fx-padding: 6;");
+        VBox card = new VBox(4);
+        card.setStyle("-fx-background-color: #101730; -fx-background-radius: 6; " + "-fx-padding: 8; -fx-border-color: #2a3a5a; -fx-border-radius: 6;");
 
-        Label nameLabel = new Label(part.getName());
+        Label nameLabel = new Label(label + ": " + part.getName());
         nameLabel.setStyle("-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 12px;");
 
-        Label brandPriceLabel = new Label(part.getBrand() + "  |  $" + part.getPrice());
-        brandPriceLabel.setStyle("-fx-text-fill: #c7d5e0; -fx-font-size: 11px;");
+        Label brandPriceLabel = new Label(part.getBrand() + "  |  $" + String.format("%.2f", part.getPrice()));
+        brandPriceLabel.setStyle("-fx-text-fill: #b0c4de; -fx-font-size: 11px;");
 
         String specsText = getKeySpecsText(part);
         Label specsLabel = new Label(specsText);
         specsLabel.setStyle("-fx-text-fill: #8ba3b5; -fx-font-size: 10px;");
         specsLabel.setWrapText(true);
 
-        partBox.getChildren().addAll(nameLabel, brandPriceLabel, specsLabel);
-        detailsVBox.getChildren().add(partBox);
+        card.getChildren().addAll(nameLabel, brandPriceLabel, specsLabel);
+        detailsVBox.getChildren().add(card);
     }
 
     private String getKeySpecsText(Part part) {
@@ -270,8 +270,8 @@ public class SandboxViewController {
         switch (category) {
             case "CPU":
                 return String.format("Cores: %s | Clock: %s GHz",
-                        specs.getOrDefault("core_count", "?"),
-                        specs.getOrDefault("core_clock", "?"));
+                        specs.getOrDefault("cores", "?"),
+                        specs.getOrDefault("base_clock", "?"));
             case "Video Card":
                 return String.format("Chipset: %s | Memory: %s GB",
                         specs.getOrDefault("chipset", "?"),
