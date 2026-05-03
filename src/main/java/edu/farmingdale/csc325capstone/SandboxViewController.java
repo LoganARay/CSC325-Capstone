@@ -83,10 +83,6 @@ public class SandboxViewController {
 
     @FXML
     public void initialize() throws Exception {
-        SandBoxParts s= new SandBoxParts();
-        if(HelloApplication.storage==null){
-            for(int i=0; i<2; i++){ s.fillingOrder();}
-        }
         setCases();
         setCpus();
         setMotherboards();
@@ -99,6 +95,7 @@ public class SandboxViewController {
         addSelectionListeners();
         updateTotalPriceAndWattage();
     }
+
     @FXML
     void handleHome(ActionEvent event) throws IOException {
         HelloApplication.setRoot("homeView.fxml");
@@ -151,16 +148,72 @@ public class SandboxViewController {
     }
 
     private void addSelectionListeners() {
-        cpuCombo.valueProperty().addListener((obs, old, val) -> updateTotalPriceAndWattage());
-        gpuCombo.valueProperty().addListener((obs, old, val) -> updateTotalPriceAndWattage());
-        ramCombo.valueProperty().addListener((obs, old, val) -> updateTotalPriceAndWattage());
-        motherboardCombo.valueProperty().addListener((obs, old, val) -> updateTotalPriceAndWattage());
-        storageCombo.valueProperty().addListener((obs, old, val) -> updateTotalPriceAndWattage());
-        psuCombo.valueProperty().addListener((obs, old, val) -> updateTotalPriceAndWattage());
-        caseCombo.valueProperty().addListener((obs, old, val) -> updateTotalPriceAndWattage());
+        cpuCombo.valueProperty().addListener((obs, old, val) -> {
+            try {
+                updateTotalPriceAndWattage();
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        gpuCombo.valueProperty().addListener((obs, old, val) -> {
+            try {
+                updateTotalPriceAndWattage();
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        ramCombo.valueProperty().addListener((obs, old, val) -> {
+            try {
+                updateTotalPriceAndWattage();
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        motherboardCombo.valueProperty().addListener((obs, old, val) -> {
+            try {
+                updateTotalPriceAndWattage();
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        storageCombo.valueProperty().addListener((obs, old, val) -> {
+            try {
+                updateTotalPriceAndWattage();
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        psuCombo.valueProperty().addListener((obs, old, val) -> {
+            try {
+                updateTotalPriceAndWattage();
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        caseCombo.valueProperty().addListener((obs, old, val) -> {
+            try {
+                updateTotalPriceAndWattage();
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
-    private void updateTotalPriceAndWattage() {
+    private void updateTotalPriceAndWattage() throws ExecutionException, InterruptedException {
         String cpuName = cpuCombo.getValue();
         String gpuName = gpuCombo.getValue();
         String ramName = ramCombo.getValue();
@@ -169,14 +222,21 @@ public class SandboxViewController {
         String psuName = psuCombo.getValue();
         String caseName = caseCombo.getValue();
 
-        Part cpu = cpuName == null ? null : HelloApplication.getPartByName(HelloApplication.cpus, cpuName, "CPU");
-        Part gpu = gpuName == null ? null : HelloApplication.getPartByName(HelloApplication.gpus, gpuName, "Video Card");
-        Part ram = ramName == null ? null : HelloApplication.getPartByName(HelloApplication.ram, ramName, "Memory");
-        Part mobo = moboName == null ? null : HelloApplication.getPartByName(HelloApplication.motherboards, moboName, "Motherboard");
-        Part storage = storageName == null ? null : HelloApplication.getPartByName(HelloApplication.storage, storageName, "Internal Hard Drive");
-        Part psu = psuName == null ? null : HelloApplication.getPartByName(HelloApplication.psus, psuName, "Power Supply");
-        Part computerCase = caseName == null ? null : HelloApplication.getPartByName(HelloApplication.cases, caseName, "Case");
+//        Part cpu = cpuName == null ? null : HelloApplication.getPartByName(HelloApplication.cpus, cpuName, "CPU");
+//        Part gpu = gpuName == null ? null : HelloApplication.getPartByName(HelloApplication.gpus, gpuName, "Video Card");
+//        Part ram = ramName == null ? null : HelloApplication.getPartByName(HelloApplication.ram, ramName, "Memory");
+//        Part mobo = moboName == null ? null : HelloApplication.getPartByName(HelloApplication.motherboards, moboName, "Motherboard");
+//        Part storage = storageName == null ? null : HelloApplication.getPartByName(HelloApplication.storage, storageName, "Internal Hard Drive");
+//        Part psu = psuName == null ? null : HelloApplication.getPartByName(HelloApplication.psus, psuName, "Power Supply");
+//        Part computerCase = caseName == null ? null : HelloApplication.getPartByName(HelloApplication.cases, caseName, "Case");
 
+        Part cpu = cpuName == null ? null : HelloApplication.getPartByName(cpuCalls, "cpus", cpuName, "CPU");
+        Part gpu = gpuName == null ? null : HelloApplication.getPartByName(gpuCalls, "gpus", gpuName, "Video Card");
+        Part ram = ramName == null ? null : HelloApplication.getPartByName(ramCalls, "ram", ramName, "Memory");
+        Part mobo = moboName == null ? null : HelloApplication.getPartByName(motherboardCalls, "motherboards", moboName, "Motherboard");
+        Part storage = storageName == null ? null : HelloApplication.getPartByName(storageCalls, "storage", storageName, "Internal Hard Drive");
+        Part psu = psuName == null ? null : HelloApplication.getPartByName(psuCalls, "psus", psuName, "Power Supply");
+        Part computerCase = caseName == null ? null : HelloApplication.getPartByName(caseCalls, "cases", caseName, "Case");
         selectedParts.clear();
         selectedParts.put("cpu", cpu);
         selectedParts.put("gpu", gpu);
@@ -311,44 +371,44 @@ public class SandboxViewController {
         });
     }
 
-    public void setCases(){
-        caseCalls=HelloApplication.getNamesParts(HelloApplication.cases);
+    public void setCases() throws ExecutionException, InterruptedException{
+        caseCalls=HelloApplication.getNamesParts(HelloApplication.cases, "cases");
         ObservableList<String> names= (FXCollections.observableArrayList(caseCalls.keySet()));
         caseCombo.setItems(names);
     }
 
-    public void setCpus(){
-        cpuCalls= HelloApplication.getNamesParts(HelloApplication.cpus);
+    public void setCpus() throws ExecutionException, InterruptedException{
+        cpuCalls= HelloApplication.getNamesParts(HelloApplication.cpus, "cpus");
         ObservableList<String> names= (FXCollections.observableArrayList(cpuCalls.keySet()));
         cpuCombo.setItems(names);
     }
 
-    public void setGpus(){
-        gpuCalls=HelloApplication.getNamesParts(HelloApplication.gpus);
+    public void setGpus() throws ExecutionException, InterruptedException{
+        gpuCalls=HelloApplication.getNamesParts(HelloApplication.gpus, "gpus");
         ObservableList<String> names= (FXCollections.observableArrayList(gpuCalls.keySet()));
         gpuCombo.setItems(names);
     }
 
-    public void setRam(){
-        ramCalls=HelloApplication.getNamesParts(HelloApplication.ram);
+    public void setRam() throws ExecutionException, InterruptedException{
+        ramCalls=HelloApplication.getNamesParts(HelloApplication.ram, "ram");
         ObservableList<String> names= (FXCollections.observableArrayList(ramCalls.keySet()));
         ramCombo.setItems(names);
     }
 
-    public void setMotherboards(){
-        motherboardCalls=HelloApplication.getNamesParts(HelloApplication.motherboards);
+    public void setMotherboards() throws ExecutionException, InterruptedException{
+        motherboardCalls=HelloApplication.getNamesParts(HelloApplication.motherboards, "motherboards");
         ObservableList<String> names= (FXCollections.observableArrayList(motherboardCalls.keySet()));
         motherboardCombo.setItems(names);
     }
 
-    public void setPsu(){
-        psuCalls=HelloApplication.getNamesParts(HelloApplication.psus);
+    public void setPsu() throws ExecutionException, InterruptedException {
+        psuCalls=HelloApplication.getNamesParts(HelloApplication.psus, "psus");
         ObservableList<String> names= (FXCollections.observableArrayList(psuCalls.keySet()));
         psuCombo.setItems(names);
     }
 
-    public void setStorage(){
-        storageCalls=HelloApplication.getNamesParts(HelloApplication.storage);
+    public void setStorage() throws ExecutionException, InterruptedException {
+        storageCalls=HelloApplication.getNamesParts(HelloApplication.storage, "storage");
         ObservableList<String> names= (FXCollections.observableArrayList(storageCalls.keySet()));
         storageCombo.setItems(names);
     }

@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
 
 public class SavedBuildsViewController {
@@ -60,13 +61,62 @@ public class SavedBuildsViewController {
             for(Map<String, Object> build:builds){
                 Label userSavedBuild= new Label(build.get("name") + "");
                 userSavedBuild.setOnMouseClicked(e->{
-                    cpuCombo.setValue(HelloApplication.cpus.get(build.get("cpu") + "").get("name") + "");
-                    gpuCombo.setValue(HelloApplication.gpus.get(build.get("gpu") + "").get("name") + "");
-                    ramCombo.setValue(HelloApplication.ram.get(build.get("ram") + "").get("name") + "");
-                    motherboardCombo.setValue(HelloApplication.motherboards.get(build.get("motherboard") + "").get("name") + "");
-                    psuCombo.setValue(HelloApplication.psus.get(build.get("psu") + "").get("name") + "");
-                    storageCombo.setValue(HelloApplication.storage.get(build.get("storage") + "").get("name") + "");
-                    caseCombo.setValue(HelloApplication.cases.get(build.get("case") + "").get("name") + "");
+//                    cpuCombo.setValue(HelloApplication.cpus.get(build.get("cpu") + "").get("name") + "");
+//                    gpuCombo.setValue(HelloApplication.gpus.get(build.get("gpu") + "").get("name") + "");
+//                    ramCombo.setValue(HelloApplication.ram.get(build.get("ram") + "").get("name") + "");
+//                    motherboardCombo.setValue(HelloApplication.motherboards.get(build.get("motherboard") + "").get("name") + "");
+//                    psuCombo.setValue(HelloApplication.psus.get(build.get("psu") + "").get("name") + "");
+//                    storageCombo.setValue(HelloApplication.storage.get(build.get("storage") + "").get("name") + "");
+//                    caseCombo.setValue(HelloApplication.cases.get(build.get("case") + "").get("name") + "");
+                    try {
+                        cpuCombo.setValue(HelloApplication.fstore.collection("cpus").document(build.get("cpu")+"").get().get().get("name") + "");
+                    } catch (InterruptedException ex) {
+                        throw new RuntimeException(ex);
+                    } catch (ExecutionException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    try {
+                        gpuCombo.setValue(HelloApplication.fstore.collection("gpus").document(build.get("gpu")+"").get().get().get("name") + "");
+                    } catch (InterruptedException ex) {
+                        throw new RuntimeException(ex);
+                    } catch (ExecutionException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    try {
+                        ramCombo.setValue(HelloApplication.fstore.collection("ram").document(build.get("ram")+"").get().get().get("name") + "");
+                    } catch (InterruptedException ex) {
+                        throw new RuntimeException(ex);
+                    } catch (ExecutionException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    try {
+                        motherboardCombo.setValue(HelloApplication.fstore.collection("motherboards").document(build.get("motherboard")+"").get().get().get("name") + "");
+                    } catch (InterruptedException ex) {
+                        throw new RuntimeException(ex);
+                    } catch (ExecutionException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    try {
+                        psuCombo.setValue(HelloApplication.fstore.collection("psus").document(build.get("psu")+"").get().get().get("name") + "");
+                    } catch (InterruptedException ex) {
+                        throw new RuntimeException(ex);
+                    } catch (ExecutionException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    try {
+                        storageCombo.setValue(HelloApplication.fstore.collection("storage").document(build.get("storage")+"").get().get().get("name") + "");
+                    } catch (InterruptedException ex) {
+                        throw new RuntimeException(ex);
+                    } catch (ExecutionException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    try {
+                        caseCombo.setValue(HelloApplication.fstore.collection("cases").document(build.get("case")+"").get().get().get("name") + "");
+                    } catch (InterruptedException ex) {
+                        throw new RuntimeException(ex);
+                    } catch (ExecutionException ex) {
+                        throw new RuntimeException(ex);
+                    }
                 });
                 storedNames.add(userSavedBuild);
             }

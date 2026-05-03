@@ -27,7 +27,6 @@ public class loginController {
 
     public void initialize() throws Exception {
         SandBoxParts s= new SandBoxParts();
-        s.fillingOrder();
         loginButton.setOnAction(e->{
             SandBoxParts r= new SandBoxParts();
             Map<String, Map<String, Object>> users;
