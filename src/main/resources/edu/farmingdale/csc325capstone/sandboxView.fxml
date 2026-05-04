@@ -26,6 +26,7 @@
                         <Insets bottom="15.0" />
                      </VBox.margin></Label>
                   <TextField prefHeight="30.0" prefWidth="314.0" promptText="New Build" />
+              <Label fx:id="loadingLabel" text="Loading parts..." visible="false" />
 
             <VBox spacing="6">
               <children>
@@ -154,9 +155,6 @@
                         </HBox>
               </children>
             </VBox>
-
-              <Label styleClass="partSection" text="Selected Parts" />
-              <VBox fx:id="detailsVBox" prefHeight="200" spacing="4" style="-fx-padding: 8;" />
 
             <HBox spacing="8">
               <children>

@@ -16,6 +16,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.ExecutionException;
+import javafx.scene.control.Label;
+import javafx.application.Platform;
 
 public class HelloApplication extends Application {
     public static Scene scene;
@@ -37,33 +39,47 @@ public class HelloApplication extends Application {
     public static List<Map<String, Object>> ram=null;
     public static List<Map<String, Object>> storage=null;
 
+    public static List<Part> allCpuParts;
+    public static List<Part> allGpuParts;
+    public static List<Part> allRamParts;
+    public static List<Part> allMoboParts;
+    public static List<Part> allPsuParts;
+    public static List<Part> allCaseParts;
+    public static List<Part> allStorageParts;
+
     public static User user=null;
     @Override
     public void start(Stage stage) throws IOException {
-        SandBoxParts c= new SandBoxParts();
-        try {
-            CollectionReference parts=fstore.collection("Parts");
-//            DocumentSnapshot doc = fstore.collection("Parts").document("cases").get().get();
-//            cases = (List<Map<String, Object>>) doc.get("list");
-
-
-            cases = (List<Map<String, Object>>) fstore.collection("Parts").document("cases").get().get().get("list");
-            cpus = (List<Map<String, Object>>) parts.document("cpus").get().get().get("list");
-            gpus= (List<Map<String, Object>>) parts.document("gpus").get().get().get("list");
-            motherboards = (List<Map<String, Object>>) parts.document("motherboards").get().get().get("list");
-            psus = (List<Map<String, Object>>) parts.document("psus").get().get().get("list");
-            ram = (List<Map<String, Object>>) parts.document("ram").get().get().get("list");
-            storage = (List<Map<String, Object>>) parts.document("storage").get().get().get("list");
-
-        scene = new Scene(loadFXML("homeView.fxml"), 950, 750);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        scene = new Scene(loadFXML("homeView.fxml"));
+        Label loadingLabel = new Label("Loading parts…");
+        loadingLabel.setTextFill(javafx.scene.paint.Color.WHITE);
+        Scene loadingScene = new Scene(loadingLabel, 400, 300);
+        stage.setScene(loadingScene);
         stage.setTitle("Steam Builder");
-
-        stage.setScene(scene);
         stage.show();
+
+        new Thread(() -> {
+            try {
+                CollectionReference parts = fstore.collection("Parts");
+                cases = (List<Map<String, Object>>) parts.document("cases").get().get().get("list");
+                cpus = (List<Map<String, Object>>) parts.document("cpus").get().get().get("list");
+                gpus = (List<Map<String, Object>>) parts.document("gpus").get().get().get("list");
+                motherboards = (List<Map<String, Object>>) parts.document("motherboards").get().get().get("list");
+                psus = (List<Map<String, Object>>) parts.document("psus").get().get().get("list");
+                ram = (List<Map<String, Object>>) parts.document("ram").get().get().get("list");
+                storage = (List<Map<String, Object>>) parts.document("storage").get().get().get("list");
+
+                Platform.runLater(() -> {
+                    try {
+                        scene = new Scene(loadFXML("homeView.fxml"), 950, 750);
+                        stage.setScene(scene);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
     }
 
 
@@ -128,7 +144,39 @@ public class HelloApplication extends Application {
         return part;
     }
 
+    public static void loadAllParts() throws Exception {
+        allCpuParts   = loadPartList(cpus, "cpus", "CPU");
+        allGpuParts   = loadPartList(gpus, "gpus", "Video Card");
+        allRamParts   = loadPartList(ram, "ram", "Memory");
+        allMoboParts  = loadPartList(motherboards, "motherboards", "Motherboard");
+        allCaseParts  = loadPartList(cases, "cases", "Case");
+        allPsuParts   = loadPartList(psus, "psus", "Power Supply");
+        allStorageParts = loadPartList(storage, "storage", "Internal Hard Drive");
+    }
 
+    private static List<Part> loadPartList(List<Map<String, Object>> partialList, String collection, String category) throws Exception {
+        List<Part> parts = new ArrayList<>();
+        for (Map<String, Object> entry : partialList) {
+            String id = (String) entry.get("id");
+            String name = (String) entry.get("name");
+            DocumentSnapshot doc = fstore.collection(collection).document(id).get().get();
+            if (doc.exists()) {
+                Part part = new Part();
+                part.setId(id);
+                part.setName(name);
+                part.setCategory(category);
+                part.setBrand((String) doc.get("brand"));
+                Object priceObj = doc.get("price");
+                part.setPrice(priceObj instanceof Number ? ((Number) priceObj).doubleValue() : 0.0);
+                part.setLink((String) doc.get("link"));
+                Object yearObj = doc.get("year");
+                part.setYear(yearObj instanceof Number ? ((Number) yearObj).intValue() : null);
+                part.setSpecs((Map<String, Object>) doc.get("specs"));
+                parts.add(part);
+            }
+        }
+        return parts;
+    }
 
     public static void main(String[] args) {
         launch(args);
