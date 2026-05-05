@@ -192,7 +192,7 @@ public class gameSearchController extends RecommendationController {
 
 
     }
-    
+
     @FXML
     void handleHome(ActionEvent event) throws IOException {
         HelloApplication.setRoot("homeView.fxml");
@@ -221,8 +221,8 @@ public class gameSearchController extends RecommendationController {
         String recGpu=rec.get("Graphics") + "";
         String recRam=rec.get("Memory") + "";
         String storage= currentGame.get("Storage") + "";
-        GameRequirements minG= new GameRequirements(minCpu, minGpu, minRam);
-        GameRequirements recG= new GameRequirements(recCpu, recGpu, recRam);
+        GameRequirements minG= new GameRequirements(minGpu, minCpu, minRam);
+        GameRequirements recG= new GameRequirements(recGpu, recCpu, recRam);
         SteamGame sg= new SteamGame(name, currentGame.get("AppId") + "", storage, minG, recG);
 
         if (library == null){
@@ -276,7 +276,9 @@ public class gameSearchController extends RecommendationController {
         if (library == null || library.isEmpty()) return;
         new Thread(() -> {
             try {
+                Thread.sleep(1000);
                 String highestGPU = getHighestLibraryGPU();
+                System.out.println("Highest GPU: " + highestGPU);
                 long totalStorage = library.stream()
                         .mapToLong(g -> {
                             try { return Long.parseLong(g.getStorage().replaceAll("[^0-9]", "")); }

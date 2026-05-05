@@ -22,6 +22,7 @@ public abstract class RecommendationController {
         int score = 0;
         String gpu = pc.getGPU() != null ? pc.getGPU().toLowerCase() : "";
         String storage = pc.getStorage() != null ? pc.getStorage().toLowerCase() : "";
+
         if (!gameGPU.isEmpty()) {
             if (gameGPU.contains("4090") || gameGPU.contains("4080")) {
                 if (gpu.contains("4090") || gpu.contains("4080")) score += 3;
@@ -32,14 +33,26 @@ public abstract class RecommendationController {
             } else if (gameGPU.contains("3060") || gameGPU.contains("2070")) {
                 if (gpu.contains("3060") || gpu.contains("4060")) score += 2;
                 else if (gpu.contains("3070") || gpu.contains("4070")) score += 3;
+            } else if (gameGPU.contains("1080") || gameGPU.contains("1070")) {
+                if (gpu.contains("3060") || gpu.contains("4060")) score += 2;
+                else if (gpu.contains("3070") || gpu.contains("4070")) score += 3;
+                else if (gpu.contains("2060") || gpu.contains("2070")) score += 1;
+            } else if (gameGPU.contains("radeon") || gameGPU.contains("directx") || gameGPU.contains("geforce") || gameGPU.contains("hd ")) {
+                // Old/low end game - favor mid range PCs
+                if (gpu.contains("3060") || gpu.contains("4060")) score += 3;
+                else if (gpu.contains("3070") || gpu.contains("4070")) score += 2;
+                else if (gpu.contains("4080") || gpu.contains("4090")) score += 1;
             } else {
                 if (gpu.contains("3060") || gpu.contains("4060")) score += 1;
             }
         }
+
+        // Storage boost for large library
         if (totalStorageGB >= 700) {
             if (storage.contains("2tb")) score += 2;
             else if (storage.contains("1tb")) score += 1;
         }
+
         return score;
     }
 
