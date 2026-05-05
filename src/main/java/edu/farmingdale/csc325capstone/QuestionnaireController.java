@@ -127,6 +127,8 @@ public class QuestionnaireController {
     @FXML
     private VBox rightPanel;
 
+    private List<Map<String, Object>> games=null;
+
     private MenuItem item1=new MenuItem(" ");
     private MenuItem item2=new MenuItem(" ");
     private MenuItem item3=new MenuItem(" ");
@@ -160,31 +162,21 @@ public class QuestionnaireController {
         searchField.textProperty().addListener((obs, oldValue, newValue) -> {
             if(newValue==null || newValue.length()<2){
                 cm.hide();
+                games=null;
                 return;
             }
             String firstLetter= newValue.substring(0, 1).toUpperCase();
             String secondLetter= newValue.substring(1, 2).toUpperCase();
-            DocumentReference docRef = fstore.collection("FullSteamGames").document(newValue.substring(0,1).toUpperCase());
+            DocumentReference docRef = fstore.collection("SteamGames").document(newValue.substring(0,1).toUpperCase());
 
             ApiFuture<DocumentSnapshot> future = docRef.get();
             DocumentSnapshot document = null;
             try {
-                document = future.get();
-                ArrayList<String> list=(ArrayList<String>) document.get(newValue.substring(1,2).toUpperCase());
-                if(list==null){
-                    cm.getItems().clear();
-                    MenuItem m= new MenuItem("No Games");
-                    cm.getItems().add(m);
-                    if(!cm.isShowing()){
-                        cm.show(searchField, Side.BOTTOM, 0, 0);
-                    }
-                    System.out.println("Document does NOT exist!");
-                    return;
-                }else{
-                    cm.getItems().clear();
-                    DocumentSnapshot doc = fstore.collection("FullSteamGames").document(firstLetter).get().get();
+                    if(games==null) {
+                        DocumentSnapshot doc = fstore.collection("SteamGames").document((firstLetter + secondLetter).toUpperCase()).get().get();
 
-                    List<Map<String, Object>> games = (List<Map<String, Object>>) doc.get(secondLetter);
+                        games = (List<Map<String, Object>>) doc.get("Games");
+                    }
                     int count=0;
                     for(Map<String, Object> game:games){
                         if(count<=5) {
@@ -221,7 +213,6 @@ public class QuestionnaireController {
                     }
                     cm.show(searchField, Side.BOTTOM, 0, 0);
                     return;
-                }
             } catch (InterruptedException e) {
                 return;
             } catch (ExecutionException e) {
