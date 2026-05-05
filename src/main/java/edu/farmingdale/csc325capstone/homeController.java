@@ -22,8 +22,6 @@ public class homeController {
     @FXML
     private Button buildSandbox;
 
-    private SandBoxParts s= new SandBoxParts();
-
     @FXML
     private void handleFindGames(ActionEvent event) throws Exception {
         HelloApplication.setRoot("gameSearch.fxml");

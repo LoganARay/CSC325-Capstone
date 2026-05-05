@@ -43,17 +43,10 @@ public class HelloApplication extends Application {
         SandBoxParts c= new SandBoxParts();
         try {
             CollectionReference parts=fstore.collection("Parts");
-//            DocumentSnapshot doc = fstore.collection("Parts").document("cases").get().get();
-//            cases = (List<Map<String, Object>>) doc.get("list");
-
-
-            cases = (List<Map<String, Object>>) fstore.collection("Parts").document("cases").get().get().get("list");
+            cases = (List<Map<String, Object>>) parts.document("cases").get().get().get("list");
             cpus = (List<Map<String, Object>>) parts.document("cpus").get().get().get("list");
             gpus= (List<Map<String, Object>>) parts.document("gpus").get().get().get("list");
             motherboards = (List<Map<String, Object>>) parts.document("motherboards").get().get().get("list");
-            psus = (List<Map<String, Object>>) parts.document("psus").get().get().get("list");
-            ram = (List<Map<String, Object>>) parts.document("ram").get().get().get("list");
-            storage = (List<Map<String, Object>>) parts.document("storage").get().get().get("list");
 
         scene = new Scene(loadFXML("homeView.fxml"), 950, 750);
         } catch (Exception e) {
@@ -61,7 +54,7 @@ public class HelloApplication extends Application {
         }
         scene = new Scene(loadFXML("homeView.fxml"));
         stage.setTitle("Steam Builder");
-
+        //stage.setFullScreen(true);
         stage.setScene(scene);
         stage.show();
     }
@@ -118,13 +111,22 @@ public class HelloApplication extends Application {
         part.setId(partMap.get(name));
         part.setName(name);
         part.setCategory(category);
-        part.setBrand((String)fstore.collection(database).document(partMap.get(name)).get().get().get("brand") );
-        Object priceObj = fstore.collection(database).document(partMap.get(name)).get().get().get("price");
-        part.setPrice(priceObj instanceof Number ? ((Number) priceObj).doubleValue() : 0.0);
-        part.setLink((String)fstore.collection(database).document(partMap.get(name)).get().get().get("link"));
-        Object yearObj = fstore.collection(database).document(partMap.get(name)).get().get().get("year");
-        part.setYear(yearObj instanceof Number ? ((Number) yearObj).intValue() : null);
-        part.setSpecs((Map<String, Object>) fstore.collection(database).document(partMap.get(name)).get().get().get("specs"));
+        DocumentSnapshot snapshot = fstore
+                .collection(database)
+                .document(partMap.get(name))
+                .get()
+                .get();
+
+        if (snapshot.exists()) {
+            part.setBrand((String)snapshot.get("brand"));
+            Object priceObj = snapshot.get("price");
+            part.setPrice(priceObj instanceof Number ? ((Number) priceObj).doubleValue() : 0.0);
+            part.setLink((String)snapshot.get("link"));
+            Object yearObj = snapshot.get("year");
+            part.setYear(yearObj instanceof Number ? ((Number) yearObj).intValue() : null);
+            part.setSpecs((Map<String, Object>) snapshot.get("specs"));
+        }
+
         return part;
     }
 

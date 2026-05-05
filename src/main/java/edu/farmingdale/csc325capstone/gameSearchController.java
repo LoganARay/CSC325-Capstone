@@ -3,6 +3,9 @@ package edu.farmingdale.csc325capstone;
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.DocumentSnapshot;
+import edu.farmingdale.csc325capstone.service.GameRequirements;
+import edu.farmingdale.csc325capstone.service.SteamGame;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -26,7 +29,7 @@ public class gameSearchController {
     private Label gameStudioLabel;
 
     @FXML
-    private ListView<?> gamesListView;
+    private ListView<Label> gamesListView;
 
     @FXML
     private Button homeButton;
@@ -63,6 +66,10 @@ public class gameSearchController {
 
     @FXML
     private TextField searchField;
+
+    private List<SteamGame> library=null;
+
+    private List<Label> gameLists=null;
 
 
     private MenuItem item1=new MenuItem(" ");
@@ -196,14 +203,46 @@ public class gameSearchController {
     public void displayStats(String name){
         setGame(name);
         gameStudioLabel.setText(name);
+        String titleName= currentGame.get("Name") + "";
         Map<String, Object> min= (Map<String, Object>)currentGame.get("Minimum");
-        minCpuLabel.setText(min.get("Processor") + "");
-        minGpuLabel.setText(min.get("Graphics") + "");
-        minRamLabel.setText(min.get("Memory") + "");
+        String minCpu=min.get("Processor") + "";
+        String minGpu=min.get("Graphics") + "";
+        String minRam=min.get("Memory") + "";
         Map<String, Object> rec= (Map<String, Object>)currentGame.get("Recommended");
-        recCpuLabel.setText(rec.get("Processor") + "");
-        recGpuLabel.setText(rec.get("Graphics") + "");
-        recRamLabel.setText(rec.get("Memory") + "");
+        String recCpu=rec.get("Processor") + "";
+        String recGpu=rec.get("Graphics") + "";
+        String recRam=rec.get("Memory") + "";
+        String storage= currentGame.get("Storage") + "";
+        GameRequirements minG= new GameRequirements(minCpu, minGpu, minRam);
+        GameRequirements recG= new GameRequirements(recCpu, recGpu, recRam);
+        SteamGame sg= new SteamGame(name, currentGame.get("AppId") + "", storage, minG, recG);
+
+        if (library == null){
+            library= new ArrayList<SteamGame>();
+        }
+        Label title= new Label(titleName);
+        title.setOnMouseClicked(e->{
+            gameStudioLabel.setText(name);
+            minCpuLabel.setText(minCpu);
+            minGpuLabel.setText(minGpu);
+            minRamLabel.setText(minRam);
+            recCpuLabel.setText(recCpu);
+            recGpuLabel.setText(recGpu);
+            recRamLabel.setText(recRam);
+            recStorageLabel.setText(storage);
+        });
+        if(gameLists==null){
+            gameLists=new ArrayList<Label>();
+        }
+        gameLists.add(title);
+        gamesListView.setItems((FXCollections.observableArrayList(gameLists)));
+        library.add(sg);
+        minCpuLabel.setText(minCpu);
+        minGpuLabel.setText(minGpu);
+        minRamLabel.setText(minRam);
+        recCpuLabel.setText(recCpu);
+        recGpuLabel.setText(recGpu);
+        recRamLabel.setText(recRam);
         if(currentGame.get("Storage")=="0"){
             recStorageLabel.setText("Less than 1 GB");
         }

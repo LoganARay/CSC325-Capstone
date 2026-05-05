@@ -1,11 +1,13 @@
 package edu.farmingdale.csc325capstone;
 
+import com.google.cloud.firestore.CollectionReference;
 import edu.farmingdale.csc325capstone.PcParts.SandBoxParts;
 import edu.farmingdale.csc325capstone.model.CompatibilityChecker;
 import edu.farmingdale.csc325capstone.model.Part;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -72,6 +74,9 @@ public class SandboxViewController {
     @FXML
     private VBox detailsVBox;
 
+    @FXML
+    private VBox detailsVBox2;
+
     private HashMap<String, String> caseCalls;
     private HashMap<String, String> cpuCalls;
     private HashMap<String, String> motherboardCalls;
@@ -83,6 +88,12 @@ public class SandboxViewController {
 
     @FXML
     public void initialize() throws Exception {
+        if(HelloApplication.psus==null){
+            CollectionReference parts=HelloApplication.fstore.collection("Parts");
+            HelloApplication.psus = (List<Map<String, Object>>) parts.document("psus").get().get().get("list");
+            HelloApplication.ram = (List<Map<String, Object>>) parts.document("ram").get().get().get("list");
+            HelloApplication.storage = (List<Map<String, Object>>) parts.document("storage").get().get().get("list");
+        }
         setCases();
         setCpus();
         setMotherboards();
@@ -132,6 +143,7 @@ public class SandboxViewController {
         totalCostNumber.setText("0");
         totalWattage.setText("0");
         selectedParts.clear();
+        detailsVBox.getChildren().clear();
         detailsVBox.getChildren().clear();
     }
 
@@ -291,7 +303,7 @@ public class SandboxViewController {
     }
 
     private void updateDetailsPanel() {
-        detailsVBox.getChildren().clear();
+        detailsVBox2.getChildren().clear();
         addPartDetail("CPU", selectedParts.get("cpu"));
         addPartDetail("GPU", selectedParts.get("gpu"));
         addPartDetail("RAM", selectedParts.get("ram"));
@@ -319,7 +331,7 @@ public class SandboxViewController {
         specsLabel.setWrapText(true);
 
         card.getChildren().addAll(nameLabel, brandPriceLabel, specsLabel);
-        detailsVBox.getChildren().add(card);
+        detailsVBox2.getChildren().add(card);
     }
 
     private String getKeySpecsText(Part part) {

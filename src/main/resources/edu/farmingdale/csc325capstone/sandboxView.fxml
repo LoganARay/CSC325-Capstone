@@ -12,6 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.ScrollPane?>
 <AnchorPane prefHeight="760.0" prefWidth="1500.0" stylesheets="@savedBuild-GamesSearch.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.csc325capstone.SandboxViewController">
   <children>
     <HBox layoutY="56.8" prefHeight="546.0" prefWidth="800.0" spacing="24" style="-fx-padding: 20 24;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0">
@@ -156,7 +157,12 @@
             </VBox>
 
               <Label styleClass="partSection" text="Selected Parts" />
-              <VBox fx:id="detailsVBox" prefHeight="200" spacing="4" style="-fx-padding: 8;" />
+              <ScrollPane prefWidth="600" prefHeight="800" fitToWidth="true">
+                  <content>
+                      <VBox fx:id="detailsVBox2" maxHeight="800" prefHeight="600" prefWidth="600" spacing="4" style="-fx-padding: 8;" >
+                      </VBox>
+                  </content>
+              </ScrollPane>
 
             <HBox spacing="8">
               <children>
