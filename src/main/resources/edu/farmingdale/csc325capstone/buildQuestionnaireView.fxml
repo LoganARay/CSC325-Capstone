@@ -100,48 +100,11 @@
 
             <Button fx:id="nextButton" maxWidth="Infinity" onAction="#onNextClicked" styleClass="next-button" text="Next" />
 
+
             <!-- View All Button -->
             <Button fx:id="viewAllBtn" maxWidth="Infinity" onAction="#onViewAllSuggestionsClicked"
                     styleClass="next-button" text="View All Suggestions"
                     visible="false" managed="false"/>
-
-            <!-- All Suggestions Pane (3 cards) -->
-            <Pane fx:id="allSuggestionsPane" visible="false" managed="false">
-                <VBox spacing="16">
-                    <!-- Card 1 -->
-                    <VBox fx:id="card1" spacing="6" styleClass="question-card">
-                        <padding><Insets top="12" right="12" bottom="12" left="12"/></padding>
-                        <Label fx:id="medal1" styleClass="question-counter" text="🥇 1st Place"/>
-                        <ImageView fx:id="img1" fitWidth="200" fitHeight="140" preserveRatio="true"/>
-                        <Label fx:id="name1" styleClass="question-text" wrapText="true"/>
-                        <Label fx:id="specs1" styleClass="question-hint" wrapText="true"/>
-                        <Label fx:id="price1" styleClass="question-text"/>
-                        <Button maxWidth="Infinity" onAction="#onViewDeal1Clicked" styleClass="next-button" text="View Deal"/>
-                    </VBox>
-                    <!-- Card 2 -->
-                    <VBox fx:id="card2" spacing="6" styleClass="question-card">
-                        <padding><Insets top="12" right="12" bottom="12" left="12"/></padding>
-                        <Label fx:id="medal2" styleClass="question-counter" text="🥈 2nd Place"/>
-                        <ImageView fx:id="img2" fitWidth="200" fitHeight="140" preserveRatio="true"/>
-                        <Label fx:id="name2" styleClass="question-text" wrapText="true"/>
-                        <Label fx:id="specs2" styleClass="question-hint" wrapText="true"/>
-                        <Label fx:id="price2" styleClass="question-text"/>
-                        <Button maxWidth="Infinity" onAction="#onViewDeal2Clicked" styleClass="next-button" text="View Deal"/>
-                    </VBox>
-                    <!-- Card 3 -->
-                    <VBox fx:id="card3" spacing="6" styleClass="question-card">
-                        <padding><Insets top="12" right="12" bottom="12" left="12"/></padding>
-                        <Label fx:id="medal3" styleClass="question-counter" text="🥉 3rd Place"/>
-                        <ImageView fx:id="img3" fitWidth="200" fitHeight="140" preserveRatio="true"/>
-                        <Label fx:id="name3" styleClass="question-text" wrapText="true"/>
-                        <Label fx:id="specs3" styleClass="question-hint" wrapText="true"/>
-                        <Label fx:id="price3" styleClass="question-text"/>
-                        <Button maxWidth="Infinity" onAction="#onViewDeal3Clicked" styleClass="next-button" text="View Deal"/>
-                    </VBox>
-                    <Button maxWidth="Infinity" onAction="#onBackToRecommendationClicked"
-                            styleClass="next-button" text="← Back"/>
-                </VBox>
-            </Pane>
 
         </VBox>
     </HBox>

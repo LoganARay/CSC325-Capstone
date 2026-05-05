@@ -11,9 +11,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -53,27 +51,32 @@ public class RegistrationController {
             }
             if(nameField.getText()!=null && passwordField.getText()!=null && emailField.getText()!=null){
                 if(emailField.getText().contains("@gmail.com") && nameField.getText().length()>4){
-                    for(Map<String, Object> user: users.values()){
-                        if((user.get("email") + "").equals(emailField.getText())){
-                            System.out.println("Email in use!!!");
-                            inUse=false;
+                    if(passwordCheck(passwordField.getText())){
+                        for(Map<String, Object> user: users.values()){
+                            if((user.get("email") + "").equals(emailField.getText())){
+                                System.out.println("Email in use!!!");
+                                inUse=false;
+                            }
+                        }
+                        if(inUse) {
+                            DocumentReference docUsers = HelloApplication.fstore.collection("Users").document(emailField.getText());
+                            Map<String, Object> user = new HashMap<String, Object>();
+                            List<Map<String, Object>> builds= new ArrayList<Map<String, Object>>();
+                            user.put("name", nameField.getText());
+                            user.put("email", emailField.getText());
+                            user.put("password", passwordField.getText());
+                            user.put("builds", builds);
+                            docUsers.set(user);
+                            HelloApplication.setCurrentUser(user.get("name") + "", user.get("email") + "", user.get("password") + "", builds);
+                            try {
+                                HelloApplication.setRoot("homeView.fxml");
+                            } catch (IOException ex) {
+                                throw new RuntimeException(ex);
+                            }
                         }
                     }
-                    if(inUse) {
-                        DocumentReference docUsers = HelloApplication.fstore.collection("Users").document(emailField.getText());
-                        HashMap<String, Object> user = new HashMap<String, Object>();
-                        HashMap<String, Object> builds= new HashMap<String, Object>();
-                        user.put("name", nameField.getText());
-                        user.put("email", emailField.getText());
-                        user.put("password", passwordField.getText());
-                        user.put("builds", builds);
-                        docUsers.set(user);
-                        HelloApplication.setCurrentUser(user.get("name") + "", user.get("email") + "", user.get("password") + "", builds);
-                        try {
-                            HelloApplication.setRoot("homeView.fxml");
-                        } catch (IOException ex) {
-                            throw new RuntimeException(ex);
-                        }
+                    else{
+                        System.out.println("Your password SUCKS!");
                     }
                 }
             }
@@ -105,5 +108,30 @@ public class RegistrationController {
 
 
 
+    }
+
+    public boolean passwordCheck(String password){
+        char[] numbers = {'1', '1', '3', '4', '5', '6', '7', '8', '9', '0'};
+        char[] specialCharacters = {'!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '=', '+', ']', '}', '[', '{', '|', ';', ':', '.', '>', ',', '<', '~', '`'};
+        if(password.length()>7){
+            boolean pass=false;
+            for (char number : numbers) {
+                if (password.contains(number + "")) {
+                    pass = true;
+                    break;
+                }
+            }
+            if(pass){
+                pass=false;
+                for (char specialCharacter : specialCharacters) {
+                    if (password.contains(specialCharacter + "")) {
+                        pass = true;
+                        break;
+                    }
+                }
+                return pass;
+            }
+        }
+        return false;
     }
 }

@@ -3,6 +3,9 @@ package edu.farmingdale.csc325capstone;
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.DocumentSnapshot;
+import edu.farmingdale.csc325capstone.service.GameRequirements;
+import edu.farmingdale.csc325capstone.service.SteamGame;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -26,7 +29,7 @@ public class gameSearchController {
     private Label gameStudioLabel;
 
     @FXML
-    private ListView<?> gamesListView;
+    private ListView<Label> gamesListView;
 
     @FXML
     private Button homeButton;
@@ -63,6 +66,10 @@ public class gameSearchController {
 
     @FXML
     private TextField searchField;
+
+    private List<SteamGame> library=null;
+
+    private List<Label> gameLists=null;
 
 
     private MenuItem item1=new MenuItem(" ");
@@ -110,41 +117,29 @@ public class gameSearchController {
         searchField.textProperty().addListener((obs, oldValue, newValue) -> {
             if(newValue==null || newValue.length()<2){
                 cm.hide();
+                cm.getItems().clear();
+                currentScope=null;
                 return;
             }
             String firstLetter= newValue.substring(0, 1).toUpperCase();
             String secondLetter= newValue.substring(1, 2).toUpperCase();
-            DocumentReference docRef = HelloApplication.steamGames.document(newValue.substring(0,1).toUpperCase());
+            DocumentReference docRef = HelloApplication.fstore.collection("SteamGames").document(newValue.substring(0,1).toUpperCase());
 
             ApiFuture<DocumentSnapshot> future = docRef.get();
             DocumentSnapshot document = null;
             try {
-                document = future.get();
-                ArrayList<String> list=(ArrayList<String>) document.get(newValue.substring(1,2).toUpperCase());
-                if(list==null){
-                    cm.getItems().clear();
-                    MenuItem m= new MenuItem("No Games");
-                    cm.getItems().add(m);
-                    if(!cm.isShowing()){
-                        cm.show(searchField, Side.BOTTOM, 0, 0);
-                    }
-                    System.out.println("Document does NOT exist!");
-                    currentScope=null;
-                    currentGame=null;
-                    return;
-                }else{
+                if(currentScope==null) {
+                    DocumentSnapshot doc = HelloApplication.fstore.collection("SteamGames").document((firstLetter + secondLetter).toUpperCase()).get().get();
 
-                    cm.getItems().clear();
-                    DocumentSnapshot doc = HelloApplication.gett(firstLetter);
-
-                    currentScope = (List<Map<String, Object>>) doc.get(secondLetter);
-
-                    int count=0;
-                    assert currentScope != null;
-                    for(Map<String, Object> game:currentScope){
-                        if(count<=5) {
-                            String name = (String) game.get("Name");
-                            if (newValue.length() <= name.length() && (name.toUpperCase()).substring(0, newValue.length()).equals(newValue.toUpperCase())) {
+                    currentScope = (List<Map<String, Object>>) doc.get("Games");
+                }
+                cm.getItems().clear();
+                int count=0;
+                for(Map<String, Object> game:currentScope){
+                    if(count<=5) {
+                        String name = (String) game.get("Name");
+                        if (newValue.length() <= name.length()) {
+                            if ((name.toUpperCase()).contains(newValue.toUpperCase())) {
                                 if(count==0){
                                     item1.setText(name);
                                     cm.getItems().add(item1);
@@ -168,10 +163,13 @@ public class gameSearchController {
                                 count++;
                             }
                         }
+                    }else{
+                        cm.show(searchField, Side.BOTTOM, 0, 0);
+                        return;
                     }
-                    cm.show(searchField, Side.BOTTOM, 0, 0);
-                    return;
                 }
+                cm.show(searchField, Side.BOTTOM, 0, 0);
+                return;
             } catch (InterruptedException e) {
                 return;
             } catch (ExecutionException e) {
@@ -205,14 +203,46 @@ public class gameSearchController {
     public void displayStats(String name){
         setGame(name);
         gameStudioLabel.setText(name);
+        String titleName= currentGame.get("Name") + "";
         Map<String, Object> min= (Map<String, Object>)currentGame.get("Minimum");
-        minCpuLabel.setText(min.get("Processor") + "");
-        minGpuLabel.setText(min.get("Graphics") + "");
-        minRamLabel.setText(min.get("Memory") + "");
+        String minCpu=min.get("Processor") + "";
+        String minGpu=min.get("Graphics") + "";
+        String minRam=min.get("Memory") + "";
         Map<String, Object> rec= (Map<String, Object>)currentGame.get("Recommended");
-        recCpuLabel.setText(rec.get("Processor") + "");
-        recGpuLabel.setText(rec.get("Graphics") + "");
-        recRamLabel.setText(rec.get("Memory") + "");
+        String recCpu=rec.get("Processor") + "";
+        String recGpu=rec.get("Graphics") + "";
+        String recRam=rec.get("Memory") + "";
+        String storage= currentGame.get("Storage") + "";
+        GameRequirements minG= new GameRequirements(minCpu, minGpu, minRam);
+        GameRequirements recG= new GameRequirements(recCpu, recGpu, recRam);
+        SteamGame sg= new SteamGame(name, currentGame.get("AppId") + "", storage, minG, recG);
+
+        if (library == null){
+            library= new ArrayList<SteamGame>();
+        }
+        Label title= new Label(titleName);
+        title.setOnMouseClicked(e->{
+            gameStudioLabel.setText(name);
+            minCpuLabel.setText(minCpu);
+            minGpuLabel.setText(minGpu);
+            minRamLabel.setText(minRam);
+            recCpuLabel.setText(recCpu);
+            recGpuLabel.setText(recGpu);
+            recRamLabel.setText(recRam);
+            recStorageLabel.setText(storage);
+        });
+        if(gameLists==null){
+            gameLists=new ArrayList<Label>();
+        }
+        gameLists.add(title);
+        gamesListView.setItems((FXCollections.observableArrayList(gameLists)));
+        library.add(sg);
+        minCpuLabel.setText(minCpu);
+        minGpuLabel.setText(minGpu);
+        minRamLabel.setText(minRam);
+        recCpuLabel.setText(recCpu);
+        recGpuLabel.setText(recGpu);
+        recRamLabel.setText(recRam);
         if(currentGame.get("Storage")=="0"){
             recStorageLabel.setText("Less than 1 GB");
         }

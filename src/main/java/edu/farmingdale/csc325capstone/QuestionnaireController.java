@@ -130,11 +130,9 @@ public class QuestionnaireController {
     @FXML
     private VBox rightPanel;
     @FXML
-    private javafx.scene.layout.Pane allSuggestionsPane;
-    @FXML
-    private VBox card1, card2, card3;
-    @FXML
     private Button viewAllBtn;
+
+    private List<Map<String, Object>> games=null;
 
     private MenuItem item1=new MenuItem(" ");
     private MenuItem item2=new MenuItem(" ");
@@ -169,31 +167,21 @@ public class QuestionnaireController {
         searchField.textProperty().addListener((obs, oldValue, newValue) -> {
             if(newValue==null || newValue.length()<2){
                 cm.hide();
+                games=null;
                 return;
             }
             String firstLetter= newValue.substring(0, 1).toUpperCase();
             String secondLetter= newValue.substring(1, 2).toUpperCase();
-            DocumentReference docRef = fstore.collection("FullSteamGames").document(newValue.substring(0,1).toUpperCase());
+            DocumentReference docRef = fstore.collection("SteamGames").document(newValue.substring(0,1).toUpperCase());
 
             ApiFuture<DocumentSnapshot> future = docRef.get();
             DocumentSnapshot document = null;
             try {
-                document = future.get();
-                ArrayList<String> list=(ArrayList<String>) document.get(newValue.substring(1,2).toUpperCase());
-                if(list==null){
-                    cm.getItems().clear();
-                    MenuItem m= new MenuItem("No Games");
-                    cm.getItems().add(m);
-                    if(!cm.isShowing()){
-                        cm.show(searchField, Side.BOTTOM, 0, 0);
-                    }
-                    System.out.println("Document does NOT exist!");
-                    return;
-                }else{
-                    cm.getItems().clear();
-                    DocumentSnapshot doc = fstore.collection("FullSteamGames").document(firstLetter).get().get();
+                    if(games==null) {
+                        DocumentSnapshot doc = fstore.collection("SteamGames").document((firstLetter + secondLetter).toUpperCase()).get().get();
 
-                    List<Map<String, Object>> games = (List<Map<String, Object>>) doc.get(secondLetter);
+                        games = (List<Map<String, Object>>) doc.get("Games");
+                    }
                     int count=0;
                     for(Map<String, Object> game:games){
                         if(count<=5) {
@@ -230,7 +218,6 @@ public class QuestionnaireController {
                     }
                     cm.show(searchField, Side.BOTTOM, 0, 0);
                     return;
-                }
             } catch (InterruptedException e) {
                 return;
             } catch (ExecutionException e) {
@@ -572,35 +559,15 @@ public class QuestionnaireController {
         selected.setStyle("-fx-background-color: #4c6b22; -fx-text-fill: white; -fx-background-radius: 6; -fx-border-color: #8bc34a; -fx-border-radius: 6;");
     }
     @FXML
-    private void onViewAllSuggestionsClicked() { showAllSuggestions(); }
-
-    @FXML
-    private void onBackToRecommendationClicked() {
-        allSuggestionsPane.setVisible(false);
-        allSuggestionsPane.setManaged(false);
-    }
-
-    private void showAllSuggestions() {
-        allSuggestionsPane.setVisible(true);
-        allSuggestionsPane.setManaged(true);
-        String[] medals = {"🥇 1st Place", "🥈 2nd Place", "🥉 3rd Place"};
-        VBox[] cards = {card1, card2, card3};
-        for (int i = 0; i < topThreePCs.size(); i++) {
-            PreBuilt pc = topThreePCs.get(i);
-            VBox card = cards[i];
-            card.setUserData(pc.getLink());
-            Label medalLabel = (Label) card.lookup("#medal" + (i + 1));
-            if (medalLabel != null) medalLabel.setText(medals[i]);
-            Label nameLabel = (Label) card.lookup("#name" + (i + 1));
-            if (nameLabel != null) nameLabel.setText(pc.getName());
-            Label specsLabel = (Label) card.lookup("#specs" + (i + 1));
-            if (specsLabel != null) specsLabel.setText("GPU: " + pc.getGPU() + "\nCPU: " + pc.getCPU() + "\nRAM: " + pc.getRAM() + "  |  Storage: " + pc.getStorage());
-            Label priceLabel = (Label) card.lookup("#price" + (i + 1));
-            if (priceLabel != null) priceLabel.setText("$" + pc.getPrice());
-            ImageView imgView = (ImageView) card.lookup("#img" + (i + 1));
-            if (imgView != null && pc.getImageURL() != null) imgView.setImage(new Image(pc.getImageURL(), true));
+    private void onViewAllSuggestionsClicked() {
+        try {
+            AllSuggestionsController.setTopThree(topThreePCs);
+            HelloApplication.setRoot("allSuggestionsView.fxml");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
+
 
     @FXML private void onViewDeal1Clicked() { openLink(topThreePCs.get(0).getLink()); }
     @FXML private void onViewDeal2Clicked() { openLink(topThreePCs.get(1).getLink()); }

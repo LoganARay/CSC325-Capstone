@@ -5,6 +5,7 @@ import com.google.cloud.firestore.Firestore;
 import com.google.cloud.firestore.QueryDocumentSnapshot;
 import com.google.cloud.firestore.QuerySnapshot;
 import com.google.firebase.cloud.FirestoreClient;
+import edu.farmingdale.csc325capstone.HelloApplication;
 
 import java.util.HashMap;
 import java.util.List;
@@ -22,4 +23,28 @@ public class SandBoxParts {
         }
         return cases;
     }
+
+//    public void fillingOrder() throws Exception {
+//        if(HelloApplication.cases==null){
+//            HelloApplication.cases= loadRepo("cases");
+//        }
+//        else if(HelloApplication.cpus==null){
+//            HelloApplication.cpus= loadRepo("cpus");
+//        }
+//        else if(HelloApplication.gpus==null){
+//            HelloApplication.gpus= loadRepo("gpus");
+//        }
+//        else if(HelloApplication.motherboards==null){
+//            HelloApplication.motherboards= loadRepo("motherboards");
+//        }
+//        else if(HelloApplication.psus==null && HelloApplication.ram==null){
+//            HelloApplication.psus= loadRepo("psus");
+//        }
+//        else if(HelloApplication.ram==null){
+//            HelloApplication.ram= loadRepo("ram");
+//        }
+//       else if (HelloApplication.storage==null){
+//            HelloApplication.storage = loadRepo("storage");
+//        }
+//    }
 }
