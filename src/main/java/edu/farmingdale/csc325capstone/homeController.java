@@ -22,7 +22,18 @@ public class homeController {
     @FXML
     private Button buildSandbox;
 
-    private SandBoxParts s= new SandBoxParts();
+    @FXML
+    public void initialize() {
+        if(HelloApplication.user!=null){
+            loginButton.setText("Hi, " + HelloApplication.user.getName());
+            loginButton.setOnMouseEntered( e->{
+                loginButton.setText("Change accounts?");
+            });
+            loginButton.setOnMouseExited( e->{
+                loginButton.setText("Hi, " + HelloApplication.user.getName());
+            });
+        }
+    }
 
     @FXML
     private void handleFindGames(ActionEvent event) throws Exception {

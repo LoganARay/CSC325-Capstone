@@ -9,11 +9,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <BorderPane prefHeight="750.0" prefWidth="950.0" stylesheets="@savedBuild-GamesSearch.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.csc325capstone.homeController">
   <top>
     <HBox alignment="CENTER_LEFT" spacing="24" style="-fx-padding: 14 28;">
       <children>
         <HBox alignment="CENTER_LEFT" spacing="12">
+            <ImageView fitWidth="80" fitHeight="80">
+                <image>
+                    <Image url="@SteamBuilderLogo.png" />
+                </image>
+            </ImageView>
           <Label styleClass="SteamBuildertitle" text="Steam Builder" textFill="WHITE">
                   <font>
                      <Font name="System Bold" size="25.0" />

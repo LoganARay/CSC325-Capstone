@@ -1,11 +1,16 @@
 package edu.farmingdale.csc325capstone;
 
+import com.google.cloud.firestore.CollectionReference;
 import edu.farmingdale.csc325capstone.PcParts.SandBoxParts;
 import edu.farmingdale.csc325capstone.model.CompatibilityChecker;
 import edu.farmingdale.csc325capstone.model.Part;
+import edu.farmingdale.csc325capstone.service.AIService;
+import edu.farmingdale.csc325capstone.service.AppState;
+import edu.farmingdale.csc325capstone.service.PartService;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,6 +24,7 @@ import java.util.List;
 import java.util.ArrayList;
 import javafx.scene.control.Label;
 import java.util.function.Predicate;
+import java.util.ArrayList;
 
 public class SandboxViewController {
 
@@ -80,6 +86,16 @@ public class SandboxViewController {
     void handleHome(ActionEvent event) throws IOException {
         HelloApplication.setRoot("homeView.fxml");
     }
+    private VBox detailsVBox2;
+
+    @FXML
+    private Button analyzeButton;
+
+    @FXML
+    private TextArea aiOutputArea;
+
+    private final AIService aiService = new AIService();
+    private final PartService partService = new PartService();
 
     private HashMap<String, String> caseCalls;
     private HashMap<String, String> cpuCalls;
@@ -110,6 +126,12 @@ public class SandboxViewController {
 
     @FXML
     public void initialize() throws Exception {
+        if(HelloApplication.psus==null){
+            CollectionReference parts=HelloApplication.fstore.collection("Parts");
+            HelloApplication.psus = (List<Map<String, Object>>) parts.document("psus").get().get().get("list");
+            HelloApplication.ram = (List<Map<String, Object>>) parts.document("ram").get().get().get("list");
+            HelloApplication.storage = (List<Map<String, Object>>) parts.document("storage").get().get().get("list");
+        }
         setCases();
         setCpus();
         setMotherboards();
@@ -167,6 +189,54 @@ public class SandboxViewController {
     private void saveBuildHandle(ActionEvent event) throws IOException, ExecutionException, InterruptedException {
         saveBuildLogic();
     }
+    @FXML
+    private void handleAnalyzeBuild(ActionEvent event) {
+        List<Part> selectedParts = new ArrayList<>();
+
+        Part cpu = findSelectedPart(cpuCombo.getValue(), "cpus");
+        Part gpu = findSelectedPart(gpuCombo.getValue(), "gpus");
+        Part ram = findSelectedPart(ramCombo.getValue(), "ram");
+        Part motherboard = findSelectedPart(motherboardCombo.getValue(), "motherboards");
+        Part storage = findSelectedPart(storageCombo.getValue(), "storage");
+        Part psu = findSelectedPart(psuCombo.getValue(), "psus");
+        Part pcCase = findSelectedPart(caseCombo.getValue(), "cases");
+
+        if (cpu != null) selectedParts.add(cpu);
+        if (gpu != null) selectedParts.add(gpu);
+        if (ram != null) selectedParts.add(ram);
+        if (motherboard != null) selectedParts.add(motherboard);
+        if (storage != null) selectedParts.add(storage);
+        if (psu != null) selectedParts.add(psu);
+        if (pcCase != null) selectedParts.add(pcCase);
+
+        if (selectedParts.isEmpty()) {
+            aiOutputArea.setText("Please select at least one part before analyzing.");
+            return;
+        }
+
+        aiOutputArea.setText("Analyzing build...");
+
+        String result = aiService.analyzeBuild(selectedParts, AppState.openAiApiKey);
+
+        // Clean formatting
+        result = result.replace("**", "");   // remove markdown bold
+        result = result.replace("###", "");  // remove headers
+        result = result.replace("##", "");
+        result = result.replace("#", "");
+        result = result.replace("1.", "\n1.");
+        result = result.replace("2.", "\n2.");
+        result = result.replace("3.", "\n3.");
+
+        // Optional: make bullets nicer
+        result = result.replace("- ", "• ");
+
+        aiOutputArea.setText(result);
+    }
+
+
+
+
+
 
     public void clearBuildLogic() {
         cpuCombo.setValue(null);
@@ -181,6 +251,7 @@ public class SandboxViewController {
         selectedParts.clear();
         detailsVBox.getChildren().clear();
         resetAllComboBoxes();
+        detailsVBox.getChildren().clear();
     }
 
     public void saveBuildLogic() throws ExecutionException, InterruptedException {
@@ -296,7 +367,7 @@ public class SandboxViewController {
     }
 
     private void updateDetailsPanel() {
-        detailsVBox.getChildren().clear();
+        detailsVBox2.getChildren().clear();
         addPartDetail("CPU", selectedParts.get("cpu"));
         addPartDetail("GPU", selectedParts.get("gpu"));
         addPartDetail("RAM", selectedParts.get("ram"));
@@ -324,7 +395,7 @@ public class SandboxViewController {
         specsLabel.setWrapText(true);
 
         card.getChildren().addAll(nameLabel, brandPriceLabel, specsLabel);
-        detailsVBox.getChildren().add(card);
+        detailsVBox2.getChildren().add(card);
     }
 
     private String getKeySpecsText(Part part) {
@@ -364,6 +435,25 @@ public class SandboxViewController {
             default:
                 return "";
         }
+    }
+    private Part findSelectedPart(String selectedName, String collectionName) {
+        if (selectedName == null || selectedName.isBlank()) {
+            return null;
+        }
+
+        try {
+            List<Part> parts = partService.getPartsByCollection(collectionName);
+
+            for (Part part : parts) {
+                if (part.getName() != null && part.getName().equals(selectedName)) {
+                    return part;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
     private void showAlert(String title, String message) {

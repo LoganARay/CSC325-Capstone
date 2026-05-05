@@ -101,6 +101,10 @@
             <Button fx:id="nextButton" maxWidth="Infinity" onAction="#onNextClicked" styleClass="next-button" text="Next" />
 
 
+            <!-- View All Button -->
+            <Button fx:id="viewAllBtn" maxWidth="Infinity" onAction="#onViewAllSuggestionsClicked"
+                    styleClass="next-button" text="View All Suggestions"
+                    visible="false" managed="false"/>
 
         </VBox>
     </HBox>

@@ -3,6 +3,9 @@ package edu.farmingdale.csc325capstone;
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.DocumentSnapshot;
+import edu.farmingdale.csc325capstone.service.GameRequirements;
+import edu.farmingdale.csc325capstone.service.SteamGame;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -16,8 +19,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.concurrent.ExecutionException;
+import edu.farmingdale.csc325capstone.model.PreBuilt;
+import edu.farmingdale.csc325capstone.service.PreBuiltService;
+import java.util.AbstractMap;
 
-public class gameSearchController {
+public class gameSearchController extends RecommendationController {
 
 @FXML
     private Button buildButton;
@@ -26,7 +32,7 @@ public class gameSearchController {
     private Label gameStudioLabel;
 
     @FXML
-    private ListView<?> gamesListView;
+    private ListView<Label> gamesListView;
 
     @FXML
     private Button homeButton;
@@ -63,6 +69,15 @@ public class gameSearchController {
 
     @FXML
     private TextField searchField;
+
+    @FXML
+    private Button recommendButton;
+
+
+
+    private List<SteamGame> library=null;
+
+    private List<Label> gameLists=null;
 
 
     private MenuItem item1=new MenuItem(" ");
@@ -172,10 +187,8 @@ public class gameSearchController {
     }
 
     @FXML
-    private void buildButtonHandle() {
-        // TODO: Navigate to the builder with the selected game.
-
-
+    void buildButtonHandle() throws IOException {
+        HelloApplication.setRoot("sandboxView.fxml");
     }
     
     @FXML
@@ -196,14 +209,46 @@ public class gameSearchController {
     public void displayStats(String name){
         setGame(name);
         gameStudioLabel.setText(name);
+        String titleName= currentGame.get("Name") + "";
         Map<String, Object> min= (Map<String, Object>)currentGame.get("Minimum");
-        minCpuLabel.setText(min.get("Processor") + "");
-        minGpuLabel.setText(min.get("Graphics") + "");
-        minRamLabel.setText(min.get("Memory") + "");
+        String minCpu=min.get("Processor") + "";
+        String minGpu=min.get("Graphics") + "";
+        String minRam=min.get("Memory") + "";
         Map<String, Object> rec= (Map<String, Object>)currentGame.get("Recommended");
-        recCpuLabel.setText(rec.get("Processor") + "");
-        recGpuLabel.setText(rec.get("Graphics") + "");
-        recRamLabel.setText(rec.get("Memory") + "");
+        String recCpu=rec.get("Processor") + "";
+        String recGpu=rec.get("Graphics") + "";
+        String recRam=rec.get("Memory") + "";
+        String storage= currentGame.get("Storage") + "";
+        GameRequirements minG= new GameRequirements(minCpu, minGpu, minRam);
+        GameRequirements recG= new GameRequirements(recCpu, recGpu, recRam);
+        SteamGame sg= new SteamGame(name, currentGame.get("AppId") + "", storage, minG, recG);
+
+        if (library == null){
+            library= new ArrayList<SteamGame>();
+        }
+        Label title= new Label(titleName);
+        title.setOnMouseClicked(e->{
+            gameStudioLabel.setText(name);
+            minCpuLabel.setText(minCpu);
+            minGpuLabel.setText(minGpu);
+            minRamLabel.setText(minRam);
+            recCpuLabel.setText(recCpu);
+            recGpuLabel.setText(recGpu);
+            recRamLabel.setText(recRam);
+            recStorageLabel.setText(storage);
+        });
+        if(gameLists==null){
+            gameLists=new ArrayList<Label>();
+        }
+        gameLists.add(title);
+        gamesListView.setItems((FXCollections.observableArrayList(gameLists)));
+        library.add(sg);
+        minCpuLabel.setText(minCpu);
+        minGpuLabel.setText(minGpu);
+        minRamLabel.setText(minRam);
+        recCpuLabel.setText(recCpu);
+        recGpuLabel.setText(recGpu);
+        recRamLabel.setText(recRam);
         if(currentGame.get("Storage")=="0"){
             recStorageLabel.setText("Less than 1 GB");
         }
@@ -222,5 +267,44 @@ public class gameSearchController {
                 break;
             }
         }
+    }
+
+    @FXML
+    private void handleRecommend(ActionEvent event) {
+        if (library == null || library.isEmpty()) return;
+        new Thread(() -> {
+            try {
+                String highestGPU = getHighestLibraryGPU();
+                long totalStorage = library.stream()
+                        .mapToLong(g -> {
+                            try { return Long.parseLong(g.getStorage().replaceAll("[^0-9]", "")); }
+                            catch (Exception e) { return 0L; }
+                        }).sum();
+                PreBuiltService service = new PreBuiltService();
+                List<PreBuilt> allPCs = service.getAllPreBuilts();
+                List<Map.Entry<PreBuilt, Integer>> scored = new ArrayList<>();
+                for (PreBuilt pc : allPCs) {
+                    scored.add(new AbstractMap.SimpleEntry<>(pc, scoreForGame(pc, highestGPU, totalStorage)));
+                }
+                scored.sort((a, b) -> b.getValue() - a.getValue());
+                List<PreBuilt> topThree = selectDiverseTopThree(scored);
+                javafx.application.Platform.runLater(() -> {
+                    navigateToSuggestions(topThree, "gameSearch.fxml", "← Back to Games");
+                });
+            } catch (Exception e) { e.printStackTrace(); }
+        }).start();
+    }
+
+    private String getHighestLibraryGPU() {
+        List<String> gpus = new ArrayList<>();
+        if (library != null) {
+            for (SteamGame g : library) {
+                if (g.getRecReq() != null && g.getRecReq().getGpu() != null) {
+                    gpus.add(g.getRecReq().getGpu().toLowerCase());
+                }
+            }
+        }
+        selectedGameGPUs = gpus;
+        return getHighestGameGPU();
     }
 }

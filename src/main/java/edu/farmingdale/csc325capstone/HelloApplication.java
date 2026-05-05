@@ -12,6 +12,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.*;
@@ -55,6 +56,24 @@ public class HelloApplication extends Application {
         Scene loadingScene = new Scene(loadingLabel, 400, 300);
         stage.setScene(loadingScene);
         stage.setTitle("Steam Builder");
+        SandBoxParts c= new SandBoxParts();
+        try {
+            CollectionReference parts=fstore.collection("Parts");
+            cases = (List<Map<String, Object>>) parts.document("cases").get().get().get("list");
+            cpus = (List<Map<String, Object>>) parts.document("cpus").get().get().get("list");
+            gpus= (List<Map<String, Object>>) parts.document("gpus").get().get().get("list");
+            motherboards = (List<Map<String, Object>>) parts.document("motherboards").get().get().get("list");
+
+        scene = new Scene(loadFXML("homeView.fxml"), 950, 750);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        scene = new Scene(loadFXML("homeView.fxml"));
+        stage.setTitle("Steam Builder");
+        stage.getIcons().add(
+                new Image(getClass().getResourceAsStream("/edu/farmingdale/csc325capstone/SteamBuilderLogo2.png"))
+        );
+        stage.setScene(scene);
         stage.show();
 
         new Thread(() -> {
@@ -134,13 +153,22 @@ public class HelloApplication extends Application {
         part.setId(partMap.get(name));
         part.setName(name);
         part.setCategory(category);
-        part.setBrand((String)fstore.collection(database).document(partMap.get(name)).get().get().get("brand") );
-        Object priceObj = fstore.collection(database).document(partMap.get(name)).get().get().get("price");
-        part.setPrice(priceObj instanceof Number ? ((Number) priceObj).doubleValue() : 0.0);
-        part.setLink((String)fstore.collection(database).document(partMap.get(name)).get().get().get("link"));
-        Object yearObj = fstore.collection(database).document(partMap.get(name)).get().get().get("year");
-        part.setYear(yearObj instanceof Number ? ((Number) yearObj).intValue() : null);
-        part.setSpecs((Map<String, Object>) fstore.collection(database).document(partMap.get(name)).get().get().get("specs"));
+        DocumentSnapshot snapshot = fstore
+                .collection(database)
+                .document(partMap.get(name))
+                .get()
+                .get();
+
+        if (snapshot.exists()) {
+            part.setBrand((String)snapshot.get("brand"));
+            Object priceObj = snapshot.get("price");
+            part.setPrice(priceObj instanceof Number ? ((Number) priceObj).doubleValue() : 0.0);
+            part.setLink((String)snapshot.get("link"));
+            Object yearObj = snapshot.get("year");
+            part.setYear(yearObj instanceof Number ? ((Number) yearObj).intValue() : null);
+            part.setSpecs((Map<String, Object>) snapshot.get("specs"));
+        }
+
         return part;
     }
 

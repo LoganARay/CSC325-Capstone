@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.*?>
+
+<VBox spacing="16" stylesheets="@questionnaire.css"
+      xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/11.0.14-internal"
+      fx:controller="edu.farmingdale.csc325capstone.AllSuggestionsController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Top 3 Recommendations" styleClass="question-text"/>
+
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+        <VBox fx:id="cardsContainer" spacing="16">
+            <padding><Insets top="8" right="8" bottom="8" left="8"/></padding>
+
+            <!-- Card 1 -->
+            <VBox fx:id="card1" spacing="8" styleClass="question-card">
+                <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+                <Label fx:id="medal1" text="🥇 1st Place" styleClass="question-counter"/>
+                <ImageView fx:id="img1" fitWidth="300" fitHeight="180" preserveRatio="true"/>
+                <Label fx:id="name1" styleClass="question-text" wrapText="true"/>
+                <Label fx:id="specs1" styleClass="question-hint" wrapText="true"/>
+                <Label fx:id="price1" styleClass="question-text"/>
+                <Button fx:id="deal1" text="View Deal" maxWidth="Infinity"
+                        onAction="#onDeal1Clicked"
+                        style="-fx-background-color: #2e7d32; -fx-text-fill: white; -fx-background-radius: 6;"/>
+            </VBox>
+
+            <!-- Card 2 -->
+            <VBox fx:id="card2" spacing="8" styleClass="question-card">
+                <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+                <Label fx:id="medal2" text="🥈 2nd Place" styleClass="question-counter"/>
+                <ImageView fx:id="img2" fitWidth="300" fitHeight="180" preserveRatio="true"/>
+                <Label fx:id="name2" styleClass="question-text" wrapText="true"/>
+                <Label fx:id="specs2" styleClass="question-hint" wrapText="true"/>
+                <Label fx:id="price2" styleClass="question-text"/>
+                <Button fx:id="deal2" text="View Deal" maxWidth="Infinity"
+                        onAction="#onDeal2Clicked"
+                        style="-fx-background-color: #2e7d32; -fx-text-fill: white; -fx-background-radius: 6;"/>
+            </VBox>
+
+            <!-- Card 3 -->
+            <VBox fx:id="card3" spacing="8" styleClass="question-card">
+                <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+                <Label fx:id="medal3" text="🥉 3rd Place" styleClass="question-counter"/>
+                <ImageView fx:id="img3" fitWidth="300" fitHeight="180" preserveRatio="true"/>
+                <Label fx:id="name3" styleClass="question-text" wrapText="true"/>
+                <Label fx:id="specs3" styleClass="question-hint" wrapText="true"/>
+                <Label fx:id="price3" styleClass="question-text"/>
+                <Button fx:id="deal3" text="View Deal" maxWidth="Infinity"
+                        onAction="#onDeal3Clicked"
+                        style="-fx-background-color: #2e7d32; -fx-text-fill: white; -fx-background-radius: 6;"/>
+            </VBox>
+
+        </VBox>
+    </ScrollPane>
+
+    <Button fx:id="backButton" text="← Back" maxWidth="Infinity"
+            onAction="#onBackClicked" styleClass="next-button"/>
+    <Button text="← Home" maxWidth="Infinity"
+            onAction="#onHomeClicked" styleClass="next-button"/>
+</VBox>
