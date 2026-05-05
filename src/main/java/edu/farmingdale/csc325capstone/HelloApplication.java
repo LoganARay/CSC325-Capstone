@@ -12,6 +12,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.*;
@@ -54,7 +55,9 @@ public class HelloApplication extends Application {
         }
         scene = new Scene(loadFXML("homeView.fxml"));
         stage.setTitle("Steam Builder");
-        //stage.setFullScreen(true);
+        stage.getIcons().add(
+                new Image(getClass().getResourceAsStream("/edu/farmingdale/csc325capstone/SteamBuilderLogo2.png"))
+        );
         stage.setScene(scene);
         stage.show();
     }

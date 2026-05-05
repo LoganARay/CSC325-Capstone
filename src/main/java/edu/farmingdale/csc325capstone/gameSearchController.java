@@ -187,10 +187,8 @@ public class gameSearchController extends RecommendationController {
     }
 
     @FXML
-    private void buildButtonHandle() {
-        // TODO: Navigate to the builder with the selected game.
-
-
+    void buildButtonHandle() throws IOException {
+        HelloApplication.setRoot("sandboxView.fxml");
     }
     
     @FXML
