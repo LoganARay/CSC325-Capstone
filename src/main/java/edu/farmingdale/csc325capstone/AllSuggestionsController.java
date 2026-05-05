@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import java.util.List;
+import javafx.scene.control.Button;
 
 public class AllSuggestionsController {
 
@@ -13,11 +14,21 @@ public class AllSuggestionsController {
     @FXML private Label name1, name2, name3;
     @FXML private Label specs1, specs2, specs3;
     @FXML private Label price1, price2, price3;
+    @FXML private Button backButton;
 
     private static List<PreBuilt> sharedTopThree;
 
     public static void setTopThree(List<PreBuilt> pcs) {
         sharedTopThree = pcs;
+    }
+
+
+    private static String sourceScreen = "buildQuestionnaireView.fxml";
+    private static String backButtonLabel = "← Redo Survey";
+
+    public static void setSource(String fxml, String label) {
+        sourceScreen = fxml;
+        backButtonLabel = label;
     }
 
     @FXML
@@ -39,6 +50,7 @@ public class AllSuggestionsController {
                 imgs[i].setImage(new Image(pc.getImageURL(), true));
             }
         }
+        backButton.setText(backButtonLabel);
     }
 
     @FXML private void onDeal1Clicked() { openLink(sharedTopThree.get(0).getLink()); }
@@ -54,7 +66,7 @@ public class AllSuggestionsController {
 
     @FXML
     private void onBackClicked() throws Exception {
-        HelloApplication.setRoot("buildQuestionnaireView.fxml");
+        HelloApplication.setRoot(sourceScreen);
     }
 
     @FXML

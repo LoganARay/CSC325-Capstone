@@ -58,7 +58,7 @@
         </VBox>
     </ScrollPane>
 
-    <Button text="← Back to Recommendation" maxWidth="Infinity"
+    <Button fx:id="backButton" text="← Back" maxWidth="Infinity"
             onAction="#onBackClicked" styleClass="next-button"/>
     <Button text="← Home" maxWidth="Infinity"
             onAction="#onHomeClicked" styleClass="next-button"/>

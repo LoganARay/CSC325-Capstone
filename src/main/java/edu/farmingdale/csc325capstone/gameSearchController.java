@@ -19,8 +19,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.concurrent.ExecutionException;
+import edu.farmingdale.csc325capstone.model.PreBuilt;
+import edu.farmingdale.csc325capstone.service.PreBuiltService;
+import java.util.AbstractMap;
 
-public class gameSearchController {
+public class gameSearchController extends RecommendationController {
 
 @FXML
     private Button buildButton;
@@ -66,6 +69,11 @@ public class gameSearchController {
 
     @FXML
     private TextField searchField;
+
+    @FXML
+    private Button recommendButton;
+
+
 
     private List<SteamGame> library=null;
 
@@ -261,5 +269,44 @@ public class gameSearchController {
                 break;
             }
         }
+    }
+
+    @FXML
+    private void handleRecommend(ActionEvent event) {
+        if (library == null || library.isEmpty()) return;
+        new Thread(() -> {
+            try {
+                String highestGPU = getHighestLibraryGPU();
+                long totalStorage = library.stream()
+                        .mapToLong(g -> {
+                            try { return Long.parseLong(g.getStorage().replaceAll("[^0-9]", "")); }
+                            catch (Exception e) { return 0L; }
+                        }).sum();
+                PreBuiltService service = new PreBuiltService();
+                List<PreBuilt> allPCs = service.getAllPreBuilts();
+                List<Map.Entry<PreBuilt, Integer>> scored = new ArrayList<>();
+                for (PreBuilt pc : allPCs) {
+                    scored.add(new AbstractMap.SimpleEntry<>(pc, scoreForGame(pc, highestGPU, totalStorage)));
+                }
+                scored.sort((a, b) -> b.getValue() - a.getValue());
+                List<PreBuilt> topThree = selectDiverseTopThree(scored);
+                javafx.application.Platform.runLater(() -> {
+                    navigateToSuggestions(topThree, "gameSearch.fxml", "← Back to Games");
+                });
+            } catch (Exception e) { e.printStackTrace(); }
+        }).start();
+    }
+
+    private String getHighestLibraryGPU() {
+        List<String> gpus = new ArrayList<>();
+        if (library != null) {
+            for (SteamGame g : library) {
+                if (g.getRecReq() != null && g.getRecReq().getGpu() != null) {
+                    gpus.add(g.getRecReq().getGpu().toLowerCase());
+                }
+            }
+        }
+        selectedGameGPUs = gpus;
+        return getHighestGameGPU();
     }
 }
