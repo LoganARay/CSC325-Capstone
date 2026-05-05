@@ -14,6 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import java.util.*;
 import java.util.concurrent.ExecutionException;
+import java.util.AbstractMap;
 
 public class QuestionnaireController {
     private String selectedBudget;
@@ -23,6 +24,9 @@ public class QuestionnaireController {
     private String selectedStorage;
     private String selectedPriority;
     private String selectedLongevity;
+    private List<PreBuilt> topThreePCs = new ArrayList<>();
+    private List<String> selectedGameNames = new ArrayList<>();
+    private List<String> selectedGameGPUs = new ArrayList<>();
 
     @FXML
     private Button budgetBtn1;
@@ -123,9 +127,14 @@ public class QuestionnaireController {
     private ImageView pcImageView;
     @FXML
     private HBox imageContainer;
-
     @FXML
     private VBox rightPanel;
+    @FXML
+    private javafx.scene.layout.Pane allSuggestionsPane;
+    @FXML
+    private VBox card1, card2, card3;
+    @FXML
+    private Button viewAllBtn;
 
     private MenuItem item1=new MenuItem(" ");
     private MenuItem item2=new MenuItem(" ");
@@ -145,17 +154,17 @@ public class QuestionnaireController {
         budgetBtn2.setText("$500 - $1,000");
         budgetBtn3.setText("$1,000 - $1,500");
         budgetBtn4.setText("$1,500+");
-
-        budgetBtn1.setOnAction( e -> selectBudget(budgetBtn1, "under_500"));
-        budgetBtn2.setOnAction(e -> selectBudget(budgetBtn2, "$500 - $1,000") );
+        budgetBtn1.setOnAction(e -> selectBudget(budgetBtn1, "under_500"));
+        budgetBtn2.setOnAction(e -> selectBudget(budgetBtn2, "500_1000"));
         budgetBtn3.setOnAction(e -> selectBudget(budgetBtn3, "1000_1500"));
         budgetBtn4.setOnAction(e -> selectBudget(budgetBtn4, "1500_plus"));
 
-        item1.setOnAction(e -> gameArea.setText(gameArea.getText() + "\n" + item1.getText()));
-        item2.setOnAction(e -> gameArea.setText(gameArea.getText() + "\n" + item2.getText()));
-        item3.setOnAction(e -> gameArea.setText(gameArea.getText() + "\n" + item3.getText()));
-        item4.setOnAction(e -> gameArea.setText(gameArea.getText() + "\n" + item4.getText()));
-        item5.setOnAction(e -> gameArea.setText(gameArea.getText() + "\n" + item5.getText()));
+        item1.setOnAction(e -> { gameArea.setText(gameArea.getText() + "\n" + item1.getText()); fetchGameRequirements(item1.getText()); });
+        item2.setOnAction(e -> { gameArea.setText(gameArea.getText() + "\n" + item2.getText()); fetchGameRequirements(item2.getText()); });
+        item3.setOnAction(e -> { gameArea.setText(gameArea.getText() + "\n" + item3.getText()); fetchGameRequirements(item3.getText()); });
+        item4.setOnAction(e -> { gameArea.setText(gameArea.getText() + "\n" + item4.getText()); fetchGameRequirements(item4.getText()); });
+        item5.setOnAction(e -> { gameArea.setText(gameArea.getText() + "\n" + item5.getText()); fetchGameRequirements(item5.getText()); });
+
 
         searchField.textProperty().addListener((obs, oldValue, newValue) -> {
             if(newValue==null || newValue.length()<2){
@@ -289,19 +298,18 @@ public class QuestionnaireController {
                 PreBuiltService service = new PreBuiltService();
                 List<PreBuilt> allPCs = service.getAllPreBuilts();
 
-                PreBuilt best = null;
-                int bestScore = -1;
-
+                List<Map.Entry<PreBuilt, Integer>> scored = new ArrayList<>();
                 for (PreBuilt pc : allPCs) {
-                    if (!isWithinBudget(pc)) continue;
-                    int score = scorePC(pc);
-                    if (score > bestScore) {
-                        bestScore = score;
-                        best = pc;
+                    if (isWithinBudget(pc)) {
+                        scored.add(new AbstractMap.SimpleEntry<>(pc, scorePC(pc)));
                     }
                 }
+                scored.sort((a, b) -> b.getValue() - a.getValue());
 
-                final PreBuilt recommendation = best;
+                topThreePCs.clear();
+                topThreePCs.addAll(selectDiverseTopThree(scored));
+
+                final PreBuilt recommendation = topThreePCs.isEmpty() ? null : topThreePCs.get(0);
                 javafx.application.Platform.runLater(() -> showRecommendation(recommendation));
 
             } catch (Exception e) {
@@ -313,7 +321,7 @@ public class QuestionnaireController {
         double price = pc.getPrice();
         switch (selectedBudget) {
             case "under_500":     return price < 500;
-            case "$500 - $1,000": return price >= 500 && price <= 1000;
+            case "500_1000": return price >= 500 && price <= 1000;
             case "1000_1500":     return price >= 1000 && price <= 1500;
             case "1500_plus":     return price > 1500;
             default:              return true;
@@ -363,6 +371,41 @@ public class QuestionnaireController {
             else if (gpu.contains("4070") || gpu.contains("3080")) score += 2;
         } else if ("3_4_years".equals(selectedLongevity)) {
             if (gpu.contains("4060") || gpu.contains("3070")) score += 2;
+        }
+
+        // Score based on game requirements + resolution
+        String selectedGameRecommendedGPU = getHighestGameGPU();
+        if (!selectedGameRecommendedGPU.isEmpty()) {
+            boolean highRes = "1440_high".equals(selectedPerformance) || "4k".equals(selectedPerformance);
+            if (selectedGameRecommendedGPU.contains("4090") || selectedGameRecommendedGPU.contains("4080")) {
+                if (gpu.contains("4090") || gpu.contains("4080")) score += 3;
+                else if (gpu.contains("4070")) score += 1;
+            } else if (selectedGameRecommendedGPU.contains("4070") || selectedGameRecommendedGPU.contains("3080")) {
+                if (gpu.contains("4070") || gpu.contains("4080") || gpu.contains("4090")) score += 3;
+                else if (gpu.contains("3080") || gpu.contains("4060")) score += 2;
+            } else if (selectedGameRecommendedGPU.contains("3060") || selectedGameRecommendedGPU.contains("2070")) {
+                if (highRes) {
+                    if (gpu.contains("5070") || gpu.contains("9070") || gpu.contains("4080") || gpu.contains("4090")) score += 3;
+                    else if (gpu.contains("4070") || gpu.contains("3080")) score += 2;
+                    else if (gpu.contains("3060") || gpu.contains("4060")) score += 1;
+                } else {
+                    if (gpu.contains("3060") || gpu.contains("4060")) score += 2;
+                    else if (gpu.contains("3070") || gpu.contains("4070")) score += 3;
+                }
+            } else {
+                if (highRes) {
+                    if (gpu.contains("5070") || gpu.contains("9070") || gpu.contains("4080") || gpu.contains("4090")) score += 3;
+                    else if (gpu.contains("4070") || gpu.contains("3080")) score += 2;
+                } else {
+                    if (gpu.contains("3060") || gpu.contains("4060")) score += 1;
+                }
+            }
+        }
+
+        // Storage boost for large game libraries
+        if (selectedGameNames.size() >= 3) {
+            if (storage.contains("2tb")) score += 2;
+            else if (storage.contains("1tb")) score += 1;
         }
 
         return score;
@@ -421,6 +464,8 @@ public class QuestionnaireController {
             }
         });
         rightPanel.getChildren().add(viewDealButton);
+        viewAllBtn.setVisible(true);
+        viewAllBtn.setManaged(true);
     }
 
     private void loadQuestion(int questionNumber) {
@@ -525,6 +570,102 @@ public class QuestionnaireController {
             selectedLongevity = value;
         }
         selected.setStyle("-fx-background-color: #4c6b22; -fx-text-fill: white; -fx-background-radius: 6; -fx-border-color: #8bc34a; -fx-border-radius: 6;");
+    }
+    @FXML
+    private void onViewAllSuggestionsClicked() { showAllSuggestions(); }
+
+    @FXML
+    private void onBackToRecommendationClicked() {
+        allSuggestionsPane.setVisible(false);
+        allSuggestionsPane.setManaged(false);
+    }
+
+    private void showAllSuggestions() {
+        allSuggestionsPane.setVisible(true);
+        allSuggestionsPane.setManaged(true);
+        String[] medals = {"🥇 1st Place", "🥈 2nd Place", "🥉 3rd Place"};
+        VBox[] cards = {card1, card2, card3};
+        for (int i = 0; i < topThreePCs.size(); i++) {
+            PreBuilt pc = topThreePCs.get(i);
+            VBox card = cards[i];
+            card.setUserData(pc.getLink());
+            Label medalLabel = (Label) card.lookup("#medal" + (i + 1));
+            if (medalLabel != null) medalLabel.setText(medals[i]);
+            Label nameLabel = (Label) card.lookup("#name" + (i + 1));
+            if (nameLabel != null) nameLabel.setText(pc.getName());
+            Label specsLabel = (Label) card.lookup("#specs" + (i + 1));
+            if (specsLabel != null) specsLabel.setText("GPU: " + pc.getGPU() + "\nCPU: " + pc.getCPU() + "\nRAM: " + pc.getRAM() + "  |  Storage: " + pc.getStorage());
+            Label priceLabel = (Label) card.lookup("#price" + (i + 1));
+            if (priceLabel != null) priceLabel.setText("$" + pc.getPrice());
+            ImageView imgView = (ImageView) card.lookup("#img" + (i + 1));
+            if (imgView != null && pc.getImageURL() != null) imgView.setImage(new Image(pc.getImageURL(), true));
+        }
+    }
+
+    @FXML private void onViewDeal1Clicked() { openLink(topThreePCs.get(0).getLink()); }
+    @FXML private void onViewDeal2Clicked() { openLink(topThreePCs.get(1).getLink()); }
+    @FXML private void onViewDeal3Clicked() { openLink(topThreePCs.get(2).getLink()); }
+
+    private void openLink(String url) {
+        if (url != null && !url.isEmpty()) {
+            try { java.awt.Desktop.getDesktop().browse(new java.net.URI(url)); }
+            catch (Exception e) { e.printStackTrace(); }
+        }
+    }
+
+    private void fetchGameRequirements(String gameName) {
+        new Thread(() -> {
+            try {
+                String firstLetter = gameName.substring(0, 1).toUpperCase();
+                String secondLetter = gameName.substring(1, 2).toUpperCase();
+                DocumentSnapshot doc = fstore.collection("FullSteamGames").document(firstLetter).get().get();
+                List<Map<String, Object>> games = (List<Map<String, Object>>) doc.get(secondLetter);
+                if (games == null) return;
+                for (Map<String, Object> game : games) {
+                    String name = (String) game.get("Name");
+                    if (name != null && name.equals(gameName)) {
+                        Map<String, Object> recommended = (Map<String, Object>) game.get("Recommended");
+                        if (recommended != null) {
+                            String gpu = (String) recommended.get("Graphics");
+                            if (gpu != null) selectedGameGPUs.add(gpu.toLowerCase());
+                        }
+                        selectedGameNames.add(gameName);
+                        break;
+                    }
+                }
+            } catch (Exception e) { e.printStackTrace(); }
+        }).start();
+    }
+
+    private String getHighestGameGPU() {
+        String[] gpuTiers = {"4090","4080","5070","9070","4070","3080","3070","4060","3060","2070","2060","1080","1070"};
+        for (String tier : gpuTiers) {
+            for (String gameGPU : selectedGameGPUs) {
+                if (gameGPU.contains(tier)) return gameGPU;
+            }
+        }
+        return selectedGameGPUs.isEmpty() ? "" : selectedGameGPUs.get(0);
+    }
+
+    private List<PreBuilt> selectDiverseTopThree(List<Map.Entry<PreBuilt, Integer>> scored) {
+        List<PreBuilt> result = new ArrayList<>();
+        if (scored.isEmpty()) return result;
+        PreBuilt first = scored.get(0).getKey();
+        result.add(first);
+        String firstGPU = first.getGPU() != null ? first.getGPU().toLowerCase() : "";
+        double firstPrice = first.getPrice();
+        for (Map.Entry<PreBuilt, Integer> entry : scored) {
+            if (result.size() >= 3) break;
+            if (result.contains(entry.getKey())) continue;
+            PreBuilt pc = entry.getKey();
+            String pcGPU = pc.getGPU() != null ? pc.getGPU().toLowerCase() : "";
+            if (!pcGPU.equals(firstGPU) || Math.abs(pc.getPrice() - firstPrice) >= 100) result.add(pc);
+        }
+        for (Map.Entry<PreBuilt, Integer> entry : scored) {
+            if (result.size() >= 3) break;
+            if (!result.contains(entry.getKey())) result.add(entry.getKey());
+        }
+        return result;
     }
 }
 
