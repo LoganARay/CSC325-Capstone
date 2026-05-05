@@ -95,7 +95,12 @@
               </children>
             </VBox>
 
-            <Button fx:id="buildButton" onAction="#buildButtonHandle" styleClass="primaryButton" text="Go to Sandbox" />
+            <HBox spacing="8">
+              <Button fx:id="buildButton" onAction="#buildButtonHandle" styleClass="primaryButton" text="Go to Sandbox" />
+              <Button fx:id="recommendButton" onAction="#handleRecommend"
+                      text="Get PC Recommendation"
+                      style="-fx-background-color: #2e7d32; -fx-text-fill: white; -fx-background-radius: 6; -fx-padding: 8 16;"/>
+            </HBox>
           </children>
                <padding>
                   <Insets left="20.0" />

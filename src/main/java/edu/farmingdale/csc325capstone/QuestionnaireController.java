@@ -14,8 +14,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import java.util.*;
 import java.util.concurrent.ExecutionException;
+import java.util.AbstractMap;
 
-public class QuestionnaireController {
+public class QuestionnaireController extends RecommendationController {
     private String selectedBudget;
     private int currentQuestion = 1;
     private String selectedPlayStyle;
@@ -23,6 +24,9 @@ public class QuestionnaireController {
     private String selectedStorage;
     private String selectedPriority;
     private String selectedLongevity;
+    private List<PreBuilt> topThreePCs = new ArrayList<>();
+    private List<String> selectedGameNames = new ArrayList<>();
+
 
     @FXML
     private Button budgetBtn1;
@@ -123,96 +127,112 @@ public class QuestionnaireController {
     private ImageView pcImageView;
     @FXML
     private HBox imageContainer;
-
     @FXML
     private VBox rightPanel;
+    @FXML
+    private Button viewAllBtn;
 
-    private List<Map<String, Object>> games=null;
+    private List<Map<String, Object>> games = null;
 
-    private MenuItem item1=new MenuItem(" ");
-    private MenuItem item2=new MenuItem(" ");
-    private MenuItem item3=new MenuItem(" ");
-    private MenuItem item4=new MenuItem(" ");
-    private MenuItem item5=new MenuItem(" ");
+    private MenuItem item1 = new MenuItem(" ");
+    private MenuItem item2 = new MenuItem(" ");
+    private MenuItem item3 = new MenuItem(" ");
+    private MenuItem item4 = new MenuItem(" ");
+    private MenuItem item5 = new MenuItem(" ");
 
 
-    private ContextMenu cm=new ContextMenu();
+    private ContextMenu cm = new ContextMenu();
 
     private FirestoreContent contxtFirebase = new FirestoreContent();
     private Firestore fstore = contxtFirebase.firebase();
 
     @FXML
-    public void initialize(){
+    public void initialize() {
         budgetBtn1.setText("Under $500");
         budgetBtn2.setText("$500 - $1,000");
         budgetBtn3.setText("$1,000 - $1,500");
         budgetBtn4.setText("$1,500+");
-
-        budgetBtn1.setOnAction( e -> selectBudget(budgetBtn1, "under_500"));
-        budgetBtn2.setOnAction(e -> selectBudget(budgetBtn2, "$500 - $1,000") );
+        budgetBtn1.setOnAction(e -> selectBudget(budgetBtn1, "under_500"));
+        budgetBtn2.setOnAction(e -> selectBudget(budgetBtn2, "500_1000"));
         budgetBtn3.setOnAction(e -> selectBudget(budgetBtn3, "1000_1500"));
         budgetBtn4.setOnAction(e -> selectBudget(budgetBtn4, "1500_plus"));
 
-        item1.setOnAction(e -> gameArea.setText(gameArea.getText() + "\n" + item1.getText()));
-        item2.setOnAction(e -> gameArea.setText(gameArea.getText() + "\n" + item2.getText()));
-        item3.setOnAction(e -> gameArea.setText(gameArea.getText() + "\n" + item3.getText()));
-        item4.setOnAction(e -> gameArea.setText(gameArea.getText() + "\n" + item4.getText()));
-        item5.setOnAction(e -> gameArea.setText(gameArea.getText() + "\n" + item5.getText()));
+        item1.setOnAction(e -> {
+            gameArea.setText(gameArea.getText() + "\n" + item1.getText());
+            fetchGameRequirements(item1.getText());
+        });
+        item2.setOnAction(e -> {
+            gameArea.setText(gameArea.getText() + "\n" + item2.getText());
+            fetchGameRequirements(item2.getText());
+        });
+        item3.setOnAction(e -> {
+            gameArea.setText(gameArea.getText() + "\n" + item3.getText());
+            fetchGameRequirements(item3.getText());
+        });
+        item4.setOnAction(e -> {
+            gameArea.setText(gameArea.getText() + "\n" + item4.getText());
+            fetchGameRequirements(item4.getText());
+        });
+        item5.setOnAction(e -> {
+            gameArea.setText(gameArea.getText() + "\n" + item5.getText());
+            fetchGameRequirements(item5.getText());
+        });
+
 
         searchField.textProperty().addListener((obs, oldValue, newValue) -> {
-            if(newValue==null || newValue.length()<2){
+            if (newValue == null || newValue.length() < 2) {
                 cm.hide();
-                games=null;
+                games = null;
                 return;
             }
-            String firstLetter= newValue.substring(0, 1).toUpperCase();
-            String secondLetter= newValue.substring(1, 2).toUpperCase();
-            DocumentReference docRef = fstore.collection("SteamGames").document(newValue.substring(0,1).toUpperCase());
+            String firstLetter = newValue.substring(0, 1).toUpperCase();
+            String secondLetter = newValue.substring(1, 2).toUpperCase();
+            DocumentReference docRef = fstore.collection("SteamGames").document(newValue.substring(0, 1).toUpperCase());
 
             ApiFuture<DocumentSnapshot> future = docRef.get();
             DocumentSnapshot document = null;
             try {
-                    if(games==null) {
-                        DocumentSnapshot doc = fstore.collection("SteamGames").document((firstLetter + secondLetter).toUpperCase()).get().get();
+                if (games == null) {
+                    DocumentSnapshot doc = fstore.collection("SteamGames").document((firstLetter + secondLetter).toUpperCase()).get().get();
 
-                        games = (List<Map<String, Object>>) doc.get("Games");
-                    }
-                    int count=0;
-                    for(Map<String, Object> game:games){
-                        if(count<=5) {
-                            String name = (String) game.get("Name");
-                            if (newValue.length() <= name.length()) {
-                                if ((name.toUpperCase()).contains(newValue.toUpperCase())) {
-                                    if(count==0){
-                                        item1.setText(name);
-                                        cm.getItems().add(item1);
-                                    }
-                                    if(count==1){
-                                        item2.setText(name);
-                                        cm.getItems().add(item2);
-                                    }
-                                    if(count==2){
-                                        item3.setText(name);
-                                        cm.getItems().add(item3);
-                                    }
-                                    if(count==3){
-                                        item4.setText(name);
-                                        cm.getItems().add(item4);
-                                    }
-                                    if(count==4){
-                                        item5.setText(name);
-                                        cm.getItems().add(item5);
-                                    }
-                                    count++;
+                    games = (List<Map<String, Object>>) doc.get("Games");
+                }
+                int count = 0;
+                for (Map<String, Object> game : games) {
+                    if (count <= 5) {
+                        String name = (String) game.get("Name");
+                        if (newValue.length() <= name.length()) {
+                            if ((name.toUpperCase()).contains(newValue.toUpperCase())) {
+                                if (count == 0) {
+                                    item1.setText(name);
+                                    cm.getItems().add(item1);
                                 }
+                                if (count == 1) {
+                                    item2.setText(name);
+                                    cm.getItems().add(item2);
+                                }
+                                if (count == 2) {
+                                    item3.setText(name);
+                                    cm.getItems().add(item3);
+                                }
+                                if (count == 3) {
+                                    item4.setText(name);
+                                    cm.getItems().add(item4);
+                                }
+                                if (count == 4) {
+                                    item5.setText(name);
+                                    cm.getItems().add(item5);
+                                }
+                                count++;
                             }
-                        }else{
-                            cm.show(searchField, Side.BOTTOM, 0, 0);
-                            return;
                         }
+                    } else {
+                        cm.show(searchField, Side.BOTTOM, 0, 0);
+                        return;
                     }
-                    cm.show(searchField, Side.BOTTOM, 0, 0);
-                    return;
+                }
+                cm.show(searchField, Side.BOTTOM, 0, 0);
+                return;
             } catch (InterruptedException e) {
                 return;
             } catch (ExecutionException e) {
@@ -244,7 +264,8 @@ public class QuestionnaireController {
         longevityBtn4.setOnAction(e -> selectOption(longevityBtn4, "unsure", "longevity"));
         loadQuestion(1);
     }
-    private void selectBudget(Button selected, String value){
+
+    private void selectBudget(Button selected, String value) {
         budgetBtn1.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
         budgetBtn2.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
         budgetBtn3.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
@@ -253,6 +274,7 @@ public class QuestionnaireController {
         selected.setStyle("-fx-background-color: #4c6b22; -fx-text-fill: white; -fx-background-radius: 6; -fx-border-color: #8bc34a; -fx-border-radius: 6;");
         selectedBudget = value;
     }
+
     @FXML
     private void onNextClicked() {
         if (selectedBudget == null) {
@@ -269,6 +291,7 @@ public class QuestionnaireController {
         }
         loadQuestion(currentQuestion);
     }
+
     @FXML
     private void onHomeClicked() throws Exception {
         HelloApplication.setRoot("homeView.fxml");
@@ -280,19 +303,18 @@ public class QuestionnaireController {
                 PreBuiltService service = new PreBuiltService();
                 List<PreBuilt> allPCs = service.getAllPreBuilts();
 
-                PreBuilt best = null;
-                int bestScore = -1;
-
+                List<Map.Entry<PreBuilt, Integer>> scored = new ArrayList<>();
                 for (PreBuilt pc : allPCs) {
-                    if (!isWithinBudget(pc)) continue;
-                    int score = scorePC(pc);
-                    if (score > bestScore) {
-                        bestScore = score;
-                        best = pc;
+                    if (isWithinBudget(pc)) {
+                        scored.add(new AbstractMap.SimpleEntry<>(pc, scorePC(pc)));
                     }
                 }
+                scored.sort((a, b) -> b.getValue() - a.getValue());
 
-                final PreBuilt recommendation = best;
+                topThreePCs.clear();
+                topThreePCs.addAll(selectDiverseTopThree(scored));
+
+                final PreBuilt recommendation = topThreePCs.isEmpty() ? null : topThreePCs.get(0);
                 javafx.application.Platform.runLater(() -> showRecommendation(recommendation));
 
             } catch (Exception e) {
@@ -300,16 +322,23 @@ public class QuestionnaireController {
             }
         }).start();
     }
+
     private boolean isWithinBudget(PreBuilt pc) {
         double price = pc.getPrice();
         switch (selectedBudget) {
-            case "under_500":     return price < 500;
-            case "$500 - $1,000": return price >= 500 && price <= 1000;
-            case "1000_1500":     return price >= 1000 && price <= 1500;
-            case "1500_plus":     return price > 1500;
-            default:              return true;
+            case "under_500":
+                return price < 500;
+            case "500_1000":
+                return price >= 500 && price <= 1000;
+            case "1000_1500":
+                return price >= 1000 && price <= 1500;
+            case "1500_plus":
+                return price > 1500;
+            default:
+                return true;
         }
     }
+
     private int scorePC(PreBuilt pc) {
         int score = 0;
         String gpu = pc.getGPU() != null ? pc.getGPU().toLowerCase() : "";
@@ -356,8 +385,46 @@ public class QuestionnaireController {
             if (gpu.contains("4060") || gpu.contains("3070")) score += 2;
         }
 
+        // Score based on game requirements + resolution
+        String selectedGameRecommendedGPU = getHighestGameGPU();
+        if (!selectedGameRecommendedGPU.isEmpty()) {
+            boolean highRes = "1440_high".equals(selectedPerformance) || "4k".equals(selectedPerformance);
+            if (selectedGameRecommendedGPU.contains("4090") || selectedGameRecommendedGPU.contains("4080")) {
+                if (gpu.contains("4090") || gpu.contains("4080")) score += 3;
+                else if (gpu.contains("4070")) score += 1;
+            } else if (selectedGameRecommendedGPU.contains("4070") || selectedGameRecommendedGPU.contains("3080")) {
+                if (gpu.contains("4070") || gpu.contains("4080") || gpu.contains("4090")) score += 3;
+                else if (gpu.contains("3080") || gpu.contains("4060")) score += 2;
+            } else if (selectedGameRecommendedGPU.contains("3060") || selectedGameRecommendedGPU.contains("2070")) {
+                if (highRes) {
+                    if (gpu.contains("5070") || gpu.contains("9070") || gpu.contains("4080") || gpu.contains("4090"))
+                        score += 3;
+                    else if (gpu.contains("4070") || gpu.contains("3080")) score += 2;
+                    else if (gpu.contains("3060") || gpu.contains("4060")) score += 1;
+                } else {
+                    if (gpu.contains("3060") || gpu.contains("4060")) score += 2;
+                    else if (gpu.contains("3070") || gpu.contains("4070")) score += 3;
+                }
+            } else {
+                if (highRes) {
+                    if (gpu.contains("5070") || gpu.contains("9070") || gpu.contains("4080") || gpu.contains("4090"))
+                        score += 3;
+                    else if (gpu.contains("4070") || gpu.contains("3080")) score += 2;
+                } else {
+                    if (gpu.contains("3060") || gpu.contains("4060")) score += 1;
+                }
+            }
+        }
+
+        // Storage boost for large game libraries
+        if (selectedGameNames.size() >= 3) {
+            if (storage.contains("2tb")) score += 2;
+            else if (storage.contains("1tb")) score += 1;
+        }
+
         return score;
     }
+
     private void showRecommendation(PreBuilt pc) {
         if (pc == null) {
             questionCounter.setText("No match found");
@@ -412,6 +479,8 @@ public class QuestionnaireController {
             }
         });
         rightPanel.getChildren().add(viewDealButton);
+        viewAllBtn.setVisible(true);
+        viewAllBtn.setManaged(true);
     }
 
     private void loadQuestion(int questionNumber) {
@@ -479,6 +548,7 @@ public class QuestionnaireController {
             longevityOptions.setManaged(true);
         }
     }
+
     private void selectOption(Button selected, String value, String questionType) {
         if (questionType.equals("playStyle")) {
             playBtn1.setStyle("-fx-background-color: #1b2838; -fx-text-fill: #c7d5e0; -fx-background-radius: 6; -fx-border-color: #4c6b8a; -fx-border-radius: 6;");
@@ -517,7 +587,71 @@ public class QuestionnaireController {
         }
         selected.setStyle("-fx-background-color: #4c6b22; -fx-text-fill: white; -fx-background-radius: 6; -fx-border-color: #8bc34a; -fx-border-radius: 6;");
     }
+
+    @FXML
+    private void onViewAllSuggestionsClicked() {
+        try {
+            navigateToSuggestions(topThreePCs, "buildQuestionnaireView.fxml", "← Redo Survey");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    @FXML
+    private void onViewDeal1Clicked() {
+        openLink(topThreePCs.get(0).getLink());
+    }
+
+    @FXML
+    private void onViewDeal2Clicked() {
+        openLink(topThreePCs.get(1).getLink());
+    }
+
+    @FXML
+    private void onViewDeal3Clicked() {
+        openLink(topThreePCs.get(2).getLink());
+    }
+
+    private void openLink(String url) {
+        if (url != null && !url.isEmpty()) {
+            try {
+                java.awt.Desktop.getDesktop().browse(new java.net.URI(url));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void fetchGameRequirements(String gameName) {
+        new Thread(() -> {
+            try {
+                String firstLetter = gameName.substring(0, 1).toUpperCase();
+                String secondLetter = gameName.substring(1, 2).toUpperCase();
+                DocumentSnapshot doc = fstore.collection("FullSteamGames").document(firstLetter).get().get();
+                List<Map<String, Object>> games = (List<Map<String, Object>>) doc.get(secondLetter);
+                if (games == null) return;
+                for (Map<String, Object> game : games) {
+                    String name = (String) game.get("Name");
+                    if (name != null && name.equals(gameName)) {
+                        Map<String, Object> recommended = (Map<String, Object>) game.get("Recommended");
+                        if (recommended != null) {
+                            String gpu = (String) recommended.get("Graphics");
+                            if (gpu != null) selectedGameGPUs.add(gpu.toLowerCase());
+                        }
+                        selectedGameNames.add(gameName);
+                        break;
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
+    }
 }
+
+
+
 
 
 
