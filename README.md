@@ -89,6 +89,31 @@ USer answers through a set of questions to pin point what pre-built would best s
 
 <img width="400" height="329" alt="Questionnaire" src="https://github.com/user-attachments/assets/919e33bf-70b2-4b39-9423-f02abe939397" /> <--- Going through every question presented
 
+## Parts Database
+
+Database Schema
+
+```json
+{
+  "id": "",
+  "name": "",
+  "category": "",
+  "brand": "",
+  "price": "",
+  "link": "",
+  "year": "",
+  "specs": {
+    "type": "",
+    "interface": "",
+    "capacity": "",
+    "price_per_gb": "",
+    "color": ""
+  }
+}
+```
+
+
+
 
 ##Sandbox
 For the more tech-savvy users, building a desktop part by part
