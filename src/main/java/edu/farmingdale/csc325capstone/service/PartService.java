@@ -29,4 +29,27 @@ public class PartService {
 
         return parts;
     }
+    public List<Part> getCompatibleMotherboards(Part selectedCpu) throws Exception {
+
+        String cpuSocket = selectedCpu.getSpec("socket");
+
+        List<Part> motherboards = getPartsByCollection("motherboards");
+
+        List<Part> compatibleMotherboards = new ArrayList<>();
+
+        for (Part motherboard : motherboards) {
+
+            String motherboardSocket = motherboard.getSpec("socket");
+
+            if (cpuSocket != null &&
+                    motherboardSocket != null &&
+                    motherboardSocket.equalsIgnoreCase(cpuSocket)) {
+
+                compatibleMotherboards.add(motherboard);
+            }
+        }
+
+        return compatibleMotherboards;
+    }
+
 }
