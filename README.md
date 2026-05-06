@@ -140,7 +140,11 @@ For the more tech-savvy users, building a desktop part by part
 - Used throughout the application for displaying, filtering, and validating parts
 - Helps keep the project object-oriented and organized by modeling real-world PC components as Java objects
 
-
+## PartService Class
+- Fetches the actual parts from the Firebase Firestore database and loads them onto part objects based on the category of the parts
+- Each document representing one specific part makes updates and retrieval straightforward
+- Helps the frontend load dropdown menus efficiently by fetching only the needed collection
+- Makes compatibility logic easier to implement, such as matching CPU and motherboard sockets
 
 
 
