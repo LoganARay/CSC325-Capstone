@@ -116,6 +116,35 @@ public abstract class RecommendationController {
         return result;
     }
 
+    protected List<PreBuilt> selectByPriceTier(List<Map.Entry<PreBuilt, Integer>> scored) {
+        List<PreBuilt> result = new ArrayList<>();
+        PreBuilt budget = null, mid = null, high = null;
+        int budgetScore = -1, midScore = -1, highScore = -1;
+
+        for (Map.Entry<PreBuilt, Integer> entry : scored) {
+            PreBuilt pc = entry.getKey();
+            if (pc == null) continue;
+            double price = pc.getPrice();
+            int s = entry.getValue();
+
+            if (price < 1200 && s > budgetScore) { budget = pc; budgetScore = s; }
+            else if (price >= 1250 && price <= 1500 && s > midScore) { mid = pc; midScore = s; }
+            else if (price > 1500 && s > highScore) { high = pc; highScore = s; }
+        }
+
+        if (budget != null) result.add(budget);
+        if (mid != null) result.add(mid);
+        if (high != null) result.add(high);
+
+        // Fill remaining slots if a tier is empty
+        for (Map.Entry<PreBuilt, Integer> entry : scored) {
+            if (result.size() >= 3) break;
+            if (!result.contains(entry.getKey()) && entry.getKey() != null)
+                result.add(entry.getKey());
+        }
+        return result;
+    }
+
     protected void navigateToSuggestions(List<PreBuilt> topThree, String sourceFxml, String backLabel) {
         AllSuggestionsController.setTopThree(topThree);
         AllSuggestionsController.setSource(sourceFxml, backLabel);

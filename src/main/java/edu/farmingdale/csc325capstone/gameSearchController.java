@@ -297,7 +297,7 @@ public class gameSearchController extends RecommendationController {
                 for (Map.Entry<PreBuilt, Integer> entry : scored) {
                     System.out.println(entry.getKey().getName() + " - Score: " + entry.getValue());
                 }
-                List<PreBuilt> topThree = selectDiverseTopThree(scored);
+                List<PreBuilt> topThree = selectByPriceTier(scored);
                 javafx.application.Platform.runLater(() -> {
                     navigateToSuggestions(topThree, "gameSearch.fxml", "← Back to Games");
                 });
