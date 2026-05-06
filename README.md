@@ -116,7 +116,9 @@ Database Schema
 
 
 
+
 ## Sandbox
+
 For the more tech-savvy users, building a desktop part by part
 - Holds an large variety of PC parts from the list
 - Allows user to save builds onto their account 
