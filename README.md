@@ -36,7 +36,12 @@ mvn clean javafx:run
 ## Building EXE
 
 ```bash
-jpackage ...
+1.  cd "Your javaFx project path"
+2.  .\mvnw.cmd clean package dependency:copy-dependencies "-DincludeScope=runtime"
+3.  mkdir package-55
+4.  copy target\CSC325-Capstone-1.0-SNAPSHOT.jar package-55\
+5.  copy target\dependency\*.jar package-55\
+6.  jpackage --type app-image --name CSC325-Capstone --runtime-image "Path to your Java 25 from ProgramFiles" --input package-55 --main-jar CSC325-Capstone-1.0-SNAPSHOT.jar --main-class edu.farmingdale.csc325capstone.Main --dest Runner --icon SteamBuilderLogo.ico
 ```
 
 ## Screenshots
