@@ -90,7 +90,12 @@ USer answers through a set of questions to pin point what pre-built would best s
 <img width="400" height="329" alt="Questionnaire" src="https://github.com/user-attachments/assets/919e33bf-70b2-4b39-9423-f02abe939397" /> <--- Going through every question presented
 
 
-
+##Sandbox
+For the more tech-savvy users, building a desktop part by part
+- Holds an large variety of PC parts fomr the last
+- Allows user to save builds onto their account 
+- Parts are dynamic! If you select one part that incompatable with another that incompatable part wont show up
+- 
 
 
 
