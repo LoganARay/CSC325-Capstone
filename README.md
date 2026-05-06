@@ -28,9 +28,9 @@ A JavaFX application that help users find find/design a desktop that perfectly s
 ## Installation
 
 ```bash
-git clone YOUR_REPO_LINK
-cd YOUR_PROJECT
-mvn clean javafx:run
+Download the SteamBuilder .zip file
+Unzip it
+Run through Intellij or follow steps below and add the .exe file through steam through 'add non-steam game' at the bottom left of library
 ```
 
 ## Building EXE
