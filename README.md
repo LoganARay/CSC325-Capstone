@@ -82,6 +82,24 @@ User selects a game/games making a library that will be used to recommend pre-bu
 
 <img width="400" height="329" alt="GameSearchReccomend" src="https://github.com/user-attachments/assets/748fc33f-4b81-4da7-a89d-153b4604b0c3" />  <--- Giving pre-built recommendations
 
+```json
+{
+  "AppId": "",
+  "Minimum": {
+    "Graphics": "",
+    "Memory": "",
+    "Processor": "",
+    }
+  "Name": "",
+  "Recommended": {
+    "Graphics": "",
+    "Memory": "",
+    "Processor": "",
+    }
+  "Storage": ""
+}
+```
+
 ## Questionnaire Mode
 USer answers through a set of questions to pin point what pre-built would best suite their needs
 - Accurate recommendations to users response
