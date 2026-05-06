@@ -188,6 +188,40 @@ public class SandboxViewController {
         aiOutputArea.setText(result);
     }
 
+    private void loadCompatibleMotherboards(Part selectedCpu) {
+        try {
+
+            // Ask PartService for compatible motherboards
+            List<Part> compatibleMotherboards =
+                    partService.getCompatibleMotherboards(selectedCpu);
+
+            // Clear old motherboard list
+            motherboardCalls.clear();
+
+            // Rebuild motherboard map using only compatible boards
+            for (Part motherboard : compatibleMotherboards) {
+                motherboardCalls.put(
+                        motherboard.getName(),
+                        motherboard.getId()
+                );
+            }
+
+            // Update ComboBox with filtered motherboard names
+            ObservableList<String> names =
+                    FXCollections.observableArrayList(
+                            motherboardCalls.keySet()
+                    );
+
+            motherboardCombo.setItems(names);
+
+            // Clear previous motherboard selection
+            motherboardCombo.getSelectionModel().clearSelection();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
 
@@ -221,9 +255,20 @@ public class SandboxViewController {
     }
 
     private void addSelectionListeners() {
+
         cpuCombo.valueProperty().addListener((obs, old, val) -> {
             try {
+                // Update total price and wattage
                 updateTotalPriceAndWattage();
+
+                // Get selected CPU as a Part object
+                Part selectedCpu = findSelectedPart(val, "cpus");
+
+                // Load compatible motherboards
+                if (selectedCpu != null) {
+                    loadCompatibleMotherboards(selectedCpu);
+                }
+
             } catch (ExecutionException e) {
                 throw new RuntimeException(e);
             } catch (InterruptedException e) {

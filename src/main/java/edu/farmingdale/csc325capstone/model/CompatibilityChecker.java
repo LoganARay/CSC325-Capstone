@@ -9,7 +9,7 @@ public class CompatibilityChecker {
     public static boolean isCpuMotherboardCompatible(Part cpu, Part mobo) {
         if (cpu == null || mobo == null) return true;
         String cpuSocket = cpu.getSpec("socket");
-        String moboSocket = mobo.getSpec("cpu_socket");
+        String moboSocket = mobo.getSpec("socket");
         return cpuSocket != null && cpuSocket.equalsIgnoreCase(moboSocket);
     }
 
