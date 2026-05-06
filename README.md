@@ -44,6 +44,29 @@ Run through Intellij or follow steps below and add the .exe file through steam t
 6.  jpackage --type app-image --name CSC325-Capstone --runtime-image "Path to your Java 25 from ProgramFiles" --input package-55 --main-jar CSC325-Capstone-1.0-SNAPSHOT.jar --main-class edu.farmingdale.csc325capstone.Main --dest Runner --icon SteamBuilderLogo.ico
 ```
 
+##HomeScreen
+Welcoming, calm introduction to Steam Builder and a clear showing what feature it contains
+- Has access to every feature and function with just one scene away (Except Register)
+- Maintains clear labels and organization
+- Made to look professional and mimic Steams style of color scheme and overall feel
+- Custom logo made to emulate steams while staying faithful to the purpose of this application
+
+  <img width="1177" height="961" alt="image" src="https://github.com/user-attachments/assets/fc71e0bc-1538-4385-a2c9-d280a0a2d176" /> <--- First thing you see when logging in
+
+##Login/Register
+Simple login and register scenes for users to interact with
+- Saves users builds to view later
+- Only accepts '@gmail' and no email can be used twice
+- Requires complex password, 8 characters long, capital letter or number, and must contain special character
+- Isnt manditory for most of the feature. following the design of being user friendly
+
+<img width="400" height="329" alt="Login" src="https://github.com/user-attachments/assets/6a333bf9-5d90-4782-8077-8d410924dd14" /> <--- Loging in
+
+<img width="400" height="329" alt="Register" src="https://github.com/user-attachments/assets/14cf8d3d-10c8-4c0c-a3f3-1938e2351e16" /> <--- Registering
+
+
+  
+
 ## Game Search
 User selects a game/games making a library that will be used to recommend pre-builts
 
