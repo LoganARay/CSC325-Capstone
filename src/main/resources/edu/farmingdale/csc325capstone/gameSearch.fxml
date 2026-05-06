@@ -97,9 +97,7 @@
 
             <HBox spacing="8">
               <Button fx:id="buildButton" onAction="#buildButtonHandle" styleClass="primaryButton" text="Go to Sandbox" />
-              <Button fx:id="recommendButton" onAction="#handleRecommend"
-                      text="Get PC Recommendation"
-                      style="-fx-background-color: #2e7d32; -fx-text-fill: white; -fx-background-radius: 6; -fx-padding: 8 16;"/>
+              <Button fx:id="recommendButton" onAction="#handleRecommend" styleClass="recommendButton" text="Get PC Recommendation" />
             </HBox>
           </children>
                <padding>
