@@ -97,28 +97,18 @@ public class gameSearchController extends RecommendationController {
 
         item1.setOnAction(e -> {
             displayStats(item1.getText());
-            item1 = new MenuItem();
-            return;
         });
         item2.setOnAction(e -> {
             displayStats(item2.getText());
-            item2 = new MenuItem();
-            return;
         });
         item3.setOnAction(e -> {
             displayStats(item3.getText());
-            item3 = new MenuItem();
-            return;
         });
         item4.setOnAction(e -> {
             displayStats(item4.getText());
-            item4 = new MenuItem();
-            return;
         });
         item5.setOnAction(e -> {
             displayStats(item5.getText());
-            item5 = new MenuItem();
-            return;
         });
 
         searchField.textProperty().addListener((obs, oldValue, newValue) -> {

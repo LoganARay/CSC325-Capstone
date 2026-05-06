@@ -24,13 +24,6 @@ public class HelloApplication extends Application {
 
     public  static FirestoreContent contxtFirebase = new FirestoreContent();
     public  static Firestore fstore = contxtFirebase.firebase();
-//    public static Map<String, Map<String, Object>> cases=null;
-//    public static Map<String, Map<String, Object>> cpus=null;
-//    public static Map<String, Map<String, Object>> gpus=null;
-//    public static Map<String, Map<String, Object>> motherboards=null;
-//    public static Map<String, Map<String, Object>> psus=null;
-//    public static Map<String, Map<String, Object>> ram=null;
-//    public static Map<String, Map<String, Object>> storage=null;
     public static List<Map<String, Object>> cases=null;
     public static List<Map<String, Object>> cpus=null;
     public static List<Map<String, Object>> gpus=null;
@@ -58,7 +51,7 @@ public class HelloApplication extends Application {
             gpus= (List<Map<String, Object>>) parts.document("gpus").get().get().get("list");
             motherboards = (List<Map<String, Object>>) parts.document("motherboards").get().get().get("list");
 
-        scene = new Scene(loadFXML("homeView.fxml"), 950, 750);
+            scene = new Scene(loadFXML("homeView.fxml"), 950, 750);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -88,7 +81,7 @@ public class HelloApplication extends Application {
         HashMap<String, String> ids= new HashMap<String, String>();
         for(Map<String, Object> name: part){
             //if((double)fstore.collection(database).document(name.get("id")+"").get().get().get("price")!=0.0) {
-                ids.put(name.get("name") + "", name.get("id") + "");
+            ids.put(name.get("name") + "", name.get("id") + "");
             //}
         }
         return ids;

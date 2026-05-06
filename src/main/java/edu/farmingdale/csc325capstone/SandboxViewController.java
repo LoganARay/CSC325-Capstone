@@ -339,14 +339,6 @@ public class SandboxViewController {
         String psuName = psuCombo.getValue();
         String caseName = caseCombo.getValue();
 
-//        Part cpu = cpuName == null ? null : HelloApplication.getPartByName(HelloApplication.cpus, cpuName, "CPU");
-//        Part gpu = gpuName == null ? null : HelloApplication.getPartByName(HelloApplication.gpus, gpuName, "Video Card");
-//        Part ram = ramName == null ? null : HelloApplication.getPartByName(HelloApplication.ram, ramName, "Memory");
-//        Part mobo = moboName == null ? null : HelloApplication.getPartByName(HelloApplication.motherboards, moboName, "Motherboard");
-//        Part storage = storageName == null ? null : HelloApplication.getPartByName(HelloApplication.storage, storageName, "Internal Hard Drive");
-//        Part psu = psuName == null ? null : HelloApplication.getPartByName(HelloApplication.psus, psuName, "Power Supply");
-//        Part computerCase = caseName == null ? null : HelloApplication.getPartByName(HelloApplication.cases, caseName, "Case");
-
         Part cpu = cpuName == null ? null : HelloApplication.getPartByName(cpuCalls, "cpus", cpuName, "CPU");
         Part gpu = gpuName == null ? null : HelloApplication.getPartByName(gpuCalls, "gpus", gpuName, "Video Card");
         Part ram = ramName == null ? null : HelloApplication.getPartByName(ramCalls, "ram", ramName, "Memory");
@@ -551,4 +543,3 @@ public class SandboxViewController {
 
     private final Map<String, Part> selectedParts = new HashMap<>();
 }
-
