@@ -1,4 +1,4 @@
-# *Steam PC Builder*
+# *Steam Builder*
 
 ## Description
 A JavaFX application that help users find find/design a desktop that perfectly suites all their gaming needs centered around the worlds biggest game provider for PC. Made for even the most tech-illiterate of users who just want to game, even tech-savvy users will find thiier own pace designing desktops part by part.  
