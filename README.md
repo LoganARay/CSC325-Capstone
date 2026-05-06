@@ -12,6 +12,7 @@ A JavaFX application that help users find find/design a desktop that perfectly s
 - Search autofill
 - Firebase database support
 - Responsive JavaFX UI
+- AI Analyzer for selected builds
 
 ## Tech Stack
 - Java
