@@ -95,7 +95,18 @@ For the more tech-savvy users, building a desktop part by part
 - Holds an large variety of PC parts fomr the last
 - Allows user to save builds onto their account 
 - Parts are dynamic! If you select one part that incompatable with another that incompatable part wont show up
-- 
+- Users can have AI analyze their build and give feed back and recommendation
+- Contians side bar featuring the selected parts important stats like price
+
+<img width="400" height="333" alt="SandBoxStuuuuf" src="https://github.com/user-attachments/assets/68ab1af0-5479-4b62-a8ff-c0ab2c513cd6" />  <--- Selecting PC parts
+
+<img width="400" height="403" alt="SandBoxAnalyze" src="https://github.com/user-attachments/assets/cdbd5b51-a200-471a-8894-2e2fa424bceb" /> <--- AI Analyze
+
+<img width="400" height="659" alt="SandBoxScrool" src="https://github.com/user-attachments/assets/5c73ad55-a475-477f-ab98-29fb860ea9fd" />  <--- Parts scroll bar
+
+
+
+
 
 
 
