@@ -164,7 +164,72 @@ For the more tech-savvy users, building a desktop part by part
 - Helps the frontend load dropdown menus efficiently by fetching only the needed collection
 - Makes compatibility logic easier to implement, such as matching CPU and motherboard sockets
 
+# 🔧 Compatibility Logic & Live Filtering – Steam Builder
 
+This document explains how the compatibility checker and dynamic dropdown filtering work in the Steam Builder PC‑building sandbox.
+
+---
+
+## 📦 Data Loading
+
+### Lightweight Summary Lists
+- At startup, `HelloApplication.start()` loads minimal part info (name, id) from Firestore.
+- These are fast to fetch and immediately populate the combo boxes in the sandbox.
+
+### Full Part Maps (Background)
+- `loadAllPartsAsync()` runs on a separate thread and fetches **complete** `Part` objects for every category.
+- The objects are stored in static `Map<String, Part>` fields (e.g., `cpuPartMap`).
+- The sandbox waits for these maps to be ready before enabling filtering.
+
+### Local Part Pools
+- `SandboxViewController.initFilterData()` copies the static maps into local lists (`allCpuParts`, `allMoboParts`, …).
+- These lists serve as the **source pools** for filtering – all combinations are tested against them.
+
+---
+
+## 🧪 Compatibility Rules (`CompatibilityChecker.java`)
+
+Each static method takes two `Part` objects and returns `true` if they are compatible.
+
+| Connection              | Check                                                   | Missing spec behaviour |
+|-------------------------|---------------------------------------------------------|------------------------|
+| CPU ↔ Motherboard       | `socket` must match exactly                             | Incompatible (strict)  |
+| RAM ↔ Motherboard       | `type` must match `ram_type`; speed checked if max known | Incompatible (strict)  |
+| GPU ↔ Case              | GPU `length` ≤ case `max_gpu_length` (or case‑type fallback) | Incompatible (strict)  |
+| Motherboard ↔ Case      | `form_factor` must be supported by case's type or explicit list | Incompatible (strict)  |
+| PSU ↔ Estimated wattage  | PSU `wattage` ≥ (CPU TDP + GPU TDP + 50W buffer)        | Insufficient           |
+
+All methods return `true` when one of the parts is `null` (no selection).
+
+---
+
+## ⚙️ Filtering Process
+
+### 1. Initialisation
+- Combo boxes are filled with lightweight summary lists.
+- If full maps are empty, a "Loading parts…" message appears and the UI waits.
+- Once all critical maps (CPU, Motherboard, RAM) are non‑empty:
+  - `initFilterData()` builds the source pools.
+  - Listeners are attached.
+  - The first price/wattage update runs.
+
+### 2. Selection Changed (`onSelectionChanged()`)
+1. A guard (`filtering` flag) prevents recursive updates.
+2. `applyFilters()` runs.
+3. `updateTotalPriceAndWattage()` calculates totals, shows alerts, and updates the details panel.
+
+### 3. Applying Filters (`applyFilters()`)
+- Retrieves the currently selected `Part` objects from local maps.
+- For **each combo box**, calls `filterCombo()` with:
+  - The full source pool (`allCpuParts`, etc.).
+  - A **predicate** that invokes the relevant `CompatibilityChecker` method.
+
+  Example for CPUs:
+  ```java
+  cpu -> {
+      if (moboSel == null) return true;
+      return CompatibilityChecker.isCpuMotherboardCompatible(cpu, moboSel);
+  }
 
 ## Build Management System
 Users can save, organize, and interact thier own built PC's
@@ -183,3 +248,4 @@ Users can save, organize, and interact thier own built PC's
 ## Authors
 - Logan Raycraft
 - Fransisco Payes
+- Junhui Yu
