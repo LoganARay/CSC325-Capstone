@@ -4,6 +4,38 @@
     -fx-text-fill: white;
 }
 
+.scroll-pane {
+    -fx-background-color: #070b1a;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.scroll-pane:focused {
+    -fx-background-insets: 0;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: #070b1a;
+}
+
+
+.scroll-bar {
+    -fx-background-color: #101730;  
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #1f4fff;
+    -fx-background-radius: 10;
+}
+
+.scroll-bar .increment-button .decrement-button {
+    -fx-background-color: #101730;
+    -fx-background-insets: 0;
+}
+
+
+
+
 .text-field {
     -fx-background-color: #1b2838;
     -fx-text-fill: white;
