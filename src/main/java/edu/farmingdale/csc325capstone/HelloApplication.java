@@ -17,6 +17,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.ExecutionException;
+import com.google.cloud.firestore.QueryDocumentSnapshot;
 
 public class HelloApplication extends Application {
     public static Scene scene;
@@ -37,6 +38,14 @@ public class HelloApplication extends Application {
     public static List<Map<String, Object>> psus=null;
     public static List<Map<String, Object>> ram=null;
     public static List<Map<String, Object>> storage=null;
+
+    public static Map<String, Part> cpuPartMap = new HashMap<>();
+    public static Map<String, Part> gpuPartMap = new HashMap<>();
+    public static Map<String, Part> ramPartMap = new HashMap<>();
+    public static Map<String, Part> moboPartMap = new HashMap<>();
+    public static Map<String, Part> psuPartMap = new HashMap<>();
+    public static Map<String, Part> casePartMap = new HashMap<>();
+    public static Map<String, Part> storagePartMap = new HashMap<>();
 
     public static User user=null;
     @Override
@@ -59,6 +68,7 @@ public class HelloApplication extends Application {
                 new Image(getClass().getResourceAsStream("/edu/farmingdale/csc325capstone/SteamBuilderLogo2.png"))
         );
         stage.setScene(scene);
+        loadAllPartsAsync();
         stage.show();
     }
 
@@ -131,6 +141,40 @@ public class HelloApplication extends Application {
         }
 
         return part;
+    }
+
+    public static void loadAllPartsAsync() {
+        new Thread(() -> {
+            try {
+                CollectionReference parts = fstore.collection("Parts");
+                loadPartMap("cpus", cpuPartMap, "CPU");
+                loadPartMap("gpus", gpuPartMap, "Video Card");
+                loadPartMap("ram", ramPartMap, "Memory");
+                loadPartMap("motherboards", moboPartMap, "Motherboard");
+                loadPartMap("psus", psuPartMap, "Power Supply");
+                loadPartMap("cases", casePartMap, "Case");
+                loadPartMap("storage", storagePartMap, "Internal Hard Drive");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
+    }
+
+    private static void loadPartMap(String collection, Map<String, Part> map, String category) throws Exception {
+        for (QueryDocumentSnapshot doc : fstore.collection(collection).get().get()) {
+            Part part = new Part();
+            part.setId(doc.getId());
+            part.setName(doc.getString("name"));
+            part.setCategory(category);
+            part.setBrand(doc.getString("brand"));
+            Object priceObj = doc.get("price");
+            part.setPrice(priceObj instanceof Number ? ((Number) priceObj).doubleValue() : 0.0);
+            part.setLink(doc.getString("link"));
+            Object yearObj = doc.get("year");
+            part.setYear(yearObj instanceof Number ? ((Number) yearObj).intValue() : null);
+            part.setSpecs((Map<String, Object>) doc.get("specs"));
+            map.put(part.getName(), part);
+        }
     }
 
 

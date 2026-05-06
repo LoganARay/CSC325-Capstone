@@ -239,7 +239,6 @@ public class SandboxViewController {
         totalWattage.setText("0");
         selectedParts.clear();
         detailsVBox.getChildren().clear();
-        detailsVBox.getChildren().clear();
     }
 
     public void saveBuildLogic() throws ExecutionException, InterruptedException {
