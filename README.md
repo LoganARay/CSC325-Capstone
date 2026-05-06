@@ -114,14 +114,6 @@ Database Schema
 }
 ```
 
-## Part Class
-- Represents a single PC component object within the application
-- Stores general part information such as name, brand, category, price, and link
-- Maps data retrieved from the Firebase database into Java objects
-- Contains a flexible specs field for component-specific attributes
-- Used throughout the application for displaying, filtering, and validating parts
-- Helps keep the project object-oriented and organized by modeling real-world PC components as Java objects
-
 
 
 ## Sandbox
@@ -138,11 +130,13 @@ For the more tech-savvy users, building a desktop part by part
 
 <img width="400" height="659" alt="SandBoxScrool" src="https://github.com/user-attachments/assets/5c73ad55-a475-477f-ab98-29fb860ea9fd" />  <--- Parts scroll bar
 
-
-
-
-
-
+## Part Class
+- Represents a single PC component object within the application
+- Stores general part information such as name, brand, category, price, and link
+- Maps data retrieved from the Firebase database into Java objects
+- Contains a flexible specs field for component-specific attributes
+- Used throughout the application for displaying, filtering, and validating parts
+- Helps keep the project object-oriented and organized by modeling real-world PC components as Java objects
 
 
 
