@@ -73,4 +73,6 @@ public class AllSuggestionsController {
     private void onHomeClicked() throws Exception {
         HelloApplication.setRoot("homeView.fxml");
     }
+
+
 }

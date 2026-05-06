@@ -19,7 +19,7 @@
             <!-- Card 1 -->
             <VBox fx:id="card1" spacing="8" styleClass="question-card">
                 <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
-                <Label fx:id="medal1" text="🥇 1st Place" styleClass="question-counter"/>
+                <Label fx:id="medal1" text="💰 Budget" styleClass="question-counter"/>
                 <ImageView fx:id="img1" fitWidth="300" fitHeight="180" preserveRatio="true"/>
                 <Label fx:id="name1" styleClass="question-text" wrapText="true"/>
                 <Label fx:id="specs1" styleClass="question-hint" wrapText="true"/>
@@ -32,7 +32,7 @@
             <!-- Card 2 -->
             <VBox fx:id="card2" spacing="8" styleClass="question-card">
                 <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
-                <Label fx:id="medal2" text="🥈 2nd Place" styleClass="question-counter"/>
+                <Label fx:id="medal2" text="⚡ Mid-Tier" styleClass="question-counter"/>
                 <ImageView fx:id="img2" fitWidth="300" fitHeight="180" preserveRatio="true"/>
                 <Label fx:id="name2" styleClass="question-text" wrapText="true"/>
                 <Label fx:id="specs2" styleClass="question-hint" wrapText="true"/>
@@ -45,7 +45,7 @@
             <!-- Card 3 -->
             <VBox fx:id="card3" spacing="8" styleClass="question-card">
                 <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
-                <Label fx:id="medal3" text="🥉 3rd Place" styleClass="question-counter"/>
+                <Label fx:id="medal3" text="🚀 High-End" styleClass="question-counter"/>
                 <ImageView fx:id="img3" fitWidth="300" fitHeight="180" preserveRatio="true"/>
                 <Label fx:id="name3" styleClass="question-text" wrapText="true"/>
                 <Label fx:id="specs3" styleClass="question-hint" wrapText="true"/>

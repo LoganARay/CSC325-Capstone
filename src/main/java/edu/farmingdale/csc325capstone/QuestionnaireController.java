@@ -347,15 +347,25 @@ public class QuestionnaireController extends RecommendationController {
 
         // Score based on performance target
         if ("4k".equals(selectedPerformance)) {
-            if (gpu.contains("4090") || gpu.contains("4080") || gpu.contains("3090")) score += 3;
-            else if (gpu.contains("4070") || gpu.contains("3080")) score += 2;
-            else if (gpu.contains("4060") || gpu.contains("3070")) score += 1;
+            if (gpu.contains("4090") || gpu.contains("4080") || gpu.contains("4070 ti") ||
+                    gpu.contains("rx 7900 xt") || gpu.contains("rx 9080")) score += 3;
+            else if (gpu.contains("4070") || gpu.contains("rx 7800") ||
+                    gpu.contains("rx 9070")) score += 2;
+            else if (gpu.contains("4060 ti") || gpu.contains("4060") ||
+                    gpu.contains("rx 7700") || gpu.contains("rx 7600")) score += 1;
         } else if ("1440_high".equals(selectedPerformance)) {
-            if (gpu.contains("4070") || gpu.contains("3080") || gpu.contains("3070")) score += 3;
-            else if (gpu.contains("4060") || gpu.contains("3060")) score += 2;
+            if (gpu.contains("4070 ti") || gpu.contains("4070") || gpu.contains("4080") ||
+                    gpu.contains("rx 7800") || gpu.contains("rx 7900") ||
+                    gpu.contains("rx 9070") || gpu.contains("rx 9080")) score += 3;
+            else if (gpu.contains("4060 ti") || gpu.contains("4060") ||
+                    gpu.contains("rx 7600") || gpu.contains("rx 7700") ||
+                    gpu.contains("rx 6700")) score += 2;
         } else if ("1080_144".equals(selectedPerformance)) {
-            if (gpu.contains("3060") || gpu.contains("4060") || gpu.contains("2070")) score += 3;
-            else if (gpu.contains("3050") || gpu.contains("2060")) score += 2;
+            if (gpu.contains("4060 ti") || gpu.contains("4060") ||
+                    gpu.contains("rx 7600") || gpu.contains("rx 6600 xt") ||
+                    gpu.contains("rx 6600")) score += 3;
+            else if (gpu.contains("4070") || gpu.contains("rx 6700") ||
+                    gpu.contains("rx 7700")) score += 2;
         } else {
             score += 1;
         }
@@ -379,39 +389,57 @@ public class QuestionnaireController extends RecommendationController {
 
         // Score based on longevity
         if ("5_plus_years".equals(selectedLongevity)) {
-            if (gpu.contains("4080") || gpu.contains("4090")) score += 3;
-            else if (gpu.contains("4070") || gpu.contains("3080")) score += 2;
+            if (gpu.contains("4080") || gpu.contains("4090") || gpu.contains("4070 ti") ||
+                    gpu.contains("rx 7900") || gpu.contains("rx 9080")) score += 3;
+            else if (gpu.contains("4070") || gpu.contains("rx 7800") ||
+                    gpu.contains("rx 9070")) score += 2;
         } else if ("3_4_years".equals(selectedLongevity)) {
-            if (gpu.contains("4060") || gpu.contains("3070")) score += 2;
+            if (gpu.contains("4060 ti") || gpu.contains("4060") ||
+                    gpu.contains("rx 7600") || gpu.contains("rx 7700")) score += 2;
         }
 
         // Score based on game requirements + resolution
         String selectedGameRecommendedGPU = getHighestGameGPU();
         if (!selectedGameRecommendedGPU.isEmpty()) {
             boolean highRes = "1440_high".equals(selectedPerformance) || "4k".equals(selectedPerformance);
-            if (selectedGameRecommendedGPU.contains("4090") || selectedGameRecommendedGPU.contains("4080")) {
-                if (gpu.contains("4090") || gpu.contains("4080")) score += 3;
-                else if (gpu.contains("4070")) score += 1;
-            } else if (selectedGameRecommendedGPU.contains("4070") || selectedGameRecommendedGPU.contains("3080")) {
-                if (gpu.contains("4070") || gpu.contains("4080") || gpu.contains("4090")) score += 3;
-                else if (gpu.contains("3080") || gpu.contains("4060")) score += 2;
-            } else if (selectedGameRecommendedGPU.contains("3060") || selectedGameRecommendedGPU.contains("2070")) {
+            if (selectedGameRecommendedGPU.contains("4090") || selectedGameRecommendedGPU.contains("4080") ||
+                    selectedGameRecommendedGPU.contains("rx 7900") || selectedGameRecommendedGPU.contains("rx 9080")) {
+                if (gpu.contains("4090") || gpu.contains("4080") || gpu.contains("4070 ti") ||
+                        gpu.contains("rx 7900 xt") || gpu.contains("rx 9080")) score += 3;
+                else if (gpu.contains("4070") || gpu.contains("rx 7800") ||
+                        gpu.contains("rx 9070")) score += 1;
+            } else if (selectedGameRecommendedGPU.contains("4070") || selectedGameRecommendedGPU.contains("3080") ||
+                    selectedGameRecommendedGPU.contains("rx 6800") || selectedGameRecommendedGPU.contains("rx 7700")) {
+                if (gpu.contains("4070 ti") || gpu.contains("4070") || gpu.contains("4080") ||
+                        gpu.contains("4090") || gpu.contains("rx 7800") || gpu.contains("rx 7900") ||
+                        gpu.contains("rx 9070") || gpu.contains("rx 9080")) score += 3;
+                else if (gpu.contains("4060 ti") || gpu.contains("4060") ||
+                        gpu.contains("rx 6700 xt") || gpu.contains("rx 6700") ||
+                        gpu.contains("rx 7600")) score += 2;
+            } else if (selectedGameRecommendedGPU.contains("3060") || selectedGameRecommendedGPU.contains("2070") ||
+                    selectedGameRecommendedGPU.contains("rx 580") || selectedGameRecommendedGPU.contains("rx 5700")) {
                 if (highRes) {
-                    if (gpu.contains("5070") || gpu.contains("9070") || gpu.contains("4080") || gpu.contains("4090"))
-                        score += 3;
-                    else if (gpu.contains("4070") || gpu.contains("3080")) score += 2;
-                    else if (gpu.contains("3060") || gpu.contains("4060")) score += 1;
+                    if (gpu.contains("4080") || gpu.contains("4090") || gpu.contains("4070 ti") ||
+                            gpu.contains("rx 7900") || gpu.contains("rx 9080")) score += 3;
+                    else if (gpu.contains("4070") || gpu.contains("rx 7800") ||
+                            gpu.contains("rx 9070")) score += 2;
+                    else if (gpu.contains("4060 ti") || gpu.contains("4060") ||
+                            gpu.contains("rx 7600") || gpu.contains("rx 7700")) score += 1;
                 } else {
-                    if (gpu.contains("3060") || gpu.contains("4060")) score += 2;
-                    else if (gpu.contains("3070") || gpu.contains("4070")) score += 3;
+                    if (gpu.contains("4060 ti") || gpu.contains("4060") ||
+                            gpu.contains("rx 6600 xt") || gpu.contains("rx 7600")) score += 2;
+                    else if (gpu.contains("4070") || gpu.contains("rx 6700") ||
+                            gpu.contains("rx 7700")) score += 3;
                 }
             } else {
                 if (highRes) {
-                    if (gpu.contains("5070") || gpu.contains("9070") || gpu.contains("4080") || gpu.contains("4090"))
-                        score += 3;
-                    else if (gpu.contains("4070") || gpu.contains("3080")) score += 2;
+                    if (gpu.contains("4080") || gpu.contains("4090") || gpu.contains("4070 ti") ||
+                            gpu.contains("rx 7900") || gpu.contains("rx 9080")) score += 3;
+                    else if (gpu.contains("4070") || gpu.contains("rx 7800") ||
+                            gpu.contains("rx 9070")) score += 2;
                 } else {
-                    if (gpu.contains("3060") || gpu.contains("4060")) score += 1;
+                    if (gpu.contains("4060 ti") || gpu.contains("4060") ||
+                            gpu.contains("rx 7600") || gpu.contains("rx 6600")) score += 1;
                 }
             }
         }
