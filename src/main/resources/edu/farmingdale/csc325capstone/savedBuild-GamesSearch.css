@@ -87,6 +87,20 @@
     -fx-text-fill: white;
 }
 
+.recommendButton {
+    -fx-font-size: 14px;
+    -fx-font-family: "System";
+    -fx-font-weight: bold;
+    -fx-padding: 8 15;
+    -fx-background-radius: 12;
+    -fx-background-color: #3ea343;
+    -fx-text-fill: white;
+}
+
+.recommendButton:hover {
+     -fx-background-color: #6cad2b; 
+    }
+
 .menuButton:hover {
      -fx-background-color: #6cad2b; 
     }
@@ -104,7 +118,7 @@
     -fx-text-fill: white;  
 }
 
-.combo-box > .list-cell {
+.combo-box .list-cell {
     -fx-text-fill: white;
 }
 
