@@ -24,6 +24,7 @@ A JavaFX application that help users find find/design a desktop that perfectly s
 - Google Cloud Firestore
 - Git
 - GitHub
+- gpt-5.4-mini
 - jpackage (for .exe)
 
 ## Installation
