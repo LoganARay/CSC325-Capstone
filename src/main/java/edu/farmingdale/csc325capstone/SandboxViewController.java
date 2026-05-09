@@ -98,6 +98,24 @@ public class SandboxViewController {
     private HashMap<String, String> storageCalls;
     private HashMap<String, String> psuCalls;
 
+    private boolean filtering = false;
+
+    private List<Part> allCpuParts;
+    private List<Part> allGpuParts;
+    private List<Part> allRamParts;
+    private List<Part> allMoboParts;
+    private List<Part> allPsuParts;
+    private List<Part> allCaseParts;
+    private List<Part> allStorageParts;
+
+    private Map<String, Part> cpuPartMap = new HashMap<>();
+    private Map<String, Part> gpuPartMap = new HashMap<>();
+    private Map<String, Part> ramPartMap = new HashMap<>();
+    private Map<String, Part> moboPartMap = new HashMap<>();
+    private Map<String, Part> psuPartMap = new HashMap<>();
+    private Map<String, Part> casePartMap = new HashMap<>();
+    private Map<String, Part> storagePartMap = new HashMap<>();
+
 
     @FXML
     public void initialize() throws Exception {
@@ -239,6 +257,21 @@ public class SandboxViewController {
         totalWattage.setText("0");
         selectedParts.clear();
         detailsVBox.getChildren().clear();
+        resetAllComboBoxes();
+    }
+
+    private void resetAllComboBoxes() {
+        try {
+            setCases();         // uses HelloApplication.cases summary
+            setCpus();          // uses HelloApplication.cpus summary
+            setMotherboards();  // uses HelloApplication.motherboards summary
+            setGpus();
+            setRam();
+            setStorage();
+            setPsu();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void saveBuildLogic() throws ExecutionException, InterruptedException {
@@ -328,6 +361,118 @@ public class SandboxViewController {
                 throw new RuntimeException(e);
             }
         });
+    }
+
+    private void onSelectionChanged() {
+        if (filtering) return;        // prevent infinite loop
+        filtering = true;
+        applyFilters();               // update all dropdowns
+        filtering = false;
+        try {
+            updateTotalPriceAndWattage();   // recalc totals, wattage, alerts
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void applyFilters() {
+        // Do nothing if full data isn't ready yet
+        if (allMoboParts == null || allMoboParts.isEmpty()) return;
+
+        // Get the currently selected Part objects from the fast local maps
+        Part cpuSel  = cpuPartMap.get(cpuCombo.getValue());
+        Part gpuSel  = gpuPartMap.get(gpuCombo.getValue());
+        Part ramSel  = ramPartMap.get(ramCombo.getValue());
+        Part moboSel = moboPartMap.get(motherboardCombo.getValue());
+        Part caseSel = casePartMap.get(caseCombo.getValue());
+
+        // CPU – only compatible if motherboard matches
+        filterCombo(cpuCombo, allCpuParts, cpu -> {
+            if (moboSel == null) return true;
+            return CompatibilityChecker.isCpuMotherboardCompatible(cpu, moboSel);
+        });
+
+        // GPU – only compatible if case fits
+        filterCombo(gpuCombo, allGpuParts, gpu -> {
+            if (caseSel == null) return true;
+            return CompatibilityChecker.isGpuCaseCompatible(gpu, caseSel);
+        });
+
+        // RAM – only compatible if motherboard supports its type & speed
+        filterCombo(ramCombo, allRamParts, ram -> {
+            if (moboSel == null) return true;
+            return CompatibilityChecker.isRamMotherboardCompatible(ram, moboSel);
+        });
+
+        // Motherboard – must satisfy CPU, RAM, and Case simultaneously
+        filterCombo(motherboardCombo, allMoboParts, mobo -> {
+            if (cpuSel != null && !CompatibilityChecker.isCpuMotherboardCompatible(cpuSel, mobo))
+                return false;
+            if (ramSel != null && !CompatibilityChecker.isRamMotherboardCompatible(ramSel, mobo))
+                return false;
+            if (caseSel != null && !CompatibilityChecker.isMotherboardCaseCompatible(mobo, caseSel))
+                return false;
+            return true;
+        });
+
+        // Case – must fit GPU and Motherboard
+        filterCombo(caseCombo, allCaseParts, c -> {
+            if (gpuSel != null && !CompatibilityChecker.isGpuCaseCompatible(gpuSel, c))
+                return false;
+            if (moboSel != null && !CompatibilityChecker.isMotherboardCaseCompatible(moboSel, c))
+                return false;
+            return true;
+        });
+
+        // Storage and PSU are never filtered – they always show all items
+    }
+
+    private void initFilterData() {
+        // Copy the static maps from HelloApplication into local maps
+        cpuPartMap.putAll(HelloApplication.cpuPartMap);
+        gpuPartMap.putAll(HelloApplication.gpuPartMap);
+        ramPartMap.putAll(HelloApplication.ramPartMap);
+        moboPartMap.putAll(HelloApplication.moboPartMap);
+        psuPartMap.putAll(HelloApplication.psuPartMap);
+        casePartMap.putAll(HelloApplication.casePartMap);
+        storagePartMap.putAll(HelloApplication.storagePartMap);
+
+        // Build the full source lists from the maps
+        allCpuParts    = new ArrayList<>(cpuPartMap.values());
+        allGpuParts    = new ArrayList<>(gpuPartMap.values());
+        allRamParts    = new ArrayList<>(ramPartMap.values());
+        allMoboParts   = new ArrayList<>(moboPartMap.values());
+        allPsuParts    = new ArrayList<>(psuPartMap.values());
+        allCaseParts   = new ArrayList<>(casePartMap.values());
+        allStorageParts = new ArrayList<>(storagePartMap.values());
+    }
+
+    private void filterCombo(ComboBox<String> combo, List<Part> source,
+                             java.util.function.Predicate<Part> test) {
+        // If the full data hasn't been loaded yet, keep the existing list untouched
+        if (source == null || source.isEmpty()) return;
+
+        String currentSelection = combo.getValue();
+        List<String> allowedNames = new ArrayList<>();
+
+        // Apply the predicate to each part in the source pool
+        for (Part p : source) {
+            if (test.test(p)) {
+                allowedNames.add(p.getName());
+            }
+        }
+
+        // Replace the combo's items with the filtered list
+        ObservableList<String> filteredItems = FXCollections.observableArrayList();
+        filteredItems.addAll(allowedNames);
+        combo.setItems(filteredItems);
+
+        // If the previously selected part is no longer compatible, clear it
+        if (currentSelection != null && !allowedNames.contains(currentSelection)) {
+            combo.setValue(null);
+        } else if (currentSelection != null) {
+            combo.setValue(currentSelection);   // retain selection if still valid
+        }
     }
 
     private void updateTotalPriceAndWattage() throws ExecutionException, InterruptedException {
