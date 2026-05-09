@@ -11,7 +11,7 @@
       stylesheets="@questionnaire.css"
       xmlns:fx="http://javafx.com/fxml/1"
       xmlns="http://javafx.com/javafx/11.0.14-internal"
-      fx:controller="edu.farmingdale.csc325capstone.QuestionnaireController">
+      fx:controller="edu.farmingdale.csc325capstone.ViewModel.QuestionnaireController">
 
     <padding>
         <Insets bottom="20" left="20" right="20" top="20" />
