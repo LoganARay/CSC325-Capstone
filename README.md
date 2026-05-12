@@ -243,9 +243,26 @@ Users can save, organize, and interact thier own built PC's
 - Enables future expansion for exporting/sharing builds
 
 
+### GUI Logic and CSS
+- Most root containers are ArchorPanes or Vbox to allow for flexiblity of element placements
+- Nearly all elements are nested into vbox or hbox to make resizing seamless
+  - Vgrow or Hgrow is enabled to ensure proper scaling  
+- FXML files for saved builds and sandbox function similarly
+  - Both utilize combo boxes allowing users to pick a single item from a drop down 
+- Sandbox is the most complex:
+  - Combo boxes decicated to PC part picking
+  - Scroll pane shows details of parts
+  - Text area displays AI recommendation text
+- CSS includes different classes for each level of text:
+  - Title
+  - Section header
+  - Regular text
+- Padding, spacing, and margins all used to create space between elements and containers
+
 
 
 ## Authors
 - Logan Raycraft
 - Fransisco Payes
 - Junhui Yu
+- Hope Jordan
