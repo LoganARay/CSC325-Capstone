@@ -1,11 +1,9 @@
-package edu.farmingdale.csc325capstone;
+package edu.farmingdale.csc325capstone.ViewModel;
 
-import edu.farmingdale.csc325capstone.PcParts.SandBoxParts;
+import edu.farmingdale.csc325capstone.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import java.io.IOException;
-
 
 
 public class homeController {

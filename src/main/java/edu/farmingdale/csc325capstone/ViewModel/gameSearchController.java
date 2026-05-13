@@ -1,23 +1,21 @@
-package edu.farmingdale.csc325capstone;
+package edu.farmingdale.csc325capstone.ViewModel;
 
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.DocumentSnapshot;
+import edu.farmingdale.csc325capstone.HelloApplication;
 import edu.farmingdale.csc325capstone.service.GameRequirements;
 import edu.farmingdale.csc325capstone.service.SteamGame;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.geometry.Side;
 import javafx.scene.control.*;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.ResourceBundle;
 import java.util.concurrent.ExecutionException;
 import edu.farmingdale.csc325capstone.model.PreBuilt;
 import edu.farmingdale.csc325capstone.service.PreBuiltService;

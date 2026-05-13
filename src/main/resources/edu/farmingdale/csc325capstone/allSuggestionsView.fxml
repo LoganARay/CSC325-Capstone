@@ -7,7 +7,7 @@
 <VBox spacing="16" stylesheets="@questionnaire.css"
       xmlns:fx="http://javafx.com/fxml/1"
       xmlns="http://javafx.com/javafx/11.0.14-internal"
-      fx:controller="edu.farmingdale.csc325capstone.AllSuggestionsController">
+      fx:controller="edu.farmingdale.csc325capstone.ViewModel.AllSuggestionsController">
     <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
 
     <Label text="Top 3 Recommendations" styleClass="question-text"/>

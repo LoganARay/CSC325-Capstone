@@ -1,7 +1,8 @@
-package edu.farmingdale.csc325capstone;
+package edu.farmingdale.csc325capstone.ViewModel;
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.*;
-import com.google.cloud.Service;
+import edu.farmingdale.csc325capstone.FirestoreContent;
+import edu.farmingdale.csc325capstone.HelloApplication;
 import javafx.fxml.FXML;
 import javafx.geometry.Side;
 import javafx.scene.control.*;

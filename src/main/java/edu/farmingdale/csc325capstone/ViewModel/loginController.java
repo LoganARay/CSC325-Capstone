@@ -1,4 +1,5 @@
-package edu.farmingdale.csc325capstone;
+package edu.farmingdale.csc325capstone.ViewModel;
+import edu.farmingdale.csc325capstone.HelloApplication;
 import edu.farmingdale.csc325capstone.PcParts.SandBoxParts;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,7 +7,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
