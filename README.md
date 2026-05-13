@@ -266,3 +266,4 @@ Users can save, organize, and interact thier own built PC's
 - Fransisco Payes
 - Junhui Yu
 - Hope Jordan
+- Derek Zacarias
