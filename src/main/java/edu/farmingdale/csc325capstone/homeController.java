@@ -10,17 +10,7 @@ import java.io.IOException;
 
 public class homeController {
     @FXML
-    private Button homeButton;
-    @FXML
-    private Button savedButton;
-    @FXML
     private Button loginButton;
-    @FXML
-    private Button findGames;
-    @FXML
-    private Button takeQuestionnaire;
-    @FXML
-    private Button buildSandbox;
 
     @FXML
     public void initialize() {

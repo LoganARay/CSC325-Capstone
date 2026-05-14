@@ -28,9 +28,6 @@ public class RegistrationController {
     private TextField emailField;
 
     @FXML
-    private Button goToHome;
-
-    @FXML
     private Button goToLoginButton;
 
     @FXML

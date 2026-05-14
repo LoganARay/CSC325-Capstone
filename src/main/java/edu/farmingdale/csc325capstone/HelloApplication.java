@@ -91,27 +91,6 @@ public class HelloApplication extends Application {
         user= new User(name, email, password, builds);
     }
 
-//    public static Part getPartByName(Map<String, Map<String, Object>> partMap, String name, String category) {
-//        for (Map.Entry<String, Map<String, Object>> entry : partMap.entrySet()) {
-//            Map<String, Object> data = entry.getValue();
-//            if (name.equals(data.get("name"))) {
-//                Part part = new Part();
-//                part.setId(entry.getKey());
-//                part.setName((String) data.get("name"));
-//                part.setCategory(category);
-//                part.setBrand((String) data.get("brand"));
-//                Object priceObj = data.get("price");
-//                part.setPrice(priceObj instanceof Number ? ((Number) priceObj).doubleValue() : 0.0);
-//                part.setLink((String) data.get("link"));
-//                Object yearObj = data.get("year");
-//                part.setYear(yearObj instanceof Number ? ((Number) yearObj).intValue() : null);
-//                part.setSpecs((Map<String, Object>) data.get("specs"));
-//                return part;
-//            }
-//        }
-//        return null;
-//    }
-
     public static Part getPartByName(HashMap<String, String> partMap, String database, String name, String category) throws ExecutionException, InterruptedException {
         Part part=new Part();
         part.setId(partMap.get(name));

@@ -20,10 +20,6 @@ public class loginController {
 
     @FXML
     private Button loginButton;
-    @FXML
-    private Button goToRegisterButton;
-    @FXML
-    private Button goToHome;
 
     public void initialize() throws Exception {
         SandBoxParts s= new SandBoxParts();

@@ -26,19 +26,10 @@ import java.util.AbstractMap;
 public class gameSearchController extends RecommendationController {
 
     @FXML
-    private Button buildButton;
-
-    @FXML
     private Label gameStudioLabel;
 
     @FXML
     private ListView<Label> gamesListView;
-
-    @FXML
-    private Button homeButton;
-
-    @FXML
-    private Button loginButton;
 
     @FXML
     private Label minCpuLabel;
@@ -48,9 +39,6 @@ public class gameSearchController extends RecommendationController {
 
     @FXML
     private Label minRamLabel;
-
-    @FXML
-    private Label minStorageLabel;
 
     @FXML
     private Label recCpuLabel;
@@ -65,14 +53,7 @@ public class gameSearchController extends RecommendationController {
     private Label recStorageLabel;
 
     @FXML
-    private Button savedButton;
-
-    @FXML
     private TextField searchField;
-
-    @FXML
-    private Button recommendButton;
-
 
     private List<SteamGame> library = null;
 

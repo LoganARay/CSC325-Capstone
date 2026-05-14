@@ -20,7 +20,6 @@ public class FirestoreContent {
 
         try {
             InputStream serviceAccount =
-                    //FirestoreContent.class.getClassLoader().getResourceAsStream("/file/key.json");
                     FirestoreContent.class.getResourceAsStream("/file/key.json");
 
             System.out.println("ClassLoader file/key.json = " +

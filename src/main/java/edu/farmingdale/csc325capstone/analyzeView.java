@@ -7,18 +7,6 @@ import javafx.scene.control.Button;
     public class analyzeView {
 
         @FXML
-        private Button analyzezBuildButton;
-
-        @FXML
-        private Button backSandbox;
-
-        @FXML
-        private Button homeButton;
-
-        @FXML
-        private Button savedButton;
-
-        @FXML
         void handleAnalyze(ActionEvent event) {
 
         }

@@ -61,13 +61,6 @@ public class SavedBuildsViewController {
             for(Map<String, Object> build:builds){
                 Label userSavedBuild= new Label(build.get("name") + "");
                 userSavedBuild.setOnMouseClicked(e->{
-//                    cpuCombo.setValue(HelloApplication.cpus.get(build.get("cpu") + "").get("name") + "");
-//                    gpuCombo.setValue(HelloApplication.gpus.get(build.get("gpu") + "").get("name") + "");
-//                    ramCombo.setValue(HelloApplication.ram.get(build.get("ram") + "").get("name") + "");
-//                    motherboardCombo.setValue(HelloApplication.motherboards.get(build.get("motherboard") + "").get("name") + "");
-//                    psuCombo.setValue(HelloApplication.psus.get(build.get("psu") + "").get("name") + "");
-//                    storageCombo.setValue(HelloApplication.storage.get(build.get("storage") + "").get("name") + "");
-//                    caseCombo.setValue(HelloApplication.cases.get(build.get("case") + "").get("name") + "");
                     try {
                         cpuCombo.setValue(HelloApplication.fstore.collection("cpus").document(build.get("cpu")+"").get().get().get("name") + "");
                     } catch (InterruptedException ex) {

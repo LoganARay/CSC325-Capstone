@@ -278,7 +278,7 @@ public class SandboxViewController {
         if(HelloApplication.user!=null) {
             if (cpuCombo.getValue() != null && gpuCombo.getValue() != null
                     && ramCombo.getValue() != null && motherboardCombo.getValue() != null && storageCombo.getValue() != null
-                    && psuCombo.getValue() != null && caseCombo.getValue() != null && buildName.getText()!=null) {
+                    && psuCombo.getValue() != null && caseCombo.getValue() != null && buildName.getText()!=null && buildName.getText()!="") {
                 HelloApplication.user.updateBuilds(cpuCalls.get(cpuCombo.getValue()), gpuCalls.get(gpuCombo.getValue()), ramCalls.get(ramCombo.getValue()), motherboardCalls.get(motherboardCombo.getValue()), storageCalls.get(storageCombo.getValue()), psuCalls.get(psuCombo.getValue()), caseCalls.get(caseCombo.getValue()), buildName.getText());
             }
         }else{
