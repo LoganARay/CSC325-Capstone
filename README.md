@@ -244,6 +244,7 @@ Users can save, organize, and interact thier own built PC's
 
 
 ### GUI Logic and CSS
+- Main goal was to make the application extremely user friendly, while still looking professional
 - Most root containers are ArchorPanes or Vbox to allow for flexiblity of element placements
 - Nearly all elements are nested into vbox or hbox to make resizing seamless
   - Vgrow or Hgrow is enabled to ensure proper scaling  
@@ -253,10 +254,15 @@ Users can save, organize, and interact thier own built PC's
   - Combo boxes decicated to PC part picking
   - Scroll pane shows details of parts
   - Text area displays AI recommendation text
-- CSS includes different classes for each level of text:
+- CSS includes different classes for each level of text and buttons:
   - Title
   - Section header
+  - Part label
   - Regular text
+  - Primary buttons
+  - Menu buttons
+- Vbox, scroll panes, listviews all have their own set of style class for consistency
+  - Scroll pane background insets was set to 0 to make it seemless into the root background by moving the edges 
 - Padding, spacing, and margins all used to create space between elements and containers
 
 
