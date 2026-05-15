@@ -1,8 +1,7 @@
-package edu.farmingdale.csc325capstone;
+package edu.farmingdale.csc325capstone.ViewModel;
 
-import com.google.cloud.firestore.CollectionReference;
 import com.google.cloud.firestore.DocumentReference;
-import com.google.cloud.firestore.Firestore;
+import edu.farmingdale.csc325capstone.HelloApplication;
 import edu.farmingdale.csc325capstone.PcParts.SandBoxParts;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,12 +11,6 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.util.*;
-
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 
 public class RegistrationController {
 

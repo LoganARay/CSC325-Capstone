@@ -1,10 +1,9 @@
-package edu.farmingdale.csc325capstone;
+package edu.farmingdale.csc325capstone.ViewModel;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 
-    public class analyzeView {
+public class analyzeView {
 
         @FXML
         void handleAnalyze(ActionEvent event) {

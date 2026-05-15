@@ -1,5 +1,6 @@
-package edu.farmingdale.csc325capstone;
+package edu.farmingdale.csc325capstone.ViewModel;
 
+import edu.farmingdale.csc325capstone.HelloApplication;
 import edu.farmingdale.csc325capstone.model.PreBuilt;
 
 import java.util.*;

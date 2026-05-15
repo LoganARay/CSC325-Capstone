@@ -1,23 +1,21 @@
-package edu.farmingdale.csc325capstone;
+package edu.farmingdale.csc325capstone.ViewModel;
 
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.DocumentSnapshot;
-import edu.farmingdale.csc325capstone.service.GameRequirements;
-import edu.farmingdale.csc325capstone.service.SteamGame;
+import edu.farmingdale.csc325capstone.HelloApplication;
+import edu.farmingdale.csc325capstone.service.GameRequirementsService;
+import edu.farmingdale.csc325capstone.service.SteamGameService;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.geometry.Side;
 import javafx.scene.control.*;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.ResourceBundle;
 import java.util.concurrent.ExecutionException;
 import edu.farmingdale.csc325capstone.model.PreBuilt;
 import edu.farmingdale.csc325capstone.service.PreBuiltService;
@@ -55,7 +53,7 @@ public class gameSearchController extends RecommendationController {
     @FXML
     private TextField searchField;
 
-    private List<SteamGame> library = null;
+    private List<SteamGameService> library = null;
 
     private List<Label> gameLists = null;
 
@@ -189,12 +187,12 @@ public class gameSearchController extends RecommendationController {
         String recGpu = rec.get("Graphics") + "";
         String recRam = rec.get("Memory") + "";
         String storage = currentGame.get("Storage") + "";
-        GameRequirements minG = new GameRequirements(minGpu, minCpu, minRam);
-        GameRequirements recG = new GameRequirements(recGpu, recCpu, recRam);
-        SteamGame sg = new SteamGame(name, currentGame.get("AppId") + "", storage, minG, recG);
+        GameRequirementsService minG = new GameRequirementsService(minGpu, minCpu, minRam);
+        GameRequirementsService recG = new GameRequirementsService(recGpu, recCpu, recRam);
+        SteamGameService sg = new SteamGameService(name, currentGame.get("AppId") + "", storage, minG, recG);
 
         if (library == null) {
-            library = new ArrayList<SteamGame>();
+            library = new ArrayList<SteamGameService>();
         }
         Label title = new Label(titleName);
         title.setOnMouseClicked(e -> {
@@ -278,7 +276,7 @@ public class gameSearchController extends RecommendationController {
     private String getHighestLibraryGPU() {
         List<String> gpus = new ArrayList<>();
         if (library != null) {
-            for (SteamGame g : library) {
+            for (SteamGameService g : library) {
                 if (g.getRecReq() != null && g.getRecReq().getGpu() != null) {
                     gpus.add(g.getRecReq().getGpu().toLowerCase());
                 }
@@ -292,7 +290,7 @@ public class gameSearchController extends RecommendationController {
         String[] tiers = {"i9", "ryzen 9", "i7", "ryzen 7", "i5", "ryzen 5", "i3", "ryzen 3"};
         List<String> cpus = new ArrayList<>();
         if (library != null) {
-            for (SteamGame g : library) {
+            for (SteamGameService g : library) {
                 if (g.getRecReq() != null && g.getRecReq().getCpu() != null) {
                     cpus.add(g.getRecReq().getCpu().toLowerCase());
                 }

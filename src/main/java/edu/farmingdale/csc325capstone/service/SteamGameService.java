@@ -1,14 +1,14 @@
 package edu.farmingdale.csc325capstone.service;
 
-public class SteamGame {
+public class SteamGameService {
     private String name;
     private String appid;
     private String storage;
 
-    private GameRequirements minReq;
-    private GameRequirements recReq;
+    private GameRequirementsService minReq;
+    private GameRequirementsService recReq;
 
-    public SteamGame(String name, String appid, String storage, GameRequirements minReq, GameRequirements recReq) {
+    public SteamGameService(String name, String appid, String storage, GameRequirementsService minReq, GameRequirementsService recReq) {
         this.name = name;
         this.appid = appid;
         this.storage = storage;
@@ -40,19 +40,19 @@ public class SteamGame {
         this.storage = storage;
     }
 
-    public GameRequirements getMinReq() {
+    public GameRequirementsService getMinReq() {
         return minReq;
     }
 
-    public void setMinReq(GameRequirements minReq) {
+    public void setMinReq(GameRequirementsService minReq) {
         this.minReq = minReq;
     }
 
-    public GameRequirements getRecReq() {
+    public GameRequirementsService getRecReq() {
         return recReq;
     }
 
-    public void setRecReq(GameRequirements recReq) {
+    public void setRecReq(GameRequirementsService recReq) {
         this.recReq = recReq;
     }
 }

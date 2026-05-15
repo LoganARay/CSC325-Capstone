@@ -1,7 +1,7 @@
-package edu.farmingdale.csc325capstone;
+package edu.farmingdale.csc325capstone.ViewModel;
 
 import com.google.cloud.firestore.CollectionReference;
-import edu.farmingdale.csc325capstone.PcParts.SandBoxParts;
+import edu.farmingdale.csc325capstone.HelloApplication;
 import edu.farmingdale.csc325capstone.model.CompatibilityChecker;
 import edu.farmingdale.csc325capstone.model.Part;
 import edu.farmingdale.csc325capstone.service.AIService;

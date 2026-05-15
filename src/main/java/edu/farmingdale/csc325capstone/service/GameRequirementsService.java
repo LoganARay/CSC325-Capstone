@@ -1,11 +1,11 @@
 package edu.farmingdale.csc325capstone.service;
 
-public class GameRequirements {
+public class GameRequirementsService {
     private String gpu;
     private String cpu;
     private String ram;
 
-    public GameRequirements(String gpu, String cpu, String ram) {
+    public GameRequirementsService(String gpu, String cpu, String ram) {
         this.gpu = gpu;
         this.cpu = cpu;
         this.ram = ram;

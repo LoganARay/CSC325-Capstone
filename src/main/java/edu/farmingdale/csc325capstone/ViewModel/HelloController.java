@@ -1,4 +1,4 @@
-package edu.farmingdale.csc325capstone;
+package edu.farmingdale.csc325capstone.ViewModel;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
