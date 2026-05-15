@@ -20,4 +20,6 @@ module edu.farmingdale.csc325capstone {
 
     opens edu.farmingdale.csc325capstone to javafx.fxml;
     exports edu.farmingdale.csc325capstone;
+    exports edu.farmingdale.csc325capstone.ViewModel;
+    opens edu.farmingdale.csc325capstone.ViewModel to javafx.fxml;
 }
